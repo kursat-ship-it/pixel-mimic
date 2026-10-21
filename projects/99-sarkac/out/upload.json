@@ -1,0 +1,23 @@
+{
+  "title": "99 Sarkaç Senkronize Olurken, Biri Farklı Kalıyor 🎧",
+  "description": "99 özdeş sarkaç, Kuramoto çiftlenmesiyle kendiliğinden senkronize olur; ama doğal frekansı 17/16 olan biri dışarıda kalır. Düzen parametresi R(t)=|Σe^{iφⱼ}|/99 bu 'kaostan düzene' geçişi ölçer — sence hangisi farklı? 👇",
+  "hashtags": [
+    "#bilim",
+    "#matematik",
+    "#senkronizasyon",
+    "#pixelart",
+    "#chiptune",
+    "#hayretpiksel"
+  ],
+  "duration_s": 15.0,
+  "file": "out/99-sarkac.mp4",
+  "master": "out/99-sarkac_master.mp4",
+  "cover": "out/cover.png",
+  "cover_t": 13.0,
+  "resolution": "1080x1920",
+  "fps": 30,
+  "loop": true,
+  "posted": false,
+  "sources": "sources.md",
+  "note": "Nothing posted."
+}

@@ -217,7 +217,8 @@
       "narration": [
         {
           "text": "99 sarkaç. biri farklı.",
-          "at": 0
+          "at": 0,
+          "until": 4
         },
         {
           "text": "bulabilir misin?",
@@ -277,7 +278,8 @@
       "narration": [
         {
           "text": "her tik, bir titreşim.",
-          "at": 0
+          "at": 0,
+          "until": 4
         },
         {
           "text": "kaos nasıl düzene dönüşüyor?",
@@ -343,9 +345,10 @@
           "beats": 1
         },
         "formula": {
-          "text": "R(t) = |Σ e^{iφ_j}| / 99",
+          "text": "R(t) = |Σ e^(iφj)| / 99",
           "at": 28,
-          "dot": 2
+          "dot": 1.0,
+          "y": 94
         },
         "freeze": {
           "at": 29,
@@ -356,7 +359,7 @@
         {
           "kind": "plate",
           "x": 0,
-          "y": 135,
+          "y": 72,
           "s": 1.4,
           "model": "SARKAÇ 99",
           "layer": "front",

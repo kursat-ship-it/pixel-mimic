@@ -215,7 +215,8 @@
       "narration": [
         {
           "text": "99 sarkaç. biri farklı.",
-          "at": 0
+          "at": 0,
+          "until": 4
         },
         {
           "text": "bulabilir misin?",
@@ -271,7 +272,8 @@
       "narration": [
         {
           "text": "her tik, bir titreşim.",
-          "at": 0
+          "at": 0,
+          "until": 4
         },
         {
           "text": "kaos nasıl düzene dönüşüyor?",
@@ -333,7 +335,7 @@
         {
           "kind": "plate",
           "x": 0,
-          "y": 135,
+          "y": 72,
           "s": 1.4,
           "model": "SARKAÇ 99",
           "layer": "front",
