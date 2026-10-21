@@ -162,3 +162,7 @@ class PendulumGrid(Scene):
             k += 1
         out.sort()
         return out
+
+
+from .scenes import SCENES  # noqa: E402
+SCENES.update({"pendulum_grid": PendulumGrid})

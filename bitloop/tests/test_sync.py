@@ -8,12 +8,14 @@ from bitloop.scenes_sync import PendulumGrid
 
 
 def mini(**p):
+    lay = {"back": ["stars", "nebula"], "front": ["dust"]}
     s = {"meta": {"lang": "tr"}, "loop": True,
          "music": {"bpm": 120, "meter": "4/4", "key": "A", "scale": "dorian", "flavour": "fm"},
          "segments": [
-            {"id": "A", "role": "hook", "beats": 6, "scene": "pendulum_grid", "params": p,
+            {"id": "A", "role": "hook", "beats": 16, "scene": "pendulum_grid", "params": p, "layers": lay,
              "caption": {"text": "99 SARKAÇ", "at": [0, 3]}},
-            {"id": "B", "role": "reveal", "beats": 6, "scene": "pendulum_grid", "params": p, "transition_in": "dissolve",
+            {"id": "B", "role": "reveal", "beats": 16, "scene": "pendulum_grid", "params": p, "layers": lay,
+             "transition_in": "dissolve",
              "props": [{"kind": "plate", "x": 0, "y": 72, "s": 1.4, "model": "SARKAÇ 99", "layer": "front", "par": 1.0,
                         "from": 2, "legible": True}]}]}
     return S.normalise(s)
@@ -23,7 +25,7 @@ def test_scene_registered_and_valid():
     s = mini()
     e, w = S.validate(s)
     assert not e, e
-    assert abs(s["duration_s"] - 6.0) < 1e-6
+    assert abs(s["duration_s"] - 16.0) < 1e-6
     assert s["segments"][0]["scene"] == "pendulum_grid"
 
 
@@ -34,8 +36,8 @@ def test_frame_renders_and_is_deterministic():
     b = Film(spec).frame(1.0)
     assert a.shape == (1920, 1080, 3) and a.dtype == np.uint8
     assert np.array_equal(a, b), "frames must be a pure function of t (seeded, deterministic)"
-    # the reveal frame (ring + formula active) differs from the hook frame (chaos)
-    assert not np.array_equal(Film(spec).frame(1.0), Film(spec).frame(6.5))
+    # the reveal frame (ring + formula active, t≈14.5 s) differs from the hook frame (chaos)
+    assert not np.array_equal(Film(spec).frame(1.0), Film(spec).frame(14.5))
 
 
 def test_phase_shared_across_segment_instances():

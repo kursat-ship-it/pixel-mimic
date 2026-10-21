@@ -231,6 +231,7 @@ DEFAULT_STACK = {
     "object": (["horizon", "nebula", "stars", "skyline"], ["bokeh", "dust"]),
     "image": (["horizon", "nebula", "stars", "tiles"], ["bokeh", "dust"]),
     "void": (["horizon", "nebula", "stars", "tiles"], ["bokeh", "dust"]),
+    "pendulum_grid": (["horizon", "nebula", "stars"], ["bokeh", "dust"]),
 }
 
 
