@@ -54,7 +54,7 @@ def test_phase_shared_across_segment_instances():
 
 def test_sigma_phi_glyphs():
     from bitloop.pixfont import missing
-    assert missing("Σφ") == [], missing("Σφ")
+    assert missing("Σφ|") == [], missing("Σφ|")
     assert "👀" in missing("👀")              # emoji still absent from the pixel font
 
 

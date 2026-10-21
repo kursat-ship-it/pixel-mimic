@@ -22,12 +22,12 @@ class PendulumGrid(Scene):
     defaults = {
         "rows": 11, "cols": 9,
         "outlier": 49, "freq_ratio": 17.0 / 16.0,
-        "period_beats": 4.0, "amp": 0.40, "string": 11.0,
+        "period_beats": 4.0, "amp": 0.75, "string": 11.0,
         "sync_start": 3.0, "sync_end": 24.0,
         "wave_start": 12.0, "wave_end": 18.0, "wave_amp": 0.55,
-        "trail": 3, "bloom": 0.8,
+        "trail": 5, "bloom": 0.8,
         "outlier_ring": {"at": 26.0, "beats": 1.0},
-        "formula": {"text": "R(t) = |Σ e^{iφ_j}| / 99", "at": 28.0, "dot": 1.2, "y": 94.0},
+        "formula": {"text": "R(t) = |Σ e^(iφj)| / 99", "at": 28.0, "dot": 1.0, "y": 94.0},
         "freeze": {"at": 29.0, "beats": 1.0},
     }
 
@@ -97,7 +97,7 @@ class PendulumGrid(Scene):
                 by = py + L * math.cos(ang)
                 cv.line(px, py, bx, by, 0.6, self.pal.ramp("pale", 0.5), 0.55)
                 for q in range(1, int(p["trail"]) + 1):      # türkuaz light trails (ghost bobs)
-                    gb2 = max(gb - 0.13 * q, 0.0)
+                    gb2 = max(gb - 0.12 * q, 0.0)
                     th2 = self._phase(gb2, j)
                     a2 = amp * math.sin(th2)
                     cv.disc(px + L * math.sin(a2), py + L * math.cos(a2), 1.0,
@@ -119,17 +119,10 @@ class PendulumGrid(Scene):
             self._formula(cv)
 
     def _formula(self, cv):
-        """R(t) = |Σ e^{iφ_j}| / 99 — manual composition (superscript + subscript the flat parser can't nest)."""
+        """R(t) = |Σ e^(iφj)| / 99 — one snapped line (pixel-exact; the caret stands in for the superscript)."""
         from .bitmap import draw_text
-        from .pixfont import line_bitmap
         p = self.p["formula"]; dot = float(p["dot"]); y = float(p.get("y", 94.0))
-        segs = [("R(t) = |Σ e", 1.0, 0.0), ("iφ", 0.62, -2.2), ("j", 0.62, 2.2), ("| / 99", 1.0, 0.0)]
-        ww = sum(line_bitmap([(t, False)])[0].shape[1] * dot * sc for t, sc, _ in segs)
-        x = -ww / 2.0; col = self.pal.ramp("pale", 0.95)
-        for text, sc, dy in segs:
-            w = line_bitmap([(text, False)])[0].shape[1] * dot * sc
-            draw_text(cv, text, x + w / 2.0, y + dy * dot, dot * sc, col, snap=False)
-            x += w
+        draw_text(cv, "R(t) = |Σ e^(iφj)| / 99", 0.0, y, dot, self.pal.ramp("pale", 0.95), snap=True)
 
     # ------------------------------------------------------------------ sound: ticks = pendulum peaks
     def sfx(self, dur_b):

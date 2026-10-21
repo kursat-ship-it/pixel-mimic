@@ -91,7 +91,7 @@ spec = {
   seg(id="S5", role="reveal", scene="pendulum_grid", beats=6,
       params={"rows": 11, "cols": 9, "phase": "lock",
               "outlier_ring": {"at": 26, "beats": 1},
-              "formula": {"text": "R(t) = |Σ e^{iφ_j}| / 99", "at": 28, "dot": 1.2, "y": 94},
+              "formula": {"text": "R(t) = |Σ e^(iφj)| / 99", "at": 28, "dot": 1.0, "y": 94},
               "freeze": {"at": 29, "beats": 1}},
       props=[dict(PLATE)],
       transition_in="iris",
