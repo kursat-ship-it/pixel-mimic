@@ -4,11 +4,14 @@
 # (no numpy/scipy wheels for Python-for-Android, no ffmpeg). This workflow runs
 # the full bitloop chain on a Linux runner where all of that is available.
 #
-#   Manual run:  Actions → "render" → Run workflow → choose a project slug (e.g. evren-anlamak).
-#   Draft toggle: "draft: true" renders a fast 15 fps preview instead of the full master.
-#   QC toggle:    "qc: true" also runs the measurement scripts and uploads the numbers.
+# Manual run (Actions → "render" → Run workflow):
+#   project  project slug (folder under projects/, e.g. evren-anlamak or 99-sarkac)
+#   mode     validate | draft | final   (validate = build_spec + validate only, no render)
+#   qc       also run the measurement scripts and upload the numbers
 #
-# Tests gate every render (AGENTS.md rule 5): all tests must pass before a render is delivered.
+# Tests gate every job (AGENTS.md rule 5). The `plan` job generates spec.json/spec_proxy.json and
+# validates the PROXY (0 errors required) + the TARGET (report-only; it is allowed to have
+# `unknown scene` until the render coder builds the new scene). Artifacts are downloadable.
 name: render
 
 on:
@@ -18,11 +21,11 @@ on:
         description: 'Project slug (folder under projects/, e.g. evren-anlamak)'
         required: true
         type: string
-      draft:
-        description: 'Draft preview (15 fps, fast) instead of the full master + two-pass upload?'
+      mode:
+        description: 'validate (plan only) | draft (15 fps preview) | final (master + two-pass upload)'
         required: false
-        type: boolean
-        default: false
+        type: string
+        default: 'final'
       qc:
         description: 'Also run QC measurements (integrity, stats, loudness, A/V sync)?'
         required: false
@@ -44,18 +47,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
           cache: pip
-
       - name: Install runtime deps + ffmpeg
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg
           pip install -r requirements.txt
-
       - name: Run all tests (each file also runs as a plain script)
         run: |
           cd bitloop
@@ -64,26 +64,22 @@ jobs:
             python "$t" || exit 1
           done
 
-  render:
-    name: Render reel
+  plan:
+    name: Build + validate (plan)
     needs: test
     if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
-    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
           cache: pip
-
       - name: Install runtime deps + ffmpeg
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg
           pip install -r requirements.txt
-
       - name: Resolve project path + slug
         id: proj
         run: |
@@ -93,37 +89,76 @@ jobs:
           test -f "$P/build_spec.py" || { echo "no build_spec.py at $P" >&2; exit 1; }
           echo "path=$P" >> "$GITHUB_OUTPUT"
           echo "slug=$SLUG" >> "$GITHUB_OUTPUT"
-
       - name: Build spec (build_spec.py → spec.json + spec_proxy.json)
         run: python "${{ steps.proj.outputs.path }}/build_spec.py"
+      - name: Validate PROXY (0 errors required) + retention map
+        run: |
+          bitloop/bitloop.sh validate "${{ steps.proj.outputs.path }}/spec_proxy.json" \
+            | tee "${{ steps.proj.outputs.path }}/retention_map.txt"
+      - name: Validate TARGET (report only — `unknown scene` allowed until built)
+        run: |
+          bitloop/bitloop.sh validate "${{ steps.proj.outputs.path }}/spec.json" \
+            | tee "${{ steps.proj.outputs.path }}/retention_map_target.txt" || true
+      - name: Upload plan artifacts (spec + retention maps)
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.proj.outputs.slug }}-plan
+          path: |
+            ${{ steps.proj.outputs.path }}/spec.json
+            ${{ steps.proj.outputs.path }}/spec_proxy.json
+            ${{ steps.proj.outputs.path }}/retention_map.txt
+            ${{ steps.proj.outputs.path }}/retention_map_target.txt
+          if-no-files-found: warn
 
+  render:
+    name: Render reel
+    needs: plan
+    if: github.event_name == 'workflow_dispatch' && inputs.mode != 'validate'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+      - name: Install runtime deps + ffmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          pip install -r requirements.txt
+      - name: Resolve project path + slug
+        id: proj
+        run: |
+          P="${{ inputs.project }}"
+          case "$P" in projects/*) ;; *) P="projects/$P";; esac
+          SLUG="$(basename "$P")"
+          echo "path=$P" >> "$GITHUB_OUTPUT"
+          echo "slug=$SLUG" >> "$GITHUB_OUTPUT"
+      - name: Build spec (build_spec.py → spec.json + spec_proxy.json)
+        run: python "${{ steps.proj.outputs.path }}/build_spec.py"
       - name: Validate (0 errors required) + retention map
         run: |
           bitloop/bitloop.sh validate "${{ steps.proj.outputs.path }}/spec.json" \
             | tee "${{ steps.proj.outputs.path }}/retention_map.txt"
-
       - name: Contact sheet (look before rendering)
         run: |
           mkdir -p "${{ steps.proj.outputs.path }}/out"
           bitloop/bitloop.sh sheet "${{ steps.proj.outputs.path }}/spec.json" \
             -o "${{ steps.proj.outputs.path }}/out/contact_sheet.png" --every 1 --cols 10 --w 162
-
       - name: Soundtrack only (listen before rendering)
         run: bitloop/bitloop.sh music "${{ steps.proj.outputs.path }}/spec.json" -o /tmp/music.wav
-
-      - name: Render master + cover + two-pass upload
-        if: inputs.draft == false
-        run: tools/make_master.sh "${{ steps.proj.outputs.path }}"
-
       - name: Render draft preview (15 fps)
-        if: inputs.draft == true
+        if: inputs.mode == 'draft'
         run: |
           mkdir -p "${{ steps.proj.outputs.path }}/out"
           bitloop/bitloop.sh render "${{ steps.proj.outputs.path }}/spec.json" \
             -o "${{ steps.proj.outputs.path }}/out/${{ steps.proj.outputs.slug }}_draft.mp4" --draft
-
-      - name: QC measurements (optional)
-        if: inputs.qc == true && inputs.draft == false
+      - name: Render master + cover + two-pass upload
+        if: inputs.mode == 'final'
+        run: tools/make_master.sh "${{ steps.proj.outputs.path }}"
+      - name: QC measurements (optional, final only)
+        if: inputs.qc == true && inputs.mode == 'final'
         continue-on-error: true
         run: |
           pip install -r requirements-qc.txt
@@ -137,7 +172,6 @@ jobs:
             echo "=== A/V sync ===";         python tools/qc/av_sync.py "$V" --spec "$P/spec.json"
             echo "=== SSIM vs intermediate ==="; tools/qc/ssim.sh "$V" "/tmp/${S}_crf4.mp4"
           } 2>&1 | tee "$P/out/qc_measurements.txt"
-
       - name: Upload delivery artifacts
         uses: actions/upload-artifact@v4
         with:
