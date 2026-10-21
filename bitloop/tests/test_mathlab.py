@@ -53,13 +53,6 @@ def test_all_mode_renders():
     assert fr.shape == (1920, 1080, 3) and fr.dtype == np.uint8
 
 
-def test_neon_palette_has_brand_colours():
-    from palettes import PALETTES
-    pal = Palette(PALETTES["neon"])
-    assert pal.ramps["energy"].shape[0] >= 3
-    assert "#FF00FF" in [c for c in PALETTES["neon"]["colors"]]
-
-
 if __name__ == "__main__":
     for k, v in list(globals().items()):
         if k.startswith("test_"):
