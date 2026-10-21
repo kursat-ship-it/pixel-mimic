@@ -42,6 +42,8 @@ def render(kind, root, B):
         return [(-.3 * B, _sq(f, len(t)) * np.exp(-t * 12), .1, 0)]
     if kind == "tick":
         n = int(.035 * SR); return [(0, _sq(hz(root + 60), n, .25) * adsr(n, .001, .012), .035, .2)]
+    if kind == "tick_hi":   # the outlier pendulum: same tick, a semitone up (17:16 ≈ +1 semitone), panned opposite
+        n = int(.035 * SR); return [(0, _sq(hz(root + 61), n, .25) * adsr(n, .001, .012), .035, -.2)]
     if kind.startswith("blip"):        # narration typewriter blip: soft, short, low in the mix ("blip_hi" on vowels)
         base, _, v = kind.partition("@"); g = float(v) if v else 1.0
         n = int(.028 * SR); f = hz(root + (55 if base == "blip_hi" else 50))

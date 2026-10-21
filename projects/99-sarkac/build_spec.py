@@ -14,7 +14,7 @@ MOTIF = {"notes": [4, 0, 1, 2, None], "rhythm": [0.5]}
 LAYERS = {"back": ["stars", "nebula"], "front": ["dust"]}
 
 # legible diegetic tag: a lab plate on the pendulum apparatus base (draws @hayret.piksel), revealed with the drop
-PLATE = {"kind": "plate", "x": 0, "y": 135, "s": 1.4, "model": "SARKAÇ 99", "layer": "front", "par": 1.0,
+PLATE = {"kind": "plate", "x": 0, "y": 72, "s": 1.4, "model": "SARKAÇ 99", "layer": "front", "par": 1.0,
          "from": 2.0, "legible": True}
 
 
@@ -91,7 +91,7 @@ spec = {
   seg(id="S5", role="reveal", scene="pendulum_grid", beats=6,
       params={"rows": 11, "cols": 9, "phase": "lock",
               "outlier_ring": {"at": 26, "beats": 1},
-              "formula": {"text": "R(t) = |Σ e^{iφ_j}| / 99", "at": 28, "dot": 2},
+              "formula": {"text": "R(t) = |Σ e^{iφ_j}| / 99", "at": 28, "dot": 1.2, "y": 94},
               "freeze": {"at": 29, "beats": 1}},
       props=[dict(PLATE)],
       transition_in="iris",
