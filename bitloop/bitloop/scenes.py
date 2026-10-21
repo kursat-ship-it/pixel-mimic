@@ -616,5 +616,5 @@ class Void(Scene):
 SCENES = {"hero": Hero, "lattice": Lattice, "chain": Chain, "streaks": Streaks, "pod": Pod, "junction": Junction,
           "network": Network, "silhouette": Silhouette, "object": Object, "image": ImageScene, "void": Void}
 
-from . import scenes_music, scenes_math, scenes_story, scenes_vision, scenes_cosmos, scenes_chalk, scenes_sync   # noqa: E402,F401  (they register fractal_staff, noise_scope, series_tree,
-                                          #  shepard_stairs, koch, mandel_zoom into SCENES themselves)
+from . import scenes_music, scenes_math, scenes_story, scenes_vision, scenes_cosmos, scenes_chalk, scenes_sync, scenes_mathlab   # noqa: E402,F401  (they register fractal_staff, noise_scope, series_tree,
+                                          #  shepard_stairs, koch, mandel_zoom, pendulum_grid, formula_scope into SCENES themselves)

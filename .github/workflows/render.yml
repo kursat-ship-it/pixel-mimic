@@ -149,7 +149,7 @@ jobs:
       - name: Key stills (larger, for inspection)
         run: |
           bitloop/bitloop.sh sheet "${{ steps.proj.outputs.path }}/spec.json" \
-            -o "${{ steps.proj.outputs.path }}/out/key_stills.png" --times 0,3,6,9,12,13,14.5 --cols 4 --w 360
+            -o "${{ steps.proj.outputs.path }}/out/key_stills.png" --times 0,2,4,6,8,10,12,14,16,18,19.6 --cols 6 --w 300
       - name: Soundtrack only (listen before rendering)
         run: bitloop/bitloop.sh music "${{ steps.proj.outputs.path }}/spec.json" -o /tmp/music.wav
       - name: Render draft preview (15 fps)
