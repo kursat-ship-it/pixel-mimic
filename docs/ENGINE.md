@@ -50,10 +50,11 @@ One clock: **1 beat = 1 quarter note** everywhere; `timing.TempoMap` integrates 
 | `scenes_story.py` | future_book laplace_demon (+ `chaos_twin`) dominoes libet_clock future_tree. |
 | `vision.py`, `scenes_vision.py` | Creature-vision maps over a G-buffer (uv, temp, depth, oid): `rgb bee_false_colour dichromat thermal sonar bands12 coarse_classes tint` (thermal tiles get AGC in the mosaic); vision_world, vision_mosaic. |
 | `scenes_cosmos.py`, `scenes_chalk.py` | cosmic_zoom (powers of ten done by the scene, `rewind_to_frame0`), galaxy_chess (+ rule-30 `ca_series`, boards of boards) · chalk_unify (one persistent chalkboard across segments). |
+| `scenes_sync.py` | `pendulum_grid`: rows×cols Kuramoto-coupled pendulums on the global beat (chaos → waves → converge → lock), one detuned 17:16 outlier that never locks, coral ring + order-parameter formula + freeze; `sfx()` emits `tick`/`tick_hi` at the peaks. |
 | `cli.py`, `__main__.py` | Commands: `init list validate info music still sheet strip render [--draft --crf --range --package]`; `cover_t()`. |
 | `templates/` | `blank.json`, `reference_scale_journey.json` (the analysed reference as a spec). |
 
-Tests (`bitloop/tests/`, 73): `test_engine` 14 · `test_fractal` 12 · `test_story` 10 · `test_narration` 10 · `test_vision` 10 · `test_cosmos` 17.
+Tests (`bitloop/tests/`, 79): `test_engine` 14 · `test_fractal` 12 · `test_story` 10 · `test_narration` 10 · `test_vision` 10 · `test_cosmos` 17 · `test_sync` 6.
 
 ## Spec key fields (see bitloop/README.md "Spec at a glance" for a full example)
 | Field | Meaning |

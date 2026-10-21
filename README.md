@@ -48,7 +48,7 @@ Rendering a 48 s reel takes several minutes on a multi-core box (frames render i
 AGENTS.md                 onboarding for agents: workflow, roles, ALL standing rules, QC checklist, lessons learned
 docs/WORKFLOW.md          step-by-step checklist per topic (researcher -> approval -> render coder -> QC -> delivery)
 docs/ENGINE.md            engine module map + spec key fields (authoring guide: recipe/recipe.md §12)
-bitloop/                  the engine (Python + numpy + ffmpeg). README.md = full reference. tests/ = 73 tests
+bitloop/                  the engine (Python + numpy + ffmpeg). README.md = full reference. tests/ = 79 tests
   bitloop.sh              launcher: bitloop.sh init|list|validate|info|music|still|sheet|strip|render
 recipe/                   recipe.md (§12 = authoring guide, Turkish), recipe.json (spec schema), RESEARCHER_GUIDE.md,
                           ozet_tr.md (Turkish summary), pixel-science-loop.md (reference recipe notes)

@@ -146,6 +146,10 @@ jobs:
           mkdir -p "${{ steps.proj.outputs.path }}/out"
           bitloop/bitloop.sh sheet "${{ steps.proj.outputs.path }}/spec.json" \
             -o "${{ steps.proj.outputs.path }}/out/contact_sheet.png" --every 1 --cols 10 --w 162
+      - name: Key stills (larger, for inspection)
+        run: |
+          bitloop/bitloop.sh sheet "${{ steps.proj.outputs.path }}/spec.json" \
+            -o "${{ steps.proj.outputs.path }}/out/key_stills.png" --times 0,3,6,9,12,13,14.5 --cols 4 --w 360
       - name: Soundtrack only (listen before rendering)
         run: bitloop/bitloop.sh music "${{ steps.proj.outputs.path }}/spec.json" -o /tmp/music.wav
       - name: Render draft preview (15 fps)
