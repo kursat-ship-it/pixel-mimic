@@ -170,7 +170,7 @@ narration, quantise to palette, ×6 upscale) → ffmpeg. Frames are pure functio
 (seeded). Module map and spec fields: [`docs/ENGINE.md`](docs/ENGINE.md).
 
 ## 7. Housekeeping
-- Tests: `cd bitloop && for t in tests/test_*.py; do python "$t" || break; done` (79 tests: cosmos 17, engine 14, fractal 12,
-  narration 10, story 10, vision 10, sync 6). `python -m pytest tests` also works if pytest is installed.
+- Tests: `cd bitloop && for t in tests/test_*.py; do python "$t" || break; done` (83 tests: cosmos 17, engine 14, fractal 12,
+  narration 10, story 10, vision 10, sync 6, mathlab 4). `python -m pytest tests` also works if pytest is installed.
 - Do not commit: venvs, `*.mp4`, `*.wav`, frame dumps, `/tmp` intermediates, reference videos, secrets (see `.gitignore`).
 - When you add a scene/param: update `bitloop/README.md`, `recipe/recipe.md` §12 (Turkish authoring notes) and `docs/ENGINE.md`.

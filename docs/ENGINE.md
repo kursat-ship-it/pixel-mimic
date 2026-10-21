@@ -54,7 +54,7 @@ One clock: **1 beat = 1 quarter note** everywhere; `timing.TempoMap` integrates 
 | `cli.py`, `__main__.py` | Commands: `init list validate info music still sheet strip render [--draft --crf --range --package]`; `cover_t()`. |
 | `templates/` | `blank.json`, `reference_scale_journey.json` (the analysed reference as a spec). |
 
-Tests (`bitloop/tests/`, 79): `test_engine` 14 · `test_fractal` 12 · `test_story` 10 · `test_narration` 10 · `test_vision` 10 · `test_cosmos` 17 · `test_sync` 6.
+Tests (`bitloop/tests/`, 83): `test_engine` 14 · `test_fractal` 12 · `test_story` 10 · `test_narration` 10 · `test_vision` 10 · `test_cosmos` 17 · `test_sync` 6 · `test_mathlab` 4.
 
 ## Spec key fields (see bitloop/README.md "Spec at a glance" for a full example)
 | Field | Meaning |

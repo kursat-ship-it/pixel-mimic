@@ -152,6 +152,11 @@ jobs:
             -o "${{ steps.proj.outputs.path }}/out/key_stills.png" --times 0,2,4,6,8,10,12,14,16,18,19.6 --cols 6 --w 300
       - name: Soundtrack only (listen before rendering)
         run: bitloop/bitloop.sh music "${{ steps.proj.outputs.path }}/spec.json" -o /tmp/music.wav
+      - name: 44.1 kHz / 16-bit PCM audio (brief requirement)
+        if: inputs.mode == 'final'
+        run: |
+          ffmpeg -v error -y -i /tmp/music.wav -ar 44100 -sample_fmt s16 \
+            "${{ steps.proj.outputs.path }}/out/music_44k1_16bit.wav"
       - name: Render draft preview (15 fps)
         if: inputs.mode == 'draft'
         run: |
@@ -182,6 +187,7 @@ jobs:
           name: ${{ steps.proj.outputs.slug }}-delivery
           path: |
             ${{ steps.proj.outputs.path }}/out/*.mp4
+            ${{ steps.proj.outputs.path }}/out/*.wav
             ${{ steps.proj.outputs.path }}/out/*.png
             ${{ steps.proj.outputs.path }}/out/*.json
             ${{ steps.proj.outputs.path }}/out/*.txt

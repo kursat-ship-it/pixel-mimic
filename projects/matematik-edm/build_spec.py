@@ -89,7 +89,7 @@ spec = {
   seg(id="S0", role="hook", scene="formula_scope", beats=2,
       params={"formula": "hardtekk", "formula_text": "", "window": 0.9},
       transition_in="cut",
-      narration=[{"text": "matematikle elektronik müzik", "at": 0, "place": "title", "size": "head"}]),
+      narration=[{"text": "matematikle elektronik müzik", "at": 0, "place": "title", "size": "head", "rate": "16th"}]),
   seg(id="S1", role="step", scene="formula_scope", beats=4,
       params={"formula": "hardtekk", "formula_text": F["hardtekk"]},
       transition_in="whip",
@@ -136,7 +136,7 @@ spec = {
               "from": 0.4, "legible": True}],
       transition_in="crash",
       events=[{"at": 0, "kind": "reveal", "label": "drop: tüm katmanlar"}],
-      narration=[{"text": "her ses = tek bir grafik", "at": 0, "place": "title", "size": "head"}]),
+      narration=[{"text": "her ses = tek bir grafik", "at": 0, "place": "title", "size": "head", "rate": "16th"}]),
  ]}
 
 json.dump(spec, open("spec.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
