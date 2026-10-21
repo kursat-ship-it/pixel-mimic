@@ -112,9 +112,10 @@ class PendulumGrid(Scene):
             th = self._phase(gb, o); ang = amp * math.sin(th)
             bx = px + L * math.sin(ang); by = py + L * math.cos(ang)
             pk = pulse(gb, 1.0, 5.0)
-            R = 4.5 + 2.5 * pk
-            cv.ring(bx, by, R, 1.4, self.A(0.65), 0.95)
-            cv.glow(bx, by, R * 1.6, self.A(0.75), 0.5 + 0.7 * pk)
+            R = 5.0 + 3.2 * pk
+            cv.glow(bx, by, R * 2.1, self.A(0.85), 0.6 + 0.9 * pk)
+            cv.ring(bx, by, R, 2.1, self.A(0.92), 1.0)          # vivid coral ring (the one warm accent)
+            cv.ring(bx, by, R * 1.45, 1.0, self.A(0.7), 0.5)     # faint outer halo
         if gb >= float(p["formula"]["at"]):
             self._formula(cv)
 
