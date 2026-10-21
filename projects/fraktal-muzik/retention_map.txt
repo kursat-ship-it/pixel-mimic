@@ -1,0 +1,92 @@
+id   role      scene      beats  start    end  in       caption
+S1   hook      fractal_staff   6.0   0.00   3.60  cut      BU MELODİNİN / İÇİNDE / *KENDİSİ* VAR!
+S2   rehook    fractal_staff   6.0   3.60   7.20  crash    YAKINLAŞ: / AYNI MELODİ / *TEKRAR*
+S3   promise   koch         6.0   7.20  10.80  whip     FRAKTALLARDA / SONSUZ MÜZİK / SAKLI MI?
+S4   step      noise_scope   8.0  10.80  15.60  glitch   MÜZİK DE / FRAKTAL GİBİ / DALGALANIR | *1/F* YASASI / VOSS 1975
+S5   twist     fractal_staff   8.0  15.60  20.40  crt      AMA ASIL / SIR ŞU: | HER *4.* NOTA / = AYNI / MELODİ
+S6   number    series_tree   6.0  20.40  24.00  match    *1959*: BİR / BESTECİ / BUNU BULDU
+S7   build     shepard_stairs   8.0  24.00  28.80  spin     SONSUZA DEK / YÜKSELİYOR / GİBİ...
+S8   drop      mandel_zoom   8.0  28.80  33.60  flash    4 HIZ / *1* MELODİ
+S9   reveal    object       8.0  33.60  38.40  iris     CEVAP: / BİR ANLAMDA / *EVET* | SERİ SONSUZ / AMA KULAK / *SONLU*
+S10  loop      fractal_staff   6.0  38.40  42.00  portal   
+total 70.0 beats = 42.00 s
+
+RETENTION MAP · 42.0 s · 4/4 · 100 BPM · 10 segments
+  s  0         5         10        15        20        25        30        35        40       
+     !······!"·····!!····!|"···!!···!··!·····!!······|···!····▲····!····@····"···|·······↻
+     legend: ! hook/re-hook  | cut/transition  " caption  ▲ drop  ♪ sonic logo  @ legible tag  ↻ loop
+    t(s)   beat  lane   event
+    0.00   0.00  HOOK   S1 hook     fractal_staff
+    0.00   0.00  MUSIC  tohum: e2 4/4 100 BPM G dorian 
+    0.00   0.00  TEXT   “BU MELODİNİN / İÇİNDE / *KENDİSİ* VAR!”  [claim]
+    1.20   2.00  EVENT  punch
+    2.40   4.00  EVENT  pop · nota içinde minik porte belirir
+    3.60   6.00  EVENT  rehook · notanın içinden aynı porte çıkıyor
+    3.60   6.00  MUSIC  ikinci_hiz: e2 4/4 100 BPM G dorian 
+    3.60   6.00  TRANS  S2 rehook   fractal_staff  ← crash (1b)
+    4.20   7.00  TEXT   “YAKINLAŞ: / AYNI MELODİ / *TEKRAR*”
+    5.40   9.00  EVENT  punch
+    7.20  12.00  MUSIC  koch: e2.2 4/4 100 BPM G dorian 
+    7.20  12.00  TRANS  S3 promise  koch  ← whip (0.5b)
+    7.50  12.50  TEXT   “FRAKTALLARDA / SONSUZ MÜZİK / SAKLI MI?”  [question]
+    7.80  13.00  EVENT  pulse
+    8.40  14.00  EVENT  pulse
+    9.00  15.00  EVENT  punch
+    9.60  16.00  EVENT  pulse
+   10.20  17.00  EVENT  rehook · soru + cevap sonda vaadi
+   10.80  18.00  MUSIC  pembe: e2.3 4/4 100 BPM G dorian 
+   10.80  18.00  TRANS  S4 step     noise_scope  ← glitch (0.5b)
+   11.10  18.50  TEXT   “MÜZİK DE / FRAKTAL GİBİ / DALGALANIR”
+   11.40  19.00  TAG    @ terminal subtle (S4)
+   12.60  21.00  EVENT  punch · pembe iz türkuaz parlar
+   13.20  22.00  EVENT  rehook · 1/f sayısı
+   13.50  22.50  TEXT   “*1/F* YASASI / VOSS 1975”  [number]
+   14.40  24.00  EVENT  pulse
+   15.60  26.00  EVENT  twist · her 4. nota yanar, diğerleri söner
+   15.60  26.00  MUSIC  kanit_a: e1 4/4 100 BPM G dorian 
+   15.60  26.00  TEXT   “AMA ASIL / SIR ŞU:”
+   15.60  26.00  TRANS  S5 twist    fractal_staff  ← crt (1b)
+   16.80  28.00  EVENT  pop
+   17.10  28.50  TEXT   “HER *4.* NOTA / = AYNI / MELODİ”  [number]
+   18.00  30.00  EVENT  punch · hızlı melodi geri gelir: ikisi üst üste
+   18.00  30.00  MUSIC  kanit_b: e2 4/4 100 BPM G dorian 
+   19.20  32.00  EVENT  pulse
+   20.40  34.00  EVENT  rehook · yeni sayı: 1959
+   20.40  34.00  MUSIC  agac: e2.5 4/4 100 BPM G dorian 
+   20.40  34.00  TRANS  S6 number   series_tree  ← match (0.75b)
+   20.70  34.50  TEXT   “*1959*: BİR / BESTECİ / BUNU BULDU”  [number]
+   21.30  35.50  TAG    @ chalkboard subtle (S6)
+   21.60  36.00  EVENT  pulse
+   22.20  37.00  EVENT  punch
+   23.40  39.00  EVENT  pulse
+   24.00  40.00  MUSIC  shepard: e1.5 4/4 100 BPM G dorian shepard riser→ stop 0.5b
+   24.00  40.00  TRANS  S7 build    shepard_stairs  ← spin (1b)
+   24.30  40.50  TEXT   “SONSUZA DEK / YÜKSELİYOR / GİBİ...”
+   25.20  42.00  EVENT  punch
+   26.40  44.00  EVENT  rehook · Shepard yanılsaması, sözsüz gerilim
+   27.60  46.00  EVENT  pulse
+   28.80  48.00  MUSIC  dusus: e3 4/4 100 BPM G lydian DROP
+   28.80  48.00  TRANS  S8 drop     mandel_zoom  ← flash (0.5b)
+   30.00  50.00  EVENT  punch
+   31.20  52.00  EVENT  rehook · 4 hız / 1 melodi
+   31.20  52.00  TEXT   “4 HIZ / *1* MELODİ”  [number]
+   32.40  54.00  EVENT  punch
+   33.60  56.00  EVENT  reveal · plak + okunur etiket + ses logosu
+   33.60  56.00  MUSIC  cevap: e2.5 4/4 100 BPM G lydian 
+   33.60  56.00  TRANS  S9 reveal   object  ← iris (1b)
+   33.90  56.50  LOGO   sonic logo (long note)
+   33.90  56.50  TAG    @ label:vinyl LEGIBLE (S9)
+   33.90  56.50  TEXT   “CEVAP: / BİR ANLAMDA / *EVET*”
+   34.80  58.00  EVENT  pulse
+   36.00  60.00  EVENT  punch
+   36.30  60.50  TEXT   “SERİ SONSUZ / AMA KULAK / *SONLU*”
+   37.20  62.00  EVENT  pulse
+   38.40  64.00  MUSIC  dongu: e2 4/4 100 BPM G dorian 
+   38.40  64.00  TRANS  S10 loop     fractal_staff  ← portal (1.25b)
+   39.60  66.00  EVENT  punch
+   40.80  68.00  EVENT  pulse
+   42.00  70.00  LOGO   sonic logo (long note)
+   42.00  70.00  LOOP   seam ← dissolve → frame 0
+  visual change every 0.56 s on average · longest static 1.20 s at 40.80 s · longest re-hook gap 5.7 s · 14 hooks/re-hooks
+
+OK

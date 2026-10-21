@@ -1,0 +1,99 @@
+id   role      scene      beats  start    end  in       caption
+S1   hook      future_book   8.0   0.00   4.00  cut      GELECEĞİN / YAZILIYSA / *SEÇEN KİM?*
+S2   rehook    laplace_demon   8.0   4.00   8.00  crash    *1814*: / LAPLACE'IN / ŞEYTANI | GELECEĞİ / GEÇMİŞ GİBİ / GÖRÜR
+S3   step      dominoes     8.0   8.00  12.00  whip     EVREN BİR / SAAT GİBİ / İŞLİYORSA...
+S4   contrast  dominoes     8.0  12.00  16.00  split    1. KAMP: / SEÇİM BİR / *YANILSAMA* | 2. KAMP: / SEÇEN YİNE / *SENSİN*
+S5   step      libet_clock   8.0  16.00  20.00  glitch   BEYNİN / ÖNCE Mİ / KARAR VERİR? | *1983*: EVET? / *2012*: BELKİ / GÜRÜLTÜ
+S6   twist     future_book   7.0  20.00  23.50  iris     AMA KEHANET / SANA / SÖYLENİRSE? | *TERSİNİ* / YAPARSIN!
+S7   build     future_tree   7.0  23.50  27.00  spin     KUANTUM ZARI / KURTARIR MI?
+S8   drop      future_tree  14.0  27.00  34.00  mosaic   SÖYLENEN / KEHANET / *ŞAŞABİLİR* | GİZLİ / KEHANET İSE / *TUTABİLİR*
+S9   reveal    object       8.0  34.00  38.00  tiles    FİLOZOFLARIN / *%59*'U: SEÇİM / YİNE VAR | BİLMEK, / SEÇMEYİ / *SİLMEZ*
+S10  loop      future_book   4.0  38.00  40.00  match    
+total 80.0 beats = 40.00 s
+
+RETENTION MAP · 40.0 s · 4/4→7/8 · 120 BPM · 10 segments
+  s  0         5         10        15        20        25        30        35        40   
+     !·······!···"··|"···!···!···!···!···!··!!·!!··|!···!·▲!··!····!····|@···"··|····↻
+     legend: ! hook/re-hook  | cut/transition  " caption  ▲ drop  ♪ sonic logo  @ legible tag  ↻ loop
+    t(s)   beat  lane   event
+    0.00   0.00  HOOK   S1 hook     future_book
+    0.00   0.00  MUSIC  kehanet: e1.8 4/4 120 BPM E harmonic_minor 
+    0.00   0.00  TEXT   “GELECEĞİN / YAZILIYSA / *SEÇEN KİM?*”  [question]
+    0.75   1.50  EVENT  punch · kitaptaki ok SOLU gösterir
+    1.50   3.00  EVENT  pop · karakter sola adım atar (tam kehanet gibi)
+    2.50   5.00  EVENT  punch · kitabın okuna crash zoom başlar
+    4.00   8.00  EVENT  rehook · yeni karakter: şeytan + 1814
+    4.00   8.00  MUSIC  laplace: e2 4/4 120 BPM E harmonic_minor 
+    4.00   8.00  TRANS  S2 rehook   laplace_demon  ← crash (1b)
+    4.25   8.50  TEXT   “*1814*: / LAPLACE'IN / ŞEYTANI”  [number]
+    5.00  10.00  EVENT  pulse
+    6.00  12.00  EVENT  punch · bilardo topları kesik çizgili geleceklerine tam oturur
+    6.10  12.20  TEXT   “GELECEĞİ / GEÇMİŞ GİBİ / GÖRÜR”
+    7.00  14.00  EVENT  pulse
+    8.00  16.00  MUSIC  saat: e2.2 4/4 120 BPM E harmonic_minor 
+    8.00  16.00  TRANS  S3 step     dominoes  ← whip (0.5b)
+    8.25  16.50  TEXT   “EVREN BİR / SAAT GİBİ / İŞLİYORSA...”
+    8.50  17.00  TAG    @ plate subtle (S3)
+    9.00  18.00  EVENT  punch
+   10.00  20.00  EVENT  rehook · zincir karakterimize doğru geliyor: o da domino mu?
+   11.00  22.00  EVENT  punch · son domino bizim karaktere yaklaşır
+   12.00  24.00  EVENT  rehook · iki kamp, bölünmüş ekran
+   12.00  24.00  MUSIC  kamplar: e2.3 4/4 120 BPM E harmonic_minor 
+   12.00  24.00  TRANS  S4 contrast dominoes  ← split (2b)
+   12.25  24.50  TEXT   “1. KAMP: / SEÇİM BİR / *YANILSAMA*”  [number]
+   13.50  27.00  EVENT  pop · alttaki domino gözünü açar, düşünür
+   14.00  28.00  EVENT  punch
+   14.10  28.20  TEXT   “2. KAMP: / SEÇEN YİNE / *SENSİN*”  [number]
+   15.00  30.00  EVENT  pulse
+   16.00  32.00  EVENT  rehook · yeni soru: beyin önden mi gidiyor
+   16.00  32.00  MUSIC  libet: e1.6 4/4 120 BPM E harmonic_minor 
+   16.00  32.00  TRANS  S5 step     libet_clock  ← glitch (0.5b)
+   16.15  32.30  TEXT   “BEYNİN / ÖNCE Mİ / KARAR VERİR?”  [question]
+   16.50  33.00  TAG    @ terminal subtle (S5)
+   17.50  35.00  EVENT  punch · düğmeye basılır; EEG rampası
+   18.00  36.00  EVENT  rehook · rampa = gürültü denemelerinin ortalaması (Schurger)
+   18.10  36.20  TEXT   “*1983*: EVET? / *2012*: BELKİ / GÜRÜLTÜ”  [question]
+   19.00  38.00  EVENT  pulse
+   20.00  40.00  EVENT  twist · 4/4 → 7/8: saat bir sekizlik kaybeder
+   20.00  40.00  MUSIC  kacis: e2 7/8 120 BPM E harmonic_minor 
+   20.00  40.00  TEXT   “AMA KEHANET / SANA / SÖYLENİRSE?”  [question]
+   20.00  40.00  TRANS  S6 twist    future_book  ← iris (1b)
+   21.50  43.00  EVENT  punch · karakter SAĞA döner, kitaptaki ok çatlar; tahmin edilen nota (Mi) kaçırılır
+   21.50  43.00  TEXT   “*TERSİNİ* / YAPARSIN!”  [claim]
+   22.50  45.00  EVENT  pulse
+   23.50  47.00  MUSIC  zar: e1.6 7/8 120 BPM E harmonic_minor riser→ stop 0.5b
+   23.50  47.00  TRANS  S7 build    future_tree  ← spin (1b)
+   23.65  47.30  TEXT   “KUANTUM ZARI / KURTARIR MI?”  [question]
+   24.50  49.00  EVENT  punch
+   25.50  51.00  EVENT  rehook · sözsüz gerilim, halka daralır
+   26.25  52.50  EVENT  pulse
+   27.00  54.00  EVENT  shake
+   27.00  54.00  MUSIC  dusus: e3 7/8 120 BPM E dorian DROP
+   27.00  54.00  TRANS  S8 drop     future_tree  ← mosaic (0.75b)
+   27.87  55.75  EVENT  pulse
+   28.75  57.50  EVENT  rehook · Scriven: söylenen kehanet
+   28.75  57.50  TEXT   “SÖYLENEN / KEHANET / *ŞAŞABİLİR*”
+   30.50  61.00  EVENT  punch
+   31.25  62.50  EVENT  rehook · MacKay: gizli kehanet
+   31.25  62.50  TEXT   “GİZLİ / KEHANET İSE / *TUTABİLİR*”
+   32.25  64.50  EVENT  punch
+   33.12  66.25  EVENT  pulse
+   34.00  68.00  EVENT  reveal · kitap kapanır: kapakta @hayret.piksel + ses logosu
+   34.00  68.00  MUSIC  cevap: e2.4 4/4 120 BPM E harmonic_minor 
+   34.00  68.00  TRANS  S9 reveal   object  ← tiles (1b)
+   34.25  68.50  TEXT   “FİLOZOFLARIN / *%59*'U: SEÇİM / YİNE VAR”  [number]
+   34.50  69.00  LOGO   sonic logo (long note)
+   34.50  69.00  TAG    @ label:book LEGIBLE (S9)
+   35.00  70.00  EVENT  pulse
+   36.00  72.00  EVENT  punch
+   36.10  72.20  TEXT   “BİLMEK, / SEÇMEYİ / *SİLMEZ*”
+   37.00  74.00  EVENT  pulse
+   38.00  76.00  MUSIC  dongu: e1.8 4/4 120 BPM E harmonic_minor 
+   38.00  76.00  TRANS  S10 loop     future_book  ← match (0.75b)
+   38.50  77.00  EVENT  punch · kitap yeniden açılır
+   39.25  78.50  EVENT  pulse
+   40.00  80.00  LOGO   sonic logo (long note)
+   40.00  80.00  LOOP   seam ← dissolve → frame 0
+  visual change every 0.28 s on average · longest static 1.75 s at 28.75 s · longest re-hook gap 5.8 s · 20 hooks/re-hooks
+
+OK

@@ -1,0 +1,149 @@
+{
+  "version": 2,
+  "preset": "hayret",
+  "pacing": "calm",
+  "meta": {
+    "title": "{{BAŞLIK}}",
+    "description": "{{AÇIKLAMA}}",
+    "hashtags": [
+      "{{#konu}}",
+      "#bilim",
+      "#hayretpiksel"
+    ],
+    "lang": "tr"
+  },
+  "music": {
+    "bpm": 110,
+    "meter": "4/4",
+    "key": "D",
+    "scale": "dorian",
+    "flavour": "2a03",
+    "progression": [
+      "i",
+      "IV",
+      "VII",
+      "i"
+    ],
+    "drums": "auto",
+    "seed": 1,
+    "sections": [
+      {
+        "name": "a",
+        "bars": 5,
+        "energy": 1.5
+      },
+      {
+        "name": "b",
+        "bars": 3,
+        "energy": 2.5,
+        "fill": true
+      },
+      {
+        "name": "c",
+        "bars": 4,
+        "energy": 3,
+        "drop": true
+      },
+      {
+        "name": "d",
+        "bars": 1,
+        "energy": 1.5
+      }
+    ]
+  },
+  "loop": true,
+  "segments": [
+    {
+      "id": "S1",
+      "role": "hook",
+      "scene": "hero",
+      "beats": 8,
+      "events": [
+        {
+          "at": 4,
+          "kind": "punch"
+        }
+      ],
+      "narration": [
+        {
+          "text": "{{kanca: 1 kısa soru/iddia cümlesi, ≤3 satır × ~15 harf, ≤3 s'de okunur — SORU?}}",
+          "at": 0,
+          "place": "top",
+          "size": "head",
+          "reveal": "word",
+          "rate": "8th"
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "role": "rehook",
+      "scene": "lattice",
+      "beats": 12,
+      "transition_in": "slide",
+      "narration": [
+        {
+          "text": "{{anlatım: tam cümle, ≤5 satır × ~24 harf, anahtar kelime *türkuaz* — SAYI}}",
+          "at": 0.5,
+          "place": "auto",
+          "size": "body",
+          "reveal": "type",
+          "rate": "auto"
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "role": "twist",
+      "scene": "network",
+      "beats": 12,
+      "transition_in": "tiles",
+      "narration": [
+        {
+          "text": "{{anlatım: tam cümle, ≤5 satır × ~24 harf, anahtar kelime *türkuaz* — AMA…!}}",
+          "at": 0.5,
+          "place": "auto",
+          "size": "body",
+          "reveal": "type",
+          "rate": "auto"
+        }
+      ]
+    },
+    {
+      "id": "S4",
+      "role": "reveal",
+      "scene": "object",
+      "beats": 16,
+      "transition_in": "iris",
+      "params": {
+        "kind": "jar",
+        "inner": "star",
+        "brand": "auto",
+        "brand_at": 1
+      },
+      "events": [
+        {
+          "at": 4,
+          "kind": "punch"
+        }
+      ],
+      "narration": [
+        {
+          "text": "{{anlatım: tam cümle, ≤5 satır × ~24 harf, anahtar kelime *türkuaz* — CEVAP}}",
+          "at": 1,
+          "place": "auto",
+          "size": "body",
+          "reveal": "type",
+          "rate": "auto"
+        }
+      ]
+    },
+    {
+      "id": "S5",
+      "role": "loop",
+      "scene": "hero",
+      "beats": 4,
+      "transition_in": "dissolve"
+    }
+  ]
+}

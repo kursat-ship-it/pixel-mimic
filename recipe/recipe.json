@@ -1,0 +1,2419 @@
+{
+ "version": "2.0",
+ "recipe_name": "pixel-science-loop / @hayret.piksel",
+ "kind": "schema",
+ "summary": "Every video gets its own music and edit. No fixed template: a spec = brand layer (constant) + music design + free segment list, on one beat clock (tempo map).",
+ "brand_layer_constant": {
+  "palette": "hayret (Çini Gecesi, 17 colours)",
+  "logo_mark": "hayret gözü (15×10)",
+  "tag": "diegetic @hayret.piksel, ≥1 legible, ≤3 total, never in captions/first 2 s",
+  "captions": "narration blocks (5×7 pixel font, mixed case, full Turkish): body 6 / head 9 / title 12 px per dot, ≥5 px floor, UI-safe auto-layout, music-synced reveal + blips; short ALL-CAPS top-box captions optional; turquoise key word, coral 2nd accent",
+  "fps": 30,
+  "layers": "≥3 moving layers per scene",
+  "sonic_logo": "4 notes 5→1→2→3 of the current scale, short-short-short-LONG, long note on the reveal downbeat and the loop seam, in the current lead timbre, re-harmonised",
+  "pacing": "calm by default (shots ~3–5 s, soft shake/flash, slower layers)"
+ },
+ "variable_per_video": [
+  "music (bpm, meter, key, scale/makam, progression, voices, drums, motif, sections, tempo changes, sfx map)",
+  "structure (segments, durations, scenes, layers, props, camera, transitions, captions, events)"
+ ],
+ "libraries": {
+  "scales": {
+   "major": {
+    "semitones": [
+     0,
+     2,
+     4,
+     5,
+     7,
+     9,
+     11
+    ],
+    "cents": null,
+    "character": "bright, resolved"
+   },
+   "minor": {
+    "semitones": [
+     0,
+     2,
+     3,
+     5,
+     7,
+     8,
+     10
+    ],
+    "cents": null,
+    "character": "natural minor, serious"
+   },
+   "dorian": {
+    "semitones": [
+     0,
+     2,
+     3,
+     5,
+     7,
+     9,
+     10
+    ],
+    "cents": null,
+    "character": "minor but hopeful (raised 6th)"
+   },
+   "phrygian": {
+    "semitones": [
+     0,
+     1,
+     3,
+     5,
+     7,
+     8,
+     10
+    ],
+    "cents": null,
+    "character": "dark, tense ♭2"
+   },
+   "lydian": {
+    "semitones": [
+     0,
+     2,
+     4,
+     6,
+     7,
+     9,
+     11
+    ],
+    "cents": null,
+    "character": "floating, wonder (♯4)"
+   },
+   "mixolydian": {
+    "semitones": [
+     0,
+     2,
+     4,
+     5,
+     7,
+     9,
+     10
+    ],
+    "cents": null,
+    "character": "rock/heroic major (♭7)"
+   },
+   "locrian": {
+    "semitones": [
+     0,
+     1,
+     3,
+     5,
+     6,
+     8,
+     10
+    ],
+    "cents": null,
+    "character": "unstable, eerie"
+   },
+   "harmonic_minor": {
+    "semitones": [
+     0,
+     2,
+     3,
+     5,
+     7,
+     8,
+     11
+    ],
+    "cents": null,
+    "character": "dramatic, classical"
+   },
+   "melodic_minor": {
+    "semitones": [
+     0,
+     2,
+     3,
+     5,
+     7,
+     9,
+     11
+    ],
+    "cents": null,
+    "character": "jazzy, ascending minor"
+   },
+   "phrygian_dominant": {
+    "semitones": [
+     0,
+     1,
+     4,
+     5,
+     7,
+     8,
+     10
+    ],
+    "cents": null,
+    "character": "= Hicaz in 12-TET"
+   },
+   "pentatonic_major": {
+    "semitones": [
+     0,
+     2,
+     4,
+     7,
+     9
+    ],
+    "cents": null,
+    "character": "open, playful, can't go wrong"
+   },
+   "pentatonic_minor": {
+    "semitones": [
+     0,
+     3,
+     5,
+     7,
+     10
+    ],
+    "cents": null,
+    "character": "groovy, bluesy"
+   },
+   "blues": {
+    "semitones": [
+     0,
+     3,
+     5,
+     6,
+     7,
+     10
+    ],
+    "cents": null,
+    "character": "blue note ♭5"
+   },
+   "whole_tone": {
+    "semitones": [
+     0,
+     2,
+     4,
+     6,
+     8,
+     10
+    ],
+    "cents": null,
+    "character": "dreamlike, weightless, sci-fi"
+   },
+   "chromatic": {
+    "semitones": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ],
+    "cents": null,
+    "character": "everything"
+   },
+   "hirajoshi": {
+    "semitones": [
+     0,
+     2,
+     3,
+     7,
+     8
+    ],
+    "cents": null,
+    "character": "Japanese pentatonic, mysterious"
+   },
+   "hicaz": {
+    "semitones": [
+     0,
+     1,
+     4,
+     5,
+     7,
+     8,
+     10
+    ],
+    "cents": [
+     0,
+     114,
+     384,
+     498,
+     702,
+     792,
+     996
+    ],
+    "character": "augmented 2nd = 'hayret'"
+   },
+   "ussak": {
+    "semitones": [
+     0,
+     1,
+     3,
+     5,
+     7,
+     8,
+     10
+    ],
+    "cents": [
+     0,
+     150,
+     294,
+     498,
+     702,
+     792,
+     996
+    ],
+    "character": "Uşşak: segah 2nd, warm melancholy"
+   },
+   "kurdi": {
+    "semitones": [
+     0,
+     1,
+     3,
+     5,
+     7,
+     8,
+     10
+    ],
+    "cents": [
+     0,
+     90,
+     294,
+     498,
+     702,
+     792,
+     996
+    ],
+    "character": "Kürdi: plain ♭2, sober"
+   },
+   "nihavend": {
+    "semitones": [
+     0,
+     2,
+     3,
+     5,
+     7,
+     8,
+     11
+    ],
+    "cents": [
+     0,
+     204,
+     294,
+     498,
+     702,
+     792,
+     1088
+    ],
+    "character": "Nihavend: minor with leading tone"
+   },
+   "rast": {
+    "semitones": [
+     0,
+     2,
+     4,
+     5,
+     7,
+     9,
+     11
+    ],
+    "cents": [
+     0,
+     204,
+     355,
+     498,
+     702,
+     906,
+     1059
+    ],
+    "character": "Rast: major with lowered 3rd/7th"
+   },
+   "huzzam": {
+    "semitones": [
+     0,
+     1,
+     3,
+     4,
+     7,
+     8,
+     10
+    ],
+    "cents": [
+     0,
+     150,
+     350,
+     465,
+     760,
+     850,
+     1050
+    ],
+    "character": "Hüzzam: segah tonic + hicaz colour (rough approx.)"
+   },
+   "saba": {
+    "semitones": [
+     0,
+     2,
+     3,
+     4,
+     7,
+     8,
+     10
+    ],
+    "cents": [
+     0,
+     150,
+     294,
+     384,
+     702,
+     792,
+     996
+    ],
+    "character": "Saba: grieving, diminished 4th"
+   }
+  },
+  "drum_patterns": [
+   "aksak_7_8",
+   "aksak_9_8",
+   "boom_bap",
+   "breakbeat",
+   "dnb",
+   "four_on_floor",
+   "half_time",
+   "maqsum",
+   "march",
+   "none",
+   "shuffle",
+   "six_eight",
+   "trap",
+   "waltz",
+   "auto"
+  ],
+  "transitions": {
+   "cut": "hard cut on the beat",
+   "crash": "camera dives into the outgoing scene's bright focus, cut",
+   "dissolve": "radial ordered-dither dissolve",
+   "whip": "whip pan with motion smear (dir)",
+   "slide": "new scene slides over the old (dir)",
+   "push": "new scene pushes the old out (dir)",
+   "mosaic": "pixelate burst up, switch, resolve",
+   "iris": "hayret-eye shaped iris opens on the new scene",
+   "tiles": "Çini wipe: 8-point star tiles flip diagonally",
+   "glitch": "scanline tear + channel split",
+   "match": "match cut on shape: new focus starts where the old one was",
+   "silhouette": "morph through a shared glowing silhouette (shape, size)",
+   "flash": "white-hot flash cut",
+   "spin": "old spins away, new spins in",
+   "split": "split screen (old top / new bottom), then new takes over",
+   "portal": "zoom through the outgoing focus into the new scene",
+   "crt": "CRT power-off to a line/dot, power-on into new"
+  },
+  "music_styles": [
+   "aksak_phrygian",
+   "blues_shuffle",
+   "halftime_minor",
+   "hicaz_maqsum",
+   "lydian_waltz",
+   "nihavend_six_eight",
+   "pentatonic_bounce",
+   "rast_aksak",
+   "reference",
+   "synthwave_major",
+   "trap_harmonic",
+   "whole_tone_space"
+  ],
+  "archetypes": {
+   "scale_journey": "The reference (Bit Wonder) structure: one protagonist, macro→micro steps, build, hit, big number, metaphor reveal.",
+   "countdown_top_n": "Top-N countdown (5→1). Each item = 2 bars with a different transition; riser + stop before #1; #1 is the payoff.",
+   "before_after_reveal": "Before/after: minor, half-time 'before' → split screen → key change to major + drop on the 'after'.",
+   "process_timeline": "Process / how-it-works: numbered stages chained by match cuts and pushes over an aksak 7/8 groove.",
+   "myth_vs_fact": "Myth vs fact: state the myth (glitchy, unstable), CRT power-off, stop, then the fact lands on a drop.",
+   "cosmic_zoom_out": "Zoom out to cosmic scale: each portal jumps a power of ten; music accelerates (bpm ramp) and opens into lydian.",
+   "impossible_number": "Build-up to an impossible number: numbers escalate every 4–6 s, accelerando + risers, the number lands on the drop.",
+   "story_vignette": "Micro story: a character (hero/image), a problem, a surprising turn, the science answer, a warm payoff."
+  },
+  "scenes": [
+   "chain",
+   "hero",
+   "image",
+   "junction",
+   "lattice",
+   "network",
+   "object",
+   "pod",
+   "silhouette",
+   "streaks",
+   "void"
+  ],
+  "props": [
+   "billboard",
+   "chalkboard",
+   "neon_sign",
+   "patch",
+   "plate",
+   "ship",
+   "stamp",
+   "terminal"
+  ],
+  "layers": [
+   "bokeh",
+   "debris",
+   "dust",
+   "grid",
+   "horizon",
+   "nebula",
+   "rays",
+   "skyline",
+   "stars",
+   "tiles"
+  ],
+  "scenes_added_fraktal": {
+   "fractal_staff": "scrolling pixel staff playing an integer series; modes play|nest|every4 (zoom into a note → same staff; every 4th note burns and falls to a bass staff); converge_to_frame0 for loops",
+   "koch": "Koch snowflake growing one level per beat with echo outlines, inner counter flake, note sparks",
+   "noise_scope": "oscilloscope with white / 1/f (Voss–McCartney) / brown traces",
+   "series_tree": "binary tree a(2n)=−a(n), a(2n+1)=a(n)+1 growing a level per beat; sounding note's ancestor path lit",
+   "shepard_stairs": "endless spiral staircase of piano keys (one octave per turn), Gaussian brightness over height",
+   "mandel_zoom": "numpy Mandelbrot deep zoom with beat-stepped colour bands and note emitters",
+   "object kind vinyl": "record with a note spiral synced to the needle and a legible cream label (handle) — legible tag object"
+  },
+  "scenes_added_story": {
+   "future_book": "hooded hero (sprites.HERO) at a forked road with a hovering BOOK OF THE FUTURE (3-frame page flips, big arrow page), sky clock with 2-beat pendulum, prophecy piano-roll of a series in the lower third (ghost future notes, whisper halo one 8th early); modes read | avoid (turn_at, ink crack, ✗ on predicted notes the actual_series skips) | open (cover opens, converges to frame 0)",
+   "laplace_demon": "many-eyed demon (9 tracking eyes) over a deterministic billiard table (pre-rolled sim, dotted future paths revealed per beat, collision ticks on the 16th grid) + abacus",
+   "dominoes": "domino run on a Bézier S-curve before a grandfather clock (glyph numerals, 2-beat pendulum, plate slot on the case); one falls per fall_every (4-frame fall + tick), preroll_down already down; split: top endless mechanical conveyor vs bottom 'thinker' domino that opens its eyes, looks around and hops onto a türkuaz side branch",
+   "libet_clock": "Libet clock (60 ticks, coral spot per period_s with tail, W marker), EEG strip scrolling then time-locked to a button press (hero's sleeve + finger), readiness ramp from a Schurger 2012 leaky stochastic accumulator; at noise_at the ramp splits into noise_trials single trials whose average is the ramp",
+   "future_tree": "dice: real 3-D pixel dice (6-frame quarter-turn tumble per roll_every), sprouting paths, contracting coral countdown ring, frozen last beat; burst: seeded binary futures tree (depth, grow_every, pre_gens; un-grown futures as dotted ghosts), zoom-constant 2–3 px paths, blinking lamps, ghost hero walkers, chosen root→leaf path burns türkuaz",
+   "object kind book": "hardcover on a desk with candle (3-frame flame, dust motes) and inkwell; open at frame 0 (arrow page), closes at close_at with a thud; cover = eye emblem + 2-dot snapped title + 2-line handle on a matte ink plate (legible tag object); cover aspect matches future_book's small cover for match cuts",
+   "sprites": "sprites.py: multi-colour char-map sprites; the mascot HERO (16×22: front blink look_l look_r read wow walk1-3 turn), draw_sprite(scale, flip, tint, alpha, squash), hero_frame(state, lb)"
+  }
+ },
+ "quality_rules": {
+  "hook_caption_s": [
+   0,
+   1.5
+  ],
+  "curiosity_gap_by_s": 3,
+  "visual_change_every_s": {
+   "calm": [
+    1.0,
+    3.5
+   ],
+   "punchy": [
+    1.5,
+    2.5
+   ],
+   "note": "narration reveal counts as change (1 per s of reveal)"
+  },
+  "max_static_s": {
+   "calm": 4.5,
+   "punchy": 3
+  },
+  "max_held_breath_s": 1.5,
+  "rehook_every_s": [
+   5,
+   8
+  ],
+  "twist_at": [
+   0.3,
+   0.8
+  ],
+  "payoff_after": 0.45,
+  "duration_s": {
+   "hard": [
+    15,
+    90
+   ],
+   "sweet_spot": [
+    20,
+    45
+   ]
+  },
+  "cuts": "on ½-beat grid",
+  "loop": "seamless (loop_transition into frame 0, audio tail wrapped)",
+  "hook_text_fully_revealed_by_s": 3,
+  "shot_length_s": {
+   "calm": [
+    3,
+    5
+   ],
+   "warn_below_avg": 2.5
+  },
+  "fast_transitions_per_10s": {
+   "calm": 1,
+   "kinds": [
+    "crash",
+    "whip",
+    "spin",
+    "glitch",
+    "flash",
+    "mosaic",
+    "portal",
+    "split"
+   ]
+  },
+  "camera_calm_max": {
+   "zoom_ln_per_s": 0.35,
+   "pan_px_per_s": 30,
+   "rot_deg_per_s": 6,
+   "orbit_deg": 4,
+   "exempt": "hook"
+  },
+  "text_readability": {
+   "min_dot_px": 5,
+   "sizes_px_per_dot": {
+    "body": 6,
+    "head": 9,
+    "title": 12
+   },
+   "max_lines": {
+    "body": 5,
+    "head": 3,
+    "title": 3
+   },
+   "reading_time_s": "0.6 + 0.35 × words after full reveal",
+   "safe_zones": {
+    "bottom": 0.18,
+    "right": 0.125,
+    "left": 0.05,
+    "top": 0.05
+   },
+   "subject_cover_max": 0.3,
+   "legibility_basis": "cap height ≥ 22 arcmin on a 5.4\" phone (124 mm tall) at 35 cm (ISO 9241-303); recognition 100 % after 720p+blur+JPEG-40 from 3 px/dot"
+  }
+ },
+ "spec_schema": {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "bitloop topic spec v2",
+  "type": "object",
+  "required": [
+   "segments"
+  ],
+  "properties": {
+   "version": {
+    "const": 2
+   },
+   "preset": {
+    "enum": [
+     "hayret",
+     "reference"
+    ],
+    "default": "hayret"
+   },
+   "meta": {
+    "type": "object",
+    "properties": {
+     "title": {
+      "type": "string",
+      "maxLength": 70
+     },
+     "description": {
+      "type": "string"
+     },
+     "hashtags": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 6
+     },
+     "lang": {
+      "default": "tr"
+     }
+    }
+   },
+   "format": {
+    "type": "object",
+    "properties": {
+     "width": {
+      "default": 1080
+     },
+     "height": {
+      "default": 1920
+     },
+     "fps": {
+      "default": 30
+     },
+     "grid": {
+      "default": 6
+     }
+    }
+   },
+   "palette": {
+    "default": "hayret"
+   },
+   "music": {
+    "type": "object",
+    "properties": {
+     "style": {
+      "enum": [
+       "aksak_phrygian",
+       "blues_shuffle",
+       "halftime_minor",
+       "hicaz_maqsum",
+       "lydian_waltz",
+       "nihavend_six_eight",
+       "pentatonic_bounce",
+       "rast_aksak",
+       "reference",
+       "synthwave_major",
+       "trap_harmonic",
+       "whole_tone_space"
+      ],
+      "description": "optional starting point; every key overrides it"
+     },
+     "bpm": {
+      "type": "number",
+      "minimum": 60,
+      "maximum": 180
+     },
+     "meter": {
+      "type": "string"
+     },
+     "grouping": {
+      "type": "array"
+     },
+     "key": {
+      "type": "string"
+     },
+     "scale": {
+      "enum": [
+       "blues",
+       "chromatic",
+       "dorian",
+       "harmonic_minor",
+       "hicaz",
+       "hirajoshi",
+       "huzzam",
+       "kurdi",
+       "locrian",
+       "lydian",
+       "major",
+       "melodic_minor",
+       "minor",
+       "mixolydian",
+       "nihavend",
+       "pentatonic_major",
+       "pentatonic_minor",
+       "phrygian",
+       "phrygian_dominant",
+       "rast",
+       "saba",
+       "ussak",
+       "whole_tone"
+      ]
+     },
+     "tuning": {
+      "enum": [
+       "12tet",
+       "approx"
+      ]
+     },
+     "flavour": {
+      "enum": [
+       "2a03",
+       "gameboy",
+       "sid",
+       "fm"
+      ]
+     },
+     "progression": {
+      "type": "array",
+      "description": "roman (diatonic: I ii V; forced: bVI V7 viio) | chord names (Em C#m7 Fmaj7) | note lists"
+     },
+     "chord_bars": {
+      "type": "number"
+     },
+     "swing": {
+      "type": "number"
+     },
+     "seed": {
+      "type": "integer"
+     },
+     "voices": {
+      "type": "object",
+      "additionalProperties": {
+       "type": "object",
+       "properties": {
+        "role": {
+         "enum": [
+          "lead",
+          "counter",
+          "arp",
+          "bass",
+          "pad"
+         ]
+        },
+        "type": {
+         "enum": [
+          "pulse",
+          "triangle",
+          "saw",
+          "wave",
+          "fm",
+          "noise"
+         ]
+        },
+        "duty": {
+         "type": "number"
+        },
+        "pwm": {
+         "type": "number"
+        },
+        "pwm_rate": {
+         "type": "number"
+        },
+        "sweep": {
+         "type": "number"
+        },
+        "sweep_time": {
+         "type": "number"
+        },
+        "vibrato": {
+         "type": "number",
+         "description": "semitones"
+        },
+        "vib_rate": {
+         "type": "number"
+        },
+        "vib_delay": {
+         "type": "number"
+        },
+        "arp": {
+         "type": "array",
+         "description": "chip arpeggio intervals, e.g. [0,4,7]"
+        },
+        "arp_rate": {
+         "type": "number"
+        },
+        "glide": {
+         "type": "number"
+        },
+        "octave": {
+         "type": "integer"
+        },
+        "vol": {
+         "type": "number"
+        },
+        "pan": {
+         "type": "number"
+        },
+        "echo": {
+         "type": "number",
+         "description": "beats"
+        },
+        "env": {
+         "type": "object",
+         "properties": {
+          "a": {
+           "type": "number"
+          },
+          "d": {
+           "type": "number"
+          },
+          "s": {
+           "type": "number"
+          },
+          "r": {
+           "type": "number"
+          }
+         }
+        },
+        "pattern": {
+         "description": "arp: up down updown broken alberti pedal groups oompah · bass: chip root8 octave walk pump groups waltz sustain | [semitones|null]"
+        },
+        "rate": {
+         "type": "number",
+         "description": "notes per beat (4 = 16ths, 3 = triplets, 2 = 8ths)"
+        },
+        "min_energy": {
+         "type": "number"
+        },
+        "table": {
+         "description": "wave: bass organ pluck soft | 32×4-bit list"
+        },
+        "ratio": {
+         "type": "number"
+        },
+        "index": {
+         "type": "number"
+        },
+        "idecay": {
+         "type": "number"
+        },
+        "filter": {
+         "description": "sweep | pluck | soft | Hz"
+        },
+        "detune": {
+         "type": "number"
+        },
+        "series": {
+         "description": "integer-sequence melody on the global beat grid: index = floor(beat*rate/div) → scale degree sign*a(i)+offset in the section scale (diatonic, follows key/scale changes). Slower voices of the same series land on every 2nd/4th… note of faster ones (self-similarity). Custom finite melodies: music.series_defs {name: {values:[ints], period:N}} (shared by music and visuals); lookahead k = the voice plays k notes in the future (slot n → value n+k).",
+         "oneOf": [
+          {
+           "type": "string",
+           "description": "norgard or a name from music.series_defs"
+          },
+          {
+           "type": "object",
+           "properties": {
+            "name": {
+             "type": "string",
+             "description": "norgard or a series_defs name"
+            },
+            "rate": {
+             "type": "number",
+             "exclusiveMinimum": 0,
+             "maximum": 8,
+             "description": "notes per beat (4 = 16ths)"
+            },
+            "div": {
+             "type": "number",
+             "description": "speed divisor: rate/div"
+            },
+            "sign": {
+             "enum": [
+              1,
+              -1
+             ]
+            },
+            "invert": {
+             "type": "boolean"
+            },
+            "offset": {
+             "type": "integer"
+            },
+            "gate": {
+             "type": "number"
+            },
+            "phase": {
+             "enum": [
+              "global",
+              "section"
+             ]
+            },
+            "logo_duck": {
+             "type": "number",
+             "minimum": 0,
+             "maximum": 1
+            },
+            "lookahead": {
+             "type": "integer",
+             "minimum": 0,
+             "maximum": 64,
+             "description": "slot n plays value n+k (a voice that is k notes ahead, e.g. a whisper)"
+            }
+           }
+          }
+         ]
+        }
+       }
+      }
+     },
+     "drums": {
+      "description": "none|four_on_floor|breakbeat|trap|half_time|boom_bap|maqsum|aksak_9_8|aksak_7_8|waltz|six_eight|shuffle|march|dnb|auto|{K,S,C,H,O,D,T,M,R,Z: step string X x o r .}"
+     },
+     "motif": {
+      "type": "object",
+      "description": "{notes:[degrees|null], rhythm:[beats]} or {contour: arch rise fall wave valley zigzag question flat, range, density, seed, cadence}"
+     },
+     "sections": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "name": {
+         "type": "string"
+        },
+        "bars": {
+         "type": "number"
+        },
+        "beats": {
+         "type": "number"
+        },
+        "energy": {
+         "type": "number",
+         "minimum": 0,
+         "maximum": 3,
+         "description": "0 silent … 3 everything"
+        },
+        "bpm": {
+         "type": "number"
+        },
+        "bpm_to": {
+         "type": "number",
+         "description": "linear tempo ramp to this BPM by the section end (accel/ritardando)"
+        },
+        "meter": {
+         "type": "string",
+         "examples": [
+          "4/4",
+          "3/4",
+          "6/8",
+          "7/8",
+          "9/8",
+          "5/8"
+         ]
+        },
+        "grouping": {
+         "type": "array",
+         "items": {
+          "type": "integer"
+         },
+         "description": "aksak groups, e.g. [2,2,3]"
+        },
+        "key": {
+         "type": "string"
+        },
+        "scale": {
+         "enum": [
+          "blues",
+          "chromatic",
+          "dorian",
+          "harmonic_minor",
+          "hicaz",
+          "hirajoshi",
+          "huzzam",
+          "kurdi",
+          "locrian",
+          "lydian",
+          "major",
+          "melodic_minor",
+          "minor",
+          "mixolydian",
+          "nihavend",
+          "pentatonic_major",
+          "pentatonic_minor",
+          "phrygian",
+          "phrygian_dominant",
+          "rast",
+          "saba",
+          "ussak",
+          "whole_tone"
+         ]
+        },
+        "tuning": {
+         "enum": [
+          "12tet",
+          "approx"
+         ]
+        },
+        "transpose": {
+         "type": "integer"
+        },
+        "progression": {
+         "type": "array"
+        },
+        "chord_bars": {
+         "type": "number"
+        },
+        "voices": {
+         "type": "array",
+         "items": {
+          "type": "string"
+         }
+        },
+        "voices_in": {
+         "type": "array"
+        },
+        "voices_out": {
+         "type": "array"
+        },
+        "drums": {
+         "description": "pattern name | 'auto' | 'none' | {inst: step-string}"
+        },
+        "fill": {
+         "type": "boolean"
+        },
+        "riser": {
+         "type": "boolean",
+         "description": "riser into the next section; drums drop out"
+        },
+        "stop": {
+         "type": "number",
+         "description": "beats of silence at the end (held breath ≤ 1.5 s)"
+        },
+        "drop": {
+         "type": "boolean",
+         "description": "hit + crash + shake/flash on the first beat"
+        },
+        "swing": {
+         "type": "number"
+        },
+        "riser_kind": {
+         "enum": [
+          "noise",
+          "shepard"
+         ],
+         "description": "noise = classic sweep; shepard = Shepard–Risset endless rising chip tone (needs riser:true)"
+        },
+        "shepard_hops": {
+         "type": "number",
+         "description": "hop blips per beat in a shepard riser (default 2)"
+        },
+        "gain": {
+         "type": "object",
+         "additionalProperties": {
+          "type": "number",
+          "minimum": 0
+         },
+         "description": "per-section voice trim {voice: k}"
+        }
+       }
+      },
+      "description": "omit → one section per segment, behaviour from roles (build=riser, hit/drop=drop, hold=stop)"
+     },
+     "logo": {
+      "description": "true | {at: ['reveal','loop'] | beats} — the 4-note sonic logo, transposed into the section's key/scale/timbre"
+     },
+     "sfx": {
+      "description": "true | false | {event_kind: replacement_kind | null}"
+     },
+     "breath": {
+      "type": "number",
+      "default": 0.5
+     },
+     "lufs": {
+      "default": -14
+     },
+     "source": {
+      "enum": [
+       "synth",
+       "file"
+      ]
+     },
+     "file": {
+      "type": "string"
+     },
+     "offset": {
+      "type": "number"
+     },
+     "series_defs": {
+      "type": "object",
+      "description": "named finite integer melodies usable as series (music voices AND scenes, e.g. future_book roll_series)",
+      "additionalProperties": {
+       "oneOf": [
+        {
+         "type": "array",
+         "items": {
+          "type": "integer"
+         }
+        },
+        {
+         "type": "object",
+         "properties": {
+          "values": {
+           "type": "array",
+           "items": {
+            "type": "integer"
+           }
+          },
+          "period": {
+           "type": "integer",
+           "minimum": 1
+          }
+         },
+         "required": [
+          "values"
+         ]
+        }
+       ]
+      }
+     }
+    }
+   },
+   "brand": {
+    "type": "object",
+    "properties": {
+     "handle": {
+      "default": "@hayret.piksel"
+     },
+     "auto": {
+      "default": true
+     }
+    }
+   },
+   "fx": {
+    "type": "object",
+    "properties": {
+     "shake": {
+      "type": "number",
+      "description": "hit shake (calm 1.0, punchy 2.5)"
+     },
+     "flash": {
+      "type": "number",
+      "description": "hit flash (calm .22, punchy .55)"
+     },
+     "shimmer": {
+      "default": 0.05
+     },
+     "layer_speed": {
+      "type": "number",
+      "description": "background/particle layer clock multiplier (calm .6)"
+     }
+    }
+   },
+   "loop": {
+    "type": "boolean",
+    "default": true
+   },
+   "loop_beats": {
+    "default": 2
+   },
+   "loop_transition": {
+    "description": "transition into frame 0 (end-aligned)"
+   },
+   "segments": {
+    "type": "array",
+    "minItems": 1,
+    "items": {
+     "type": "object",
+     "required": [
+      "scene"
+     ],
+     "properties": {
+      "id": {
+       "type": "string"
+      },
+      "role": {
+       "enum": [
+        "hook",
+        "promise",
+        "step",
+        "build",
+        "hold",
+        "drop",
+        "hit",
+        "rehook",
+        "number",
+        "twist",
+        "reveal",
+        "payoff",
+        "metaphor",
+        "system",
+        "contrast",
+        "loop",
+        "free"
+       ]
+      },
+      "beats": {
+       "type": "number"
+      },
+      "bars": {
+       "type": "number"
+      },
+      "scene": {
+       "enum": [
+        "chain",
+        "dominoes",
+        "fractal_staff",
+        "future_book",
+        "future_tree",
+        "hero",
+        "image",
+        "junction",
+        "koch",
+        "laplace_demon",
+        "lattice",
+        "libet_clock",
+        "mandel_zoom",
+        "network",
+        "noise_scope",
+        "object",
+        "pod",
+        "series_tree",
+        "shepard_stairs",
+        "silhouette",
+        "streaks",
+        "void"
+       ]
+      },
+      "params": {
+       "type": "object"
+      },
+      "layers": {
+       "type": "object",
+       "properties": {
+        "back": {
+         "type": "array",
+         "items": {
+          "oneOf": [
+           {
+            "enum": [
+             "bokeh",
+             "debris",
+             "dust",
+             "grid",
+             "horizon",
+             "nebula",
+             "rays",
+             "skyline",
+             "stars",
+             "tiles"
+            ]
+           },
+           {
+            "type": "object",
+            "required": [
+             "kind"
+            ],
+            "properties": {
+             "kind": {
+              "enum": [
+               "bokeh",
+               "debris",
+               "dust",
+               "grid",
+               "horizon",
+               "nebula",
+               "rays",
+               "skyline",
+               "stars",
+               "tiles"
+              ]
+             },
+             "ramps": {
+              "type": "array"
+             },
+             "weights": {
+              "type": "array"
+             },
+             "n": {
+              "type": "integer"
+             }
+            },
+            "description": "layer with kwargs (e.g. nebula/bokeh ramps)"
+           }
+          ]
+         }
+        },
+        "front": {
+         "type": "array",
+         "items": {
+          "oneOf": [
+           {
+            "enum": [
+             "bokeh",
+             "debris",
+             "dust",
+             "grid",
+             "horizon",
+             "nebula",
+             "rays",
+             "skyline",
+             "stars",
+             "tiles"
+            ]
+           },
+           {
+            "type": "object",
+            "required": [
+             "kind"
+            ],
+            "properties": {
+             "kind": {
+              "enum": [
+               "bokeh",
+               "debris",
+               "dust",
+               "grid",
+               "horizon",
+               "nebula",
+               "rays",
+               "skyline",
+               "stars",
+               "tiles"
+              ]
+             },
+             "ramps": {
+              "type": "array"
+             },
+             "weights": {
+              "type": "array"
+             },
+             "n": {
+              "type": "integer"
+             }
+            },
+            "description": "layer with kwargs (e.g. nebula/bokeh ramps)"
+           }
+          ]
+         }
+        }
+       }
+      },
+      "props": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "properties": {
+         "kind": {
+          "enum": [
+           "billboard",
+           "chalkboard",
+           "neon_sign",
+           "patch",
+           "plate",
+           "ship",
+           "stamp",
+           "terminal"
+          ]
+         },
+         "x": {
+          "type": "number"
+         },
+         "y": {
+          "type": "number"
+         },
+         "s": {
+          "type": "number"
+         },
+         "layer": {
+          "enum": [
+           "back",
+           "mid",
+           "front"
+          ]
+         },
+         "par": {
+          "type": "number"
+         },
+         "from": {
+          "type": "number"
+         },
+         "to": {
+          "type": "number"
+         },
+         "legible": {
+          "type": "boolean"
+         }
+        }
+       }
+      },
+      "camera": {
+       "type": "object",
+       "properties": {
+        "zoom": {
+         "type": "array"
+        },
+        "pan": {
+         "type": "array"
+        },
+        "rot": {
+         "type": "array"
+        },
+        "orbit": {
+         "type": "number"
+        },
+        "ease": {
+         "type": "string"
+        },
+        "follow": {},
+        "crash_zoom": {
+         "type": "number"
+        }
+       }
+      },
+      "transition_in": {
+       "description": "name or {type, beats, align, dir, shape, size, sfx}",
+       "enum": [
+        "crash",
+        "crt",
+        "cut",
+        "dissolve",
+        "flash",
+        "glitch",
+        "iris",
+        "match",
+        "mosaic",
+        "portal",
+        "push",
+        "silhouette",
+        "slide",
+        "spin",
+        "split",
+        "tiles",
+        "whip"
+       ]
+      },
+      "energy": {
+       "type": "number"
+      },
+      "caption": {
+       "type": "object",
+       "properties": {
+        "text": {
+         "type": "string"
+        },
+        "at": {
+         "type": "array"
+        },
+        "hi": {
+         "type": "array"
+        }
+       },
+       "description": "short ALL-CAPS top-box caption (≤3 lines; never below 5 px/dot). Prefer narration for sentences."
+      },
+      "captions": {
+       "type": "array"
+      },
+      "events": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "properties": {
+         "at": {
+          "type": "number"
+         },
+         "kind": {
+          "enum": [
+           "punch",
+           "shake",
+           "flash",
+           "pulse",
+           "pop",
+           "rehook",
+           "twist",
+           "reveal",
+           "mark"
+          ]
+         },
+         "sfx": {
+          "type": [
+           "string",
+           "null"
+          ]
+         },
+         "label": {
+          "type": "string"
+         },
+         "amount": {
+          "type": "number"
+         }
+        }
+       }
+      },
+      "rehook": {
+       "type": "boolean"
+      },
+      "seed": {
+       "type": "integer"
+      },
+      "layer_sync": {
+       "enum": [
+        "first",
+        "loop"
+       ],
+       "description": "loop segment: reuse the first segment's layer stack on the film-loop clock (t−T) so the last frame equals frame 0"
+      },
+      "narration": {
+       "type": "array",
+       "items": {
+        "oneOf": [
+         {
+          "type": "string"
+         },
+         {
+          "type": "object",
+          "required": [
+           "text"
+          ],
+          "properties": {
+           "text": {
+            "type": "string",
+            "description": "full sentence(s); *türkuaz* _mercan_ highlights; \\n forced break. Turkish wrap + syllable hyphenation automatic"
+           },
+           "at": {
+            "description": "start beat (segment-relative) or [start, until]",
+            "oneOf": [
+             {
+              "type": "number"
+             },
+             {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2
+             }
+            ]
+           },
+           "until": {
+            "description": "end beat (segment-relative) | 'segment' | omitted = auto (reveal + reading time + hold, clamped to the segment)"
+           },
+           "place": {
+            "enum": [
+             "auto",
+             "top",
+             "dialog",
+             "panel",
+             "title",
+             "mid",
+             "callout",
+             "world"
+            ],
+            "default": "auto"
+           },
+           "size": {
+            "description": "body 6 px/dot (≈24 chars, ≤5 lines) | head 9 (≈15, ≤3) | title 12 | int ≥ 5 (measured legible minimum)",
+            "oneOf": [
+             {
+              "enum": [
+               "body",
+               "head",
+               "title"
+              ]
+             },
+             {
+              "type": "integer",
+              "minimum": 5
+             }
+            ]
+           },
+           "reveal": {
+            "enum": [
+             "type",
+             "word",
+             "line",
+             "fade",
+             "none"
+            ],
+            "default": "type"
+           },
+           "rate": {
+            "description": "auto | 32nd 16th 8th triplet beat half | beats per step",
+            "default": "auto"
+           },
+           "pauses": {
+            "type": "boolean",
+            "default": true,
+            "description": "+1 step after , ; :  +2 after . ! ?"
+           },
+           "blip": {
+            "description": "soft chiptune blip on reveal steps (SFX kinds blip / blip_hi, ≈−28 dB in the mix)",
+            "oneOf": [
+             {
+              "type": "boolean"
+             },
+             {
+              "type": "object",
+              "properties": {
+               "every": {
+                "type": "integer"
+               },
+               "vol": {
+                "type": "number"
+               }
+              }
+             }
+            ],
+            "default": true
+           },
+           "cursor": {
+            "type": "boolean",
+            "description": "default on for reveal=type (blinks on 8ths once complete)"
+           },
+           "hold": {
+            "type": "number",
+            "default": 0,
+            "description": "extra seconds after the reading time (auto until)"
+           },
+           "exit": {
+            "enum": [
+             "dither",
+             "wipe",
+             "cut"
+            ],
+            "default": "dither"
+           },
+           "exit_beats": {
+            "type": "number",
+            "default": 0.5
+           },
+           "enter_beats": {
+            "type": "number",
+            "default": 0.25
+           },
+           "case": {
+            "enum": [
+             "as_is",
+             "upper"
+            ],
+            "default": "as_is"
+           },
+           "align": {
+            "enum": [
+             "left",
+             "center"
+            ]
+           },
+           "width": {
+            "type": "integer",
+            "description": "max chars per line"
+           },
+           "speaker": {
+            "type": "string",
+            "description": "dialog name tab"
+           },
+           "target": {
+            "description": "callout pointer: [x, y] scene coords or 'focus'"
+           },
+           "side": {
+            "enum": [
+             "right",
+             "left",
+             "above",
+             "below"
+            ]
+           },
+           "surface": {
+            "type": "object",
+            "description": "world text: {x, y, w (scene units), dot (scene units per font dot, default 1), rot, fill, ink: dark, outline}"
+           },
+           "xy": {
+            "type": "array",
+            "description": "explicit block centre [fx, fy] as screen fractions"
+           }
+          }
+         }
+        ]
+       },
+       "description": "narrator text blocks (recipe §12.6) — the main text system; caption stays for short ALL-CAPS lines"
+      },
+      "subject": {
+       "description": "box auto-layout avoids: [x0,y0,x1,y1] scene coords | radius around the scene focus | 'none' (default focus ± 40)"
+      }
+     }
+    }
+   },
+   "pacing": {
+    "description": "how hard the edit hits (recipe §12.7). calm = default since Oct 2026; punchy = the first two reels",
+    "oneOf": [
+     {
+      "enum": [
+       "calm",
+       "punchy"
+      ],
+      "default": "calm"
+     },
+     {
+      "type": "object",
+      "properties": {
+       "preset": {
+        "enum": [
+         "calm",
+         "punchy"
+        ]
+       },
+       "layer_speed": {
+        "type": "number"
+       },
+       "transition_scale": {
+        "type": "number"
+       },
+       "crash_zoom": {
+        "type": "number"
+       },
+       "punch": {
+        "type": "number"
+       },
+       "static_max": {
+        "type": "number"
+       }
+      }
+     }
+    ]
+   },
+   "narration_defaults": {
+    "type": "object",
+    "description": "defaults merged into every narration block (e.g. {\"blip\": false, \"place\": \"dialog\"})"
+   },
+   "readability": {
+    "type": "object",
+    "properties": {
+     "per_word": {
+      "type": "number",
+      "default": 0.35
+     },
+     "base": {
+      "type": "number",
+      "default": 0.6
+     }
+    },
+    "description": "reading-time rule: a block must stay readable ≥ base + per_word·words seconds after it is fully revealed"
+   }
+  }
+ },
+ "example_specs": {
+  "reference_breakdown": "../bitloop/bitloop/templates/reference_scale_journey.json",
+  "blank": "../bitloop/bitloop/templates/blank.json",
+  "archetypes": "python -m bitloop init <dir> --archetype <name>"
+ },
+ "reference_example": {
+  "reference": {
+   "url": "https://youtube.com/shorts/LXcZhstWlXM",
+   "title": "One Neuron of 86 Billion 🎧",
+   "channel": "Bit Wonder (@bitwonder)",
+   "duration_s": 48.0,
+   "size": [
+    1080,
+    1920
+   ],
+   "fps": 60,
+   "bpm": 117.45,
+   "first_beat_s": 1.533,
+   "hard_cuts_s": [
+    3.52,
+    16.0,
+    24.0
+   ],
+   "visual_beats": 10,
+   "mean_beat_len_s": 4.8,
+   "speech": false
+  },
+  "title": "{{title}}",
+  "logline": "Follow one {{protagonist}} through {{topic}} until it becomes one of {{N}} — and all of it fits in a {{metaphor_object}}.",
+  "style": "pixel-science-loop",
+  "engine": "pixel-art",
+  "route_fallback": {
+   "style": "pixel-story",
+   "engine": "pixel-art"
+  },
+  "format": {
+   "width": 1080,
+   "height": 1920,
+   "fps": 60,
+   "sprite_fps": 12,
+   "duration_s": 48,
+   "art_grid": {
+    "w": 180,
+    "h": 320,
+    "scale": 6,
+    "engine_alt": {
+     "w": 270,
+     "h": 480,
+     "scale": 4
+    }
+   }
+  },
+  "music": {
+   "source": "user | library",
+   "file": "{{music_file}}",
+   "bpm": 117.45,
+   "offset": 0,
+   "license": "{{license}}",
+   "note": "music-only, no VO; steady electronic/lo-fi pulse; rescale beats if BPM differs",
+   "character": "bass-heavy, ~4 onsets/s, flat loudness ≈ -13 dB"
+  },
+  "look": {
+   "medium": "pixel art, pseudo-3D shaded round forms, Bayer dither, dithered bloom, dust motes",
+   "palette": [
+    "#11071A",
+    "#221031",
+    "#663B9F",
+    "#6E3FAC",
+    "#B087DC",
+    "#F4ECEB",
+    "#E5AF4D",
+    "#F8D070",
+    "#AB603A"
+   ],
+   "accent_rule": "amber only for energy/signal and the key number; amber area grows across the film",
+   "typography": {
+    "font": "bitloop built-in 5x7 pixel font (full-height Turkish capitals); 12 px/dot, 120 px pitch",
+    "stroke_px": 12,
+    "cap_px": 80,
+    "line_px": 120,
+    "box": {
+     "color": "#05000C",
+     "top_px": 186,
+     "align": "center",
+     "pad_px": 24
+    },
+    "text_color": "#F0E8F0",
+    "number_color": "#F8D070",
+    "max_lines": 3,
+    "max_chars_per_line": 12,
+    "max_words": 6,
+    "in_out": "6-frame dithered fade"
+   },
+   "texture": "dust motes + vignette",
+   "color_arc": "violet dark with amber dot → amber flood → network sparks → whole object glows gold → back to dot"
+  },
+  "borrowed_from_reference": [
+   "one tiny protagonist followed across scales",
+   "5 causal steps, one per 8 beats, 2–4-word caption",
+   "only 3 hard cuts, all on beats; rest continuous push/pull morphs",
+   "crash-zoom-through into a bright point",
+   "wordless build + held breath + downbeat hit + scale burst",
+   "big number in amber",
+   "everyday metaphor object with brand etched in-world",
+   "seamless loop: last frame = first frame",
+   "every spark on a note"
+  ],
+  "slots": {
+   "topic": "",
+   "protagonist": "",
+   "hook_line": "",
+   "step1": "",
+   "step1_visual": "",
+   "step2": "",
+   "step2_visual": "",
+   "step3": "",
+   "step3_visual": "",
+   "step4": "",
+   "step4_visual": "",
+   "step5": "",
+   "step5_visual": "",
+   "system_view": "",
+   "system_silhouette": "",
+   "N": "",
+   "big_number_line": "",
+   "metaphor_object": "",
+   "metaphor_line": "",
+   "brand_handle": "",
+   "title": "",
+   "description": "",
+   "music_file": "",
+   "license": "",
+   "action": "per-shot action, written at plan time"
+  },
+  "slot_rules": {
+   "hook_line": "subject + open question, ≤6 words, 3 lines",
+   "steps": "cause→effect, 2–4 words; exactly one step carries a number",
+   "big_number_line": "'ONE OF / <N> / <THINGS>' pattern",
+   "metaphor_line": "'<ALL OF IT> / <VERB> / <number+unit>'",
+   "title": "≤6 words incl. a number, ends with 🎧",
+   "description": "2 fact sentences with numbers + 3–4 hashtags"
+  },
+  "shots": [
+   {
+    "id": "S1",
+    "start_beat": 0,
+    "end_beat": 7,
+    "start_s": 0.0,
+    "end_s": 3.58,
+    "summary": "HOOK: {{protagonist}} already in action; amber data cue at bottom",
+    "action": "{{action}}",
+    "camera_note": "slow push_in + slight orbit; last 0.6 s crash-zoom into bright point",
+    "transition_in": "loop-in from S10 (identical frame)",
+    "transition_out": "crash-zoom into spark",
+    "ref_shot": "B1",
+    "ref_what": "ref B1 0.0-3.52s: Hook: neuron fires",
+    "ref_keyframe": "ref/keyframes/B1_1.50s.jpg",
+    "ref_palette": [
+     "#11071A",
+     "#2C1436",
+     "#663B9F",
+     "#B087DC",
+     "#F4ECEB",
+     "#AB603A"
+    ],
+    "camera": {
+     "move": "push_in",
+     "pace": "slow",
+     "then": "crash_zoom_last_0.6s",
+     "orbit_deg": 5
+    },
+    "text_overlay": [
+     {
+      "text": "{{hook_line}}",
+      "at_beats": [
+       0,
+       5.3
+      ],
+      "lines": 3
+     }
+    ],
+    "hero": false,
+    "sfx": [],
+    "notes": ""
+   },
+   {
+    "id": "S2",
+    "start_beat": 7,
+    "end_beat": 14.5,
+    "start_s": 3.58,
+    "end_s": 7.41,
+    "summary": "STEP 1 macro: {{step1_visual}}; amber flood on a note",
+    "action": "{{action}}",
+    "camera_note": "slow pull_out",
+    "transition_in": "HARD CUT on beat, match on scale",
+    "transition_out": "continuous",
+    "ref_shot": "B2",
+    "ref_what": "ref B2 3.52-7.3s: Membrane: sodium in",
+    "ref_keyframe": "ref/keyframes/B2_5.41s.jpg",
+    "ref_palette": [
+     "#110618",
+     "#281233",
+     "#6A3A9A",
+     "#753325",
+     "#B385DF",
+     "#F4E9E2"
+    ],
+    "camera": {
+     "move": "pull_out",
+     "pace": "slow"
+    },
+    "text_overlay": [
+     {
+      "text": "{{step1}}",
+      "at_beats": [
+       2,
+       5.7
+      ],
+      "lines": 2
+     }
+    ],
+    "hero": false,
+    "sfx": [],
+    "notes": ""
+   },
+   {
+    "id": "S3",
+    "start_beat": 14.5,
+    "end_beat": 23.7,
+    "start_s": 7.41,
+    "end_s": 12.11,
+    "summary": "STEP 2: {{step2_visual}}; repeated hops on 8th notes",
+    "action": "{{action}}",
+    "camera_note": "continuous pull_out, static framing",
+    "transition_in": "continuous camera",
+    "transition_out": "continuous tilt",
+    "ref_shot": "B3",
+    "ref_what": "ref B3 7.3-12.0s: Axon: hops myelin",
+    "ref_keyframe": "ref/keyframes/B3_9.65s.jpg",
+    "ref_palette": [
+     "#11071A",
+     "#221031",
+     "#48324D",
+     "#695A79",
+     "#B3A3C1",
+     "#F3ECF2"
+    ],
+    "camera": {
+     "move": "pull_out",
+     "pace": "slow"
+    },
+    "text_overlay": [
+     {
+      "text": "{{step2}}",
+      "at_beats": [
+       2.5,
+       7.6
+      ],
+      "lines": 2
+     }
+    ],
+    "hero": false,
+    "sfx": [],
+    "notes": ""
+   },
+   {
+    "id": "S4",
+    "start_beat": 23.7,
+    "end_beat": 31.5,
+    "start_s": 12.11,
+    "end_s": 16.09,
+    "summary": "STEP 3 (+number): {{step3_visual}}",
+    "action": "{{action}}",
+    "camera_note": "tilt/roll into steep diagonal perspective, track to next part",
+    "transition_in": "continuous",
+    "transition_out": "track along to next part",
+    "ref_shot": "B4",
+    "ref_what": "ref B4 12.0-16.0s: Speed: 100+ m/s",
+    "ref_keyframe": "ref/keyframes/B4_14.00s.jpg",
+    "ref_palette": [
+     "#10071A",
+     "#221031",
+     "#433255",
+     "#6D5F89",
+     "#F2EEF5",
+     "#D4C2AC"
+    ],
+    "camera": {
+     "move": "tilt_roll",
+     "pace": "medium",
+     "roll_deg": 30
+    },
+    "text_overlay": [
+     {
+      "text": "{{step3}}",
+      "at_beats": [
+       1,
+       5.5
+      ],
+      "lines": 3,
+      "amber_line": 3
+     }
+    ],
+    "hero": false,
+    "sfx": [],
+    "notes": ""
+   },
+   {
+    "id": "S5",
+    "start_beat": 31.5,
+    "end_beat": 39.3,
+    "start_s": 16.09,
+    "end_s": 20.08,
+    "summary": "STEP 4 close-up: {{step4_visual}}",
+    "action": "{{action}}",
+    "camera_note": "slow push_in",
+    "transition_in": "HARD CUT on beat",
+    "transition_out": "continuous",
+    "ref_shot": "B5",
+    "ref_what": "ref B5 16.0-20.0s: Synapse terminal",
+    "ref_keyframe": "ref/keyframes/B5_18.00s.jpg",
+    "ref_palette": [
+     "#11071A",
+     "#6F41AB",
+     "#3D2265",
+     "#AD87D8",
+     "#EFE8F3",
+     "#EBAF41"
+    ],
+    "camera": {
+     "move": "push_in",
+     "pace": "slow"
+    },
+    "text_overlay": [
+     {
+      "text": "{{step4}}",
+      "at_beats": [
+       1,
+       5.5
+      ],
+      "lines": 2
+     }
+    ],
+    "hero": false,
+    "sfx": [],
+    "notes": ""
+   },
+   {
+    "id": "S6",
+    "start_beat": 39.3,
+    "end_beat": 47.1,
+    "start_s": 20.08,
+    "end_s": 24.06,
+    "summary": "STEP 5 + BUILD: {{step5_visual}}; contracting amber ring + growing glow; hold 0.4 s",
+    "action": "{{action}}",
+    "camera_note": "slow pull_out then hold",
+    "transition_in": "continuous",
+    "transition_out": "—",
+    "ref_shot": "B6",
+    "ref_what": "ref B6 20.0-24.0s: Chemicals cross, build",
+    "ref_keyframe": "ref/keyframes/B6_23.50s.jpg",
+    "ref_palette": [
+     "#12081C",
+     "#4B2451",
+     "#6E3FAC",
+     "#AE85DB",
+     "#F2EBF5",
+     "#E1A44A"
+    ],
+    "camera": {
+     "move": "pull_out",
+     "pace": "slow",
+     "hold_end_s": 0.4
+    },
+    "text_overlay": [
+     {
+      "text": "{{step5}}",
+      "at_beats": [
+       1,
+       4.7
+      ],
+      "lines": 2
+     }
+    ],
+    "hero": true,
+    "sfx": [],
+    "notes": ""
+   },
+   {
+    "id": "S7",
+    "start_beat": 47.1,
+    "end_beat": 59.8,
+    "start_s": 24.06,
+    "end_s": 30.55,
+    "summary": "HIT: chain closes — flare + shockwave; fast pull-out to {{system_view}}; spark waves",
+    "action": "{{action}}",
+    "camera_note": "fast pull_out ~2 s then slow drift",
+    "transition_in": "HARD CUT on downbeat",
+    "transition_out": "morph",
+    "ref_shot": "B7",
+    "ref_what": "ref B7 24.0-30.5s: HIT: next neuron fires -> network",
+    "ref_keyframe": "ref/keyframes/B7_24.10s.jpg",
+    "ref_palette": [
+     "#251134",
+     "#14091F",
+     "#411F47",
+     "#7F5BB7",
+     "#A55B4A",
+     "#EED5D6"
+    ],
+    "camera": {
+     "move": "pull_out",
+     "pace": "fast",
+     "then": "drift_slow"
+    },
+    "text_overlay": [],
+    "hero": true,
+    "sfx": [],
+    "notes": ""
+   },
+   {
+    "id": "S8",
+    "start_beat": 59.8,
+    "end_beat": 69.0,
+    "start_s": 30.55,
+    "end_s": 35.25,
+    "summary": "BIG NUMBER: system particles assemble into {{system_silhouette}}; gold waves",
+    "action": "{{action}}",
+    "camera_note": "continuous pull_out / morph",
+    "transition_in": "continuous morph",
+    "transition_out": "reveal",
+    "ref_shot": "B8",
+    "ref_what": "ref B8 30.5-35.2s: Network = brain, 86B",
+    "ref_keyframe": "ref/keyframes/B8_32.85s.jpg",
+    "ref_palette": [
+     "#13081E",
+     "#291237",
+     "#622C4A",
+     "#8655C3",
+     "#EED7E8",
+     "#CD8C55"
+    ],
+    "camera": {
+     "move": "pull_out",
+     "pace": "slow"
+    },
+    "text_overlay": [
+     {
+      "text": "{{big_number_line}}",
+      "at_beats": [
+       3.5,
+       8.7
+      ],
+      "lines": 3,
+      "amber_line": 2
+     }
+    ],
+    "hero": true,
+    "sfx": [],
+    "notes": ""
+   },
+   {
+    "id": "S9",
+    "start_beat": 69.0,
+    "end_beat": 87.4,
+    "start_s": 35.25,
+    "end_s": 44.65,
+    "summary": "METAPHOR: {{metaphor_object}} materialises around the system; brand etched on it",
+    "action": "{{action}}",
+    "camera_note": "pull_out reveal then near-static hold",
+    "transition_in": "continuous reveal",
+    "transition_out": "push-through",
+    "ref_shot": "B9",
+    "ref_what": "ref B9 35.2-44.6s: Bulb: ~20 W + brand",
+    "ref_keyframe": "ref/keyframes/B9_38.00s.jpg",
+    "ref_palette": [
+     "#0D0515",
+     "#2B1335",
+     "#67354E",
+     "#F3E5E0",
+     "#E5AF4D",
+     "#A8789F"
+    ],
+    "camera": {
+     "move": "pull_out",
+     "pace": "slow",
+     "then": "hold"
+    },
+    "text_overlay": [
+     {
+      "text": "{{metaphor_line}}",
+      "at_beats": [
+       2,
+       8.9
+      ],
+      "lines": 3,
+      "amber_line": 3
+     },
+     {
+      "text": "{{brand_handle}}",
+      "at_beats": [
+       9.6,
+       18
+      ],
+      "in_world": true
+     }
+    ],
+    "hero": true,
+    "sfx": [],
+    "notes": ""
+   },
+   {
+    "id": "S10",
+    "start_beat": 87.4,
+    "end_beat": 94,
+    "start_s": 44.65,
+    "end_s": 48.02,
+    "summary": "LOOP: push through object → system → land exactly on frame 0",
+    "action": "{{action}}",
+    "camera_note": "fast push_in (fastest of the film)",
+    "transition_in": "continuous",
+    "transition_out": "seamless loop to S1 frame 0",
+    "ref_shot": "B10",
+    "ref_what": "ref B10 44.6-48.0s: Loop back to start",
+    "ref_keyframe": "ref/keyframes/B10_47.80s.jpg",
+    "ref_palette": [
+     "#251134",
+     "#12081D",
+     "#3D1D4A",
+     "#78486C",
+     "#956DBD",
+     "#E8D3E3"
+    ],
+    "camera": {
+     "move": "push_in",
+     "pace": "fast"
+    },
+    "text_overlay": [
+     {
+      "text": "{{hook_line}}",
+      "at_beats": [
+       4.9,
+       6.6
+      ],
+      "lines": 3,
+      "note": "fades back in to match frame 0"
+     }
+    ],
+    "hero": false,
+    "sfx": [],
+    "notes": ""
+   }
+  ],
+  "peaks": [
+   {
+    "id": "P1",
+    "ref_peak": "P1",
+    "shots": [
+     "S6",
+     "S7"
+    ],
+    "build_from_beat": 42.9,
+    "hold_beats": [
+     46.3,
+     47.1
+    ],
+    "hit_beat": 47.1,
+    "hold_after_s": 2.0,
+    "build": "caption out, contracting amber ring, glow grows",
+    "hit": "flare + shockwave on downbeat, hard cut",
+    "after": "fast pull-out to system, no text",
+    "techniques": [
+     "wordless build",
+     "held breath 0.4 s",
+     "cut on downbeat",
+     "flare+shockwave",
+     "scale burst"
+    ]
+   },
+   {
+    "id": "P2",
+    "ref_peak": "P2",
+    "shots": [
+     "S8",
+     "S9"
+    ],
+    "hit_beat": 69.0,
+    "build": "particles assemble into silhouette",
+    "hit": "everyday object materialises around it",
+    "after": "9 s hold with number + brand",
+    "techniques": [
+     "metaphor reveal by pull-out",
+     "amber number",
+     "brand in-world"
+    ]
+   }
+  ],
+  "ratios": {
+   "hard_cuts_per_48s": 3,
+   "mean_segment_s": 4.8,
+   "text_on_screen_ratio": 0.4,
+   "wordless_after_climax_ratio": 0.2,
+   "tolerance": 0.3
+  },
+  "required_inputs": [
+   {
+    "id": "topic",
+    "kind": "text",
+    "label": "Konu",
+    "why": "slots"
+   },
+   {
+    "id": "music",
+    "kind": "audio",
+    "label": "Lisanslı müzik (110–125 BPM)",
+    "why": "music-only format"
+   },
+   {
+    "id": "brand",
+    "kind": "text",
+    "label": "Kanal handle'ı",
+    "why": "in-world brand tag"
+   }
+  ],
+  "open_questions": [
+   "Captions Turkish or English?",
+   "Exact channel handle for the in-world tag?"
+  ]
+ },
+ "changelog": [
+  "v1: template extracted from reference LXcZhstWlXM",
+  "v1.1: mapped to the bitloop engine; caption font = built-in 5x7 (Press Start 2P squashes Turkish accented capitals)",
+  {
+   "version": "1.2",
+   "date": "2026-10-20",
+   "note": "channel identity @hayret.piksel as default preset; 30 fps default; reference values kept in §1–9 for comparison"
+  },
+  {
+   "version": "2.0",
+   "date": "2026-10-20",
+   "note": "recipe → schema: per-video music + edit design, brand layer constant, archetypes, transition library, retention rules; reference kept as example"
+  },
+  "fraktal-muzik: series voices (Nørgård), Shepard riser, 6 scenes + vinyl, layer kwargs (ramps), layer_sync, chalkboard/terminal lines",
+  "gelecek-secim: series_defs (list series) + lookahead voices + section gain, sprites (mascot hero), story scenes future_book laplace_demon dominoes libet_clock future_tree, object kind book (legible), Canvas.matte, snapped plate/terminal text",
+  {
+   "version": "2.3",
+   "date": "2026-10-21",
+   "note": "narration text system (narration.py: sentences, 5 placements, typewriter/word/line reveal on the beat grid, blips, cursor, dither/wipe exit, Turkish wrap+hyphenation, measured 5 px/dot floor, safe-zone + subject-avoiding layout); pacing presets calm (default) / punchy; validator: readability + calm-pacing rules replace 12-char/6-word + 25–60 % text coverage; archetypes calmed; first two reels pinned to punchy"
+  },
+  {
+   "v2.4": "vision system: G-buffer aux planes (uv/temp/depth/oid), per-segment vision + palette, maps rgb/bee_false_colour/dichromat/thermal/sonar/bands12/coarse_classes/tint, peek/collapse, persistent world (global clock), vision_world + vision_mosaic scenes, plate skin hive, pollen layer, drum B + multi-bar grids + drum_hits, pad.max_notes, one-note-chord bass fix (canli-gozu)"
+  },
+  {
+   "v2.5": "cosmos pack (evren-anlamak): cosmic_zoom (nested powers-of-ten scene zoom, kid sprite, rewind_to_frame0), chalk_unify (one persistent chalkboard, formula_bitmap, chalk tags via brand_tags), galaxy_chess (music-synced rule-30 board, board-of-boards LOD zoom, 10ⁿ counter), laplace chaos_twin (Sinai billiard, exact split beat); pixfont superscripts + Greek, minifont comma, seeded random arp + unknown-pattern warning, own_layers, --package reads meta.cover_t, bt709 bsf on every encode"
+  }
+ ],
+ "vision_system": {
+  "spec": {
+   "visions": "{mode: {map, palette, pixel?, blur?, label}}",
+   "world_palette": "palette for the G-buffer albedo",
+   "segment.vision": "mode name (or a palette name = rgb map)",
+   "segment.palette": "output palette override",
+   "params.peek": "{at, beats, mode}",
+   "params.collapse": "{from, beats}",
+   "params.sonar": "{origin, rings_on: 'drum:B', persistence_beats, speed, max_rings, base}"
+  },
+  "maps": [
+   "rgb",
+   "bee_false_colour",
+   "dichromat",
+   "thermal",
+   "sonar",
+   "bands12",
+   "coarse_classes",
+   "tint"
+  ],
+  "rule": "text boxes stay brand-coloured in every eye; every vision palette contains #04060E and #F4ECDC"
+ }
+}

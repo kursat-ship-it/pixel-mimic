@@ -1,0 +1,225 @@
+===== spec_proxy.json (existing scenes; per-segment palettes already supported) =====
+id   role      scene      beats  start    end  in       caption
+S1   hook      network      8.0   0.00   4.80  cut      [top] Evrenin *her* kuralını bilseydik?
+S2   rehook    void        10.0   4.80  10.80  iris     [top] Hayal şu: göreliliği ve kuantumu birleşt | [callout] %95: bilinmiyor
+S3   step      void         7.0  10.80  15.00  slide    [dialog] Yüzyıl bitmeden, şansımız *yarı yarıya*.
+S4   step      void         8.0  15.00  19.80  match    [dialog] 2002'de fikrini değiştirdi: belki son te
+S5   rehook    laplace_demon   9.0  19.80  25.20  dissolve [top] Bulsak bile geleceği _hesaplayamazdık_: 
+S6   twist     lattice      9.0  25.20  30.60  tiles    [dialog] Satrancın kuralları kolay; en iyi hamley
+S7   reveal    silhouette  10.0  30.60  36.60  portal   [title] *10 üzeri 120* | [panel] Olası oyun sayısı, evrendeki atom sayısı
+S8   payoff    network      7.0  36.60  40.80  silhouette [dialog] Dünyanın ebedi gizemi, *anlaşılabilir* o
+S9   payoff    hero         9.0  40.80  46.20  dissolve [panel] Kuralları bilmek, _hayreti_ bitirmez: oy
+S10  loop      network      3.0  46.20  48.00  dissolve 
+total 80.0 beats = 48.00 s
+
+RETENTION MAP · 48.0 s · 4/4 · 100 BPM · 10 segments
+  s  0         5         10        15        20        25        30        35        40        45        
+     !········!"·····!····!"······@!········!"·········!"·········♪··!········!·······!"·········|···↻
+     legend: ! hook/re-hook  | cut/transition  " caption  ▲ drop  ♪ sonic logo  @ legible tag  ↻ loop
+    t(s)   beat  lane   event
+    0.00   0.00  HOOK   S1 hook     network
+    0.00   0.00  MUSIC  kanca: e1.6 4/4 100 BPM F# dorian shepard riser→
+    0.00   0.00  TEXT   “Evrenin her kuralını bilseydik?” (word, top)  [question]
+    3.00   5.00  EVENT  pulse · galaksi → kozmik ağ
+    4.80   8.00  EVENT  rehook · iki denklem tahtada
+    4.80   8.00  MUSIC  iki_dil: e1.9 4/4 100 BPM F# dorian 
+    4.80   8.00  TAG    @ chalkboard subtle (S2)
+    4.80   8.00  TRANS  S2 rehook   void  ← iris (1.5b)
+    5.10   8.50  TEXT   “Hayal şu: göreliliği ve kuantumu birleştir…” (word, top)
+    8.40  14.00  EVENT  pop · iki denklem tek satırda birleşir
+    8.40  14.00  MUSIC  birlesme: e2 4/4 100 BPM F# dorian 
+    8.40  14.00  TEXT   “%95: bilinmiyor” (word, callout)  [number]
+   10.80  18.00  EVENT  rehook · Hawking'in 1980 iddiası
+   10.80  18.00  MUSIC  hawking80: e2 4/4 100 BPM F# major 
+   10.80  18.00  TAG    @ chalkboard subtle (S3)
+   10.80  18.00  TRANS  S3 step     void  ← slide (1.25b)
+   11.10  18.50  TEXT   “Yüzyıl bitmeden, şansımız yarı yarıya.” (word, dialog)
+   15.00  25.00  MUSIC  hawking02: e1.7 4/4 100 BPM F# major stop 0.5b
+   15.00  25.00  TAG    @ chalkboard LEGIBLE (S4)
+   15.00  25.00  TRANS  S4 step     void  ← match (1.25b)
+   15.30  25.50  TEXT   “2002'de fikrini değiştirdi: belki son teor…” (word, dialog)  [number]
+   16.20  27.00  EVENT  pop · %50 tebeşirle çizilir, 'Gödel 1931' notu belirir
+   19.80  33.00  EVENT  rehook · Laplace'ın şeytanı geri döner (önceki reel)
+   19.80  33.00  MUSIC  laplace: e2.2 4/4 100 BPM F# dorian 
+   19.80  33.00  TRANS  S5 rehook   laplace_demon  ← dissolve (1.5b)
+   20.10  33.50  TEXT   “Bulsak bile geleceği hesaplayamazdık: kaos…” (word, top)
+   21.60  36.00  EVENT  pop · ikiz toplar ayrılır, ikiz zil melodileri de
+   25.20  42.00  EVENT  twist · kural ≠ oyun: Feynman'ın satranç benzetmesi
+   25.20  42.00  MUSIC  satranc: e2.4 4/4 100 BPM F# dorian riser→
+   25.20  42.00  TRANS  S6 twist    lattice  ← tiles (1.5b)
+   25.50  42.50  TEXT   “Satrancın kuralları kolay; en iyi hamleyi …” (word, dialog)
+   30.60  51.00  EVENT  reveal · drop + sonic logo; sayaç 10^1 → 10^120
+   30.60  51.00  LOGO   sonic logo (long note)
+   30.60  51.00  MUSIC  dusus: e3.2 4/4 100 BPM F# dorian DROP
+   30.60  51.00  TEXT   “10 üzeri 120” (word, title)  [number]
+   30.60  51.00  TRANS  S7 reveal   silhouette  ← portal (2b)
+   32.10  53.50  TEXT   “Olası oyun sayısı, evrendeki atom sayısınd…” (word, panel)  [claim]
+   36.60  61.00  MUSIC  einstein: e1.2 4/4 100 BPM F# dorian 
+   36.60  61.00  TRANS  S8 payoff   network  ← silhouette (2.5b)
+   36.90  61.50  TEXT   “Dünyanın ebedi gizemi, anlaşılabilir olmas…” (word, dialog)
+   40.80  68.00  MUSIC  hayret: e2 4/4 100 BPM F# dorian 
+   40.80  68.00  TRANS  S9 payoff   hero  ← dissolve (2b)
+   41.10  68.50  TEXT   “Kuralları bilmek, hayreti bitirmez: oyun d…” (word, panel)
+   44.40  74.00  EVENT  pulse · çocuğun gözünde hayret logosu parlar
+   46.20  77.00  MUSIC  dongu: e1.6 4/4 100 BPM F# dorian 
+   46.20  77.00  TRANS  S10 loop     network  ← dissolve (1.5b)
+   48.00  80.00  LOGO   sonic logo (long note)
+   48.00  80.00  LOOP   seam ← dissolve → frame 0
+  visual change every 0.75 s on average · longest static 3.45 s at 16.35 s · longest re-hook gap 5.4 s · 11 hooks/re-hooks
+
+warn: duration 48.0 s outside the 20–45 s sweet spot
+OK
+
+===== spec.json (TARGET: errors = new scenes in render_brief.md, expected until built) =====
+id   role      scene      beats  start    end  in       caption
+S1   hook      cosmic_zoom   8.0   0.00   4.80  cut      [top] Evrenin *her* kuralını bilseydik?
+S2   rehook    chalk_unify  10.0   4.80  10.80  iris     [top] Hayal şu: göreliliği ve kuantumu birleşt | [callout] %95: bilinmiyor
+S3   step      chalk_unify   7.0  10.80  15.00  slide    [dialog] Yüzyıl bitmeden, şansımız *yarı yarıya*.
+S4   step      chalk_unify   8.0  15.00  19.80  match    [dialog] 2002'de fikrini değiştirdi: belki son te
+S5   rehook    laplace_demon   9.0  19.80  25.20  dissolve [top] Bulsak bile geleceği _hesaplayamazdık_: 
+S6   twist     galaxy_chess   9.0  25.20  30.60  tiles    [dialog] Satrancın kuralları kolay; en iyi hamley
+S7   reveal    galaxy_chess  10.0  30.60  36.60  portal   [title] *10 üzeri 120* | [panel] Olası oyun sayısı, evrendeki atom sayısı
+S8   payoff    cosmic_zoom   7.0  36.60  40.80  silhouette [dialog] Dünyanın ebedi gizemi, *anlaşılabilir* o
+S9   payoff    cosmic_zoom   9.0  40.80  46.20  dissolve [panel] Kuralları bilmek, _hayreti_ bitirmez: oy
+S10  loop      cosmic_zoom   3.0  46.20  48.00  dissolve 
+total 80.0 beats = 48.00 s
+
+RETENTION MAP · 48.0 s · 4/4 · 100 BPM · 10 segments
+  s  0         5         10        15        20        25        30        35        40        45        
+     !········!"·····!····!"······@!········!"·········!"·········♪··!········!·······!"·········|···↻
+     legend: ! hook/re-hook  | cut/transition  " caption  ▲ drop  ♪ sonic logo  @ legible tag  ↻ loop
+    t(s)   beat  lane   event
+    0.00   0.00  HOOK   S1 hook     cosmic_zoom
+    0.00   0.00  MUSIC  kanca: e1.6 4/4 100 BPM F# dorian shepard riser→
+    0.00   0.00  TEXT   “Evrenin her kuralını bilseydik?” (word, top)  [question]
+    3.00   5.00  EVENT  pulse · galaksi → kozmik ağ
+    4.80   8.00  EVENT  rehook · iki denklem tahtada
+    4.80   8.00  MUSIC  iki_dil: e1.9 4/4 100 BPM F# dorian 
+    4.80   8.00  TAG    @ chalkboard subtle (S2)
+    4.80   8.00  TRANS  S2 rehook   chalk_unify  ← iris (1.5b)
+    5.10   8.50  TEXT   “Hayal şu: göreliliği ve kuantumu birleştir…” (word, top)
+    8.40  14.00  EVENT  pop · iki denklem tek satırda birleşir
+    8.40  14.00  MUSIC  birlesme: e2 4/4 100 BPM F# dorian 
+    8.40  14.00  TEXT   “%95: bilinmiyor” (word, callout)  [number]
+   10.80  18.00  EVENT  rehook · Hawking'in 1980 iddiası
+   10.80  18.00  MUSIC  hawking80: e2 4/4 100 BPM F# major 
+   10.80  18.00  TAG    @ chalkboard subtle (S3)
+   10.80  18.00  TRANS  S3 step     chalk_unify  ← slide (1.25b)
+   11.10  18.50  TEXT   “Yüzyıl bitmeden, şansımız yarı yarıya.” (word, dialog)
+   15.00  25.00  MUSIC  hawking02: e1.7 4/4 100 BPM F# major stop 0.5b
+   15.00  25.00  TAG    @ chalkboard LEGIBLE (S4)
+   15.00  25.00  TRANS  S4 step     chalk_unify  ← match (1.25b)
+   15.30  25.50  TEXT   “2002'de fikrini değiştirdi: belki son teor…” (word, dialog)  [number]
+   16.20  27.00  EVENT  pop · %50 tebeşirle çizilir, 'Gödel 1931' notu belirir
+   19.80  33.00  EVENT  rehook · Laplace'ın şeytanı geri döner (önceki reel)
+   19.80  33.00  MUSIC  laplace: e2.2 4/4 100 BPM F# dorian 
+   19.80  33.00  TRANS  S5 rehook   laplace_demon  ← dissolve (1.5b)
+   20.10  33.50  TEXT   “Bulsak bile geleceği hesaplayamazdık: kaos…” (word, top)
+   21.60  36.00  EVENT  pop · ikiz toplar ayrılır, ikiz zil melodileri de
+   25.20  42.00  EVENT  twist · kural ≠ oyun: Feynman'ın satranç benzetmesi
+   25.20  42.00  MUSIC  satranc: e2.4 4/4 100 BPM F# dorian riser→
+   25.20  42.00  TRANS  S6 twist    galaxy_chess  ← tiles (1.5b)
+   25.50  42.50  TEXT   “Satrancın kuralları kolay; en iyi hamleyi …” (word, dialog)
+   30.60  51.00  EVENT  reveal · drop + sonic logo; sayaç 10^1 → 10^120
+   30.60  51.00  LOGO   sonic logo (long note)
+   30.60  51.00  MUSIC  dusus: e3.2 4/4 100 BPM F# dorian DROP
+   30.60  51.00  TEXT   “10 üzeri 120” (word, title)  [number]
+   30.60  51.00  TRANS  S7 reveal   galaxy_chess  ← portal (2b)
+   32.10  53.50  TEXT   “Olası oyun sayısı, evrendeki atom sayısınd…” (word, panel)  [claim]
+   36.60  61.00  MUSIC  einstein: e1.2 4/4 100 BPM F# dorian 
+   36.60  61.00  TRANS  S8 payoff   cosmic_zoom  ← silhouette (2.5b)
+   36.90  61.50  TEXT   “Dünyanın ebedi gizemi, anlaşılabilir olmas…” (word, dialog)
+   40.80  68.00  MUSIC  hayret: e2 4/4 100 BPM F# dorian 
+   40.80  68.00  TRANS  S9 payoff   cosmic_zoom  ← dissolve (2b)
+   41.10  68.50  TEXT   “Kuralları bilmek, hayreti bitirmez: oyun d…” (word, panel)
+   44.40  74.00  EVENT  pulse · çocuğun gözünde hayret logosu parlar
+   46.20  77.00  MUSIC  dongu: e1.6 4/4 100 BPM F# dorian 
+   46.20  77.00  TRANS  S10 loop     cosmic_zoom  ← dissolve (1.5b)
+   48.00  80.00  LOGO   sonic logo (long note)
+   48.00  80.00  LOOP   seam ← dissolve → frame 0
+  visual change every 0.80 s on average · longest static 3.45 s at 16.35 s · longest re-hook gap 5.4 s · 11 hooks/re-hooks
+
+warn: duration 48.0 s outside the 20–45 s sweet spot
+warn: narration layout check skipped: 'cosmic_zoom'
+ERROR: S1: unknown scene 'cosmic_zoom' (hero, lattice, chain, streaks, pod, junction, network, silhouette, object, image, void, fractal_staff, noise_scope, series_tree, shepard_stairs, koch, mandel_zoom, future_book, laplace_demon, dominoes, libet_clock, future_tree, vision_world, vision_mosaic)
+ERROR: S2: unknown scene 'chalk_unify' (hero, lattice, chain, streaks, pod, junction, network, silhouette, object, image, void, fractal_staff, noise_scope, series_tree, shepard_stairs, koch, mandel_zoom, future_book, laplace_demon, dominoes, libet_clock, future_tree, vision_world, vision_mosaic)
+ERROR: S3: unknown scene 'chalk_unify' (hero, lattice, chain, streaks, pod, junction, network, silhouette, object, image, void, fractal_staff, noise_scope, series_tree, shepard_stairs, koch, mandel_zoom, future_book, laplace_demon, dominoes, libet_clock, future_tree, vision_world, vision_mosaic)
+ERROR: S4: unknown scene 'chalk_unify' (hero, lattice, chain, streaks, pod, junction, network, silhouette, object, image, void, fractal_staff, noise_scope, series_tree, shepard_stairs, koch, mandel_zoom, future_book, laplace_demon, dominoes, libet_clock, future_tree, vision_world, vision_mosaic)
+ERROR: S6: unknown scene 'galaxy_chess' (hero, lattice, chain, streaks, pod, junction, network, silhouette, object, image, void, fractal_staff, noise_scope, series_tree, shepard_stairs, koch, mandel_zoom, future_book, laplace_demon, dominoes, libet_clock, future_tree, vision_world, vision_mosaic)
+ERROR: S7: unknown scene 'galaxy_chess' (hero, lattice, chain, streaks, pod, junction, network, silhouette, object, image, void, fractal_staff, noise_scope, series_tree, shepard_stairs, koch, mandel_zoom, future_book, laplace_demon, dominoes, libet_clock, future_tree, vision_world, vision_mosaic)
+ERROR: S8: unknown scene 'cosmic_zoom' (hero, lattice, chain, streaks, pod, junction, network, silhouette, object, image, void, fractal_staff, noise_scope, series_tree, shepard_stairs, koch, mandel_zoom, future_book, laplace_demon, dominoes, libet_clock, future_tree, vision_world, vision_mosaic)
+ERROR: S9: unknown scene 'cosmic_zoom' (hero, lattice, chain, streaks, pod, junction, network, silhouette, object, image, void, fractal_staff, noise_scope, series_tree, shepard_stairs, koch, mandel_zoom, future_book, laplace_demon, dominoes, libet_clock, future_tree, vision_world, vision_mosaic)
+ERROR: S10: unknown scene 'cosmic_zoom' (hero, lattice, chain, streaks, pod, junction, network, silhouette, object, image, void, fractal_staff, noise_scope, series_tree, shepard_stairs, koch, mandel_zoom, future_book, laplace_demon, dominoes, libet_clock, future_tree, vision_world, vision_mosaic)
+9 error(s)
+
+===== QC v2 (2026-10-21, after independent QC fixes; final spec.json) =====
+id   role      scene      beats  start    end  in       caption
+S1   hook      cosmic_zoom   8.0   0.00   4.80  cut      [top] Evrenin *her* kuralını bilseydik?
+S2   rehook    chalk_unify  10.0   4.80  10.80  iris     [top] Hayal şu: göreliliği ve kuantumu birleşt | [callout] Evrenin %95'i: bilinmiyor
+S3   step      chalk_unify   7.0  10.80  15.00  slide    [dialog] Yüzyıl bitmeden, şansımız *yarı yarıya*.
+S4   step      chalk_unify   8.0  15.00  19.80  match    [dialog] 2002'de fikrimi değiştirdim: belki son t
+S5   rehook    laplace_demon   9.0  19.80  25.20  dissolve [top] Bulsak bile geleceği _hesaplayamazdık_: 
+S6   twist     galaxy_chess   9.0  25.20  30.60  tiles    [dialog] Satrancın kuralları kolay; en iyi hamley
+S7   reveal    galaxy_chess  10.0  30.60  36.60  portal   [title] *10¹²⁰* | [panel] Olası oyun sayısı, evrendeki atom sayısı
+S8   payoff    cosmic_zoom   7.0  36.60  40.80  dissolve [dialog] Dünyanın ebedi gizemi, *anlaşılabilir* o
+S9   payoff    cosmic_zoom   9.0  40.80  46.20  dissolve [panel] Kuralları bilmek, _hayreti_ bitirmez: oy
+S10  loop      cosmic_zoom   3.0  46.20  48.00  iris     
+total 80.0 beats = 48.00 s
+
+RETENTION MAP · 48.0 s · 4/4 · 100 BPM · 10 segments
+  s  0         5         10        15        20        25        30        35        40        45        
+     !········!"····!·····!"······@!········!"·········!"·········♪···!·······!·······!"·········|···↻
+     legend: ! hook/re-hook  | cut/transition  " caption  ▲ drop  ♪ sonic logo  @ legible tag  ↻ loop
+    t(s)   beat  lane   event
+    0.00   0.00  HOOK   S1 hook     cosmic_zoom
+    0.00   0.00  MUSIC  kanca: e1.6 4/4 100 BPM F# dorian shepard riser→
+    0.00   0.00  TEXT   “Evrenin her kuralını bilseydik?” (word, top)  [question]
+    3.00   5.00  EVENT  pulse · galaksi → kozmik ağ
+    4.80   8.00  EVENT  rehook · iki denklem tahtada
+    4.80   8.00  MUSIC  iki_dil: e1.9 4/4 100 BPM F# dorian 
+    4.80   8.00  TAG    @ chalk_tag subtle (S2)
+    4.80   8.00  TRANS  S2 rehook   chalk_unify  ← iris (1.5b)
+    5.10   8.50  TEXT   “Hayal şu: göreliliği ve kuantumu birleştir…” (word, top)
+    7.95  13.25  TEXT   “Evrenin %95'i: bilinmiyor” (word, callout)  [number]
+    8.40  14.00  EVENT  pop · iki denklem tek satırda birleşir
+    8.40  14.00  MUSIC  birlesme: e2 4/4 100 BPM F# dorian 
+   10.80  18.00  EVENT  rehook · Hawking'in 1980 iddiası
+   10.80  18.00  MUSIC  hawking80: e2 4/4 100 BPM F# major 
+   10.80  18.00  TAG    @ chalk_tag subtle (S3)
+   10.80  18.00  TRANS  S3 step     chalk_unify  ← slide (1.25b)
+   11.10  18.50  TEXT   “Yüzyıl bitmeden, şansımız yarı yarıya.” (word, dialog)
+   15.00  25.00  MUSIC  hawking02: e1.7 4/4 100 BPM F# major stop 0.5b
+   15.00  25.00  TAG    @ chalk_tag LEGIBLE (S4)
+   15.00  25.00  TRANS  S4 step     chalk_unify  ← match (1.25b)
+   15.30  25.50  TEXT   “2002'de fikrimi değiştirdim: belki son teo…” (word, dialog)  [number]
+   16.20  27.00  EVENT  pop · %50 tebeşirle çizilir, 'Gödel 1931' notu belirir
+   19.80  33.00  EVENT  rehook · Laplace'ın şeytanı geri döner (önceki reel)
+   19.80  33.00  MUSIC  laplace: e2.2 4/4 100 BPM F# dorian 
+   19.80  33.00  TRANS  S5 rehook   laplace_demon  ← dissolve (1.5b)
+   20.10  33.50  TEXT   “Bulsak bile geleceği hesaplayamazdık: kaos…” (word, top)
+   21.60  36.00  EVENT  pop · ikiz toplar ayrılır, ikiz zil melodileri de
+   25.20  42.00  EVENT  twist · kural ≠ oyun: Feynman'ın satranç benzetmesi
+   25.20  42.00  MUSIC  satranc: e2.4 4/4 100 BPM F# dorian riser→
+   25.20  42.00  TRANS  S6 twist    galaxy_chess  ← tiles (1.5b)
+   25.50  42.50  TEXT   “Satrancın kuralları kolay; en iyi hamleyi …” (word, dialog)
+   30.60  51.00  EVENT  reveal · drop + sonic logo; sayaç 10^1 → 10^120
+   30.60  51.00  LOGO   sonic logo (long note)
+   30.60  51.00  MUSIC  dusus: e3.2 4/4 100 BPM F# dorian DROP
+   30.60  51.00  TRANS  S7 reveal   galaxy_chess  ← portal (2b)
+   32.55  54.25  TEXT   “Olası oyun sayısı, evrendeki atom sayısınd…” (word, panel)  [claim]
+   32.70  54.50  TEXT   “10¹²⁰” (word, title)  [number]
+   36.60  61.00  MUSIC  einstein: e1.2 4/4 100 BPM F# dorian 
+   36.60  61.00  TRANS  S8 payoff   cosmic_zoom  ← dissolve (2.5b)
+   36.90  61.50  TEXT   “Dünyanın ebedi gizemi, anlaşılabilir olmas…” (word, dialog)
+   40.80  68.00  MUSIC  hayret: e2 4/4 100 BPM F# dorian 
+   40.80  68.00  TRANS  S9 payoff   cosmic_zoom  ← dissolve (2b)
+   41.10  68.50  TEXT   “Kuralları bilmek, hayreti bitirmez: oyun d…” (word, panel)
+   44.40  74.00  EVENT  pulse · çocuğun gözünde hayret logosu parlar
+   46.20  77.00  MUSIC  dongu: e1.6 4/4 100 BPM F# dorian 
+   46.20  77.00  TRANS  S10 loop     cosmic_zoom  ← iris (1.5b)
+   48.00  80.00  LOGO   sonic logo (long note)
+   48.00  80.00  LOOP   seam ← dissolve → frame 0
+  visual change every 0.87 s on average · longest static 3.45 s at 16.35 s · longest re-hook gap 5.4 s · 12 hooks/re-hooks
+
+warn: duration 48.0 s outside the 20–45 s sweet spot
+OK

@@ -1,0 +1,268 @@
+{
+  "version": 1,
+  "_recipe": "Reference example: the LXcZhstWlXM (Bit Wonder) breakdown as a spec — v1 timing (94 beats), reference look + sound. Use archetype 'scale_journey' for a channel version.",
+  "preset": "reference",
+  "meta": {
+    "title": "{{TITLE — ≤6 words + a number + 🎧}}",
+    "description": "{{2 fact sentences with numbers}}",
+    "hashtags": [
+      "{{#tag1}}",
+      "{{#tag2}}",
+      "#pixelart"
+    ],
+    "lang": "tr"
+  },
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "grid": 6
+  },
+  "loop": true,
+  "loop_beats": 2.5,
+  "crash_beats": 1.2,
+  "morph_beats": 1.5,
+  "cover_t": 1.0,
+  "segments": [
+    {
+      "id": "S1",
+      "role": "hook",
+      "beats": 7,
+      "scene": "hero",
+      "params": {
+        "branches": 7,
+        "trace": true
+      },
+      "camera": {
+        "zoom": [
+          1.0,
+          1.15
+        ],
+        "orbit": 3
+      },
+      "caption": {
+        "text": "{{HOOK L1}}\n{{HOOK L2}}\n{{HOOK QUESTION?}}",
+        "at": [
+          0,
+          5.3
+        ]
+      },
+      "_note": "protagonist already in action at frame 0; caption on from frame 0; ends with crash-zoom into the bright point"
+    },
+    {
+      "id": "S2",
+      "role": "step",
+      "beats": 7.5,
+      "scene": "lattice",
+      "transition_in": "crash",
+      "params": {
+        "flood_at": 2.5
+      },
+      "camera": {
+        "zoom": [
+          2.2,
+          1.0
+        ],
+        "ease": "outCubic"
+      },
+      "caption": {
+        "text": "{{STEP1 L1}}\n{{STEP1 L2}}",
+        "at": [
+          2,
+          5.7
+        ]
+      },
+      "_note": "macro of the material; energy floods through on a note"
+    },
+    {
+      "id": "S3",
+      "role": "step",
+      "beats": 9,
+      "scene": "chain",
+      "transition_in": "morph",
+      "camera": {
+        "zoom": [
+          1.5,
+          0.85
+        ]
+      },
+      "caption": {
+        "text": "{{STEP2 L1}}\n{{STEP2 L2}}",
+        "at": [
+          2.5,
+          7.6
+        ]
+      },
+      "_note": "repeated hop on every 8th note"
+    },
+    {
+      "id": "S4",
+      "role": "step",
+      "beats": 8,
+      "scene": "streaks",
+      "transition_in": "morph",
+      "camera": {
+        "zoom": [
+          0.9,
+          1.2
+        ],
+        "rot": [
+          -8,
+          4
+        ]
+      },
+      "caption": {
+        "text": "{{STEP3 L1}}\n{{STEP3 L2}}\n{{NUMBER+UNIT}}",
+        "at": [
+          1,
+          5.5
+        ],
+        "hi": [
+          3
+        ]
+      },
+      "_note": "speed/scale step; carries the first amber number"
+    },
+    {
+      "id": "S5",
+      "role": "step",
+      "beats": 8,
+      "scene": "pod",
+      "transition_in": "cut",
+      "params": {
+        "release_at": 4
+      },
+      "camera": {
+        "zoom": [
+          1.0,
+          1.18
+        ]
+      },
+      "caption": {
+        "text": "{{STEP4 L1}}\n{{STEP4 L2}}",
+        "at": [
+          1,
+          5.5
+        ]
+      },
+      "_note": "the key part / the gap, close-up"
+    },
+    {
+      "id": "S6",
+      "role": "build",
+      "beats": 8,
+      "scene": "junction",
+      "transition_in": "morph",
+      "params": {
+        "fire_at": -0.5
+      },
+      "camera": {
+        "zoom": [
+          1.35,
+          1.0
+        ],
+        "ease": "outCubic"
+      },
+      "caption": {
+        "text": "{{STEP5 L1}}\n{{STEP5 L2}}",
+        "at": [
+          1,
+          4.7
+        ]
+      },
+      "_note": "caption leaves, then wordless build: ring contracts, glow grows, half-beat held breath"
+    },
+    {
+      "id": "S7",
+      "role": "hit",
+      "beats": 12.5,
+      "scene": "network",
+      "transition_in": "cut",
+      "params": {
+        "flare": true,
+        "nodes": 240
+      },
+      "camera": {
+        "zoom": [
+          2.6,
+          0.5
+        ],
+        "ease": "outCubic"
+      },
+      "_note": "HIT on the downbeat: flare + shockwave, then scale burst to the whole system. NO caption."
+    },
+    {
+      "id": "S8",
+      "role": "number",
+      "beats": 9,
+      "scene": "silhouette",
+      "transition_in": "morph",
+      "params": {
+        "shape": "{{SILHOUETTE: circle|heart|drop|star|bolt|hexagon|cloud|square|glyph:X|file.png}}",
+        "assemble": 3
+      },
+      "camera": {
+        "zoom": [
+          1.5,
+          1.0
+        ],
+        "ease": "outCubic"
+      },
+      "caption": {
+        "text": "{{ONE OF}}\n*{{N BIG NUMBER}}*\n{{THINGS}}",
+        "at": [
+          3.5,
+          8.7
+        ]
+      },
+      "_note": "system particles assemble into a recognisable shape; the 'one of N' fact"
+    },
+    {
+      "id": "S9",
+      "role": "metaphor",
+      "beats": 18,
+      "scene": "object",
+      "transition_in": "morph",
+      "params": {
+        "kind": "{{OBJECT: bulb|battery|jar|globe|phone|image}}",
+        "inner": "{{same silhouette as S8}}",
+        "brand": "auto",
+        "brand_at": 9.6,
+        "reveal": 2.5
+      },
+      "camera": {
+        "zoom": [
+          1.9,
+          1.0
+        ],
+        "ease": "outCubic"
+      },
+      "caption": {
+        "text": "{{ALL OF IT}}\n{{VERB}}\n*{{NUMBER+UNIT}}*",
+        "at": [
+          2,
+          8.9
+        ]
+      },
+      "_note": "everyday object revealed around the system; longest hold; brand etched in-world"
+    },
+    {
+      "id": "S10",
+      "role": "loop",
+      "beats": 7,
+      "scene": "network",
+      "transition_in": "morph",
+      "params": {
+        "nodes": 200
+      },
+      "camera": {
+        "zoom": [
+          0.7,
+          3.5
+        ],
+        "ease": "inCubic"
+      },
+      "_note": "fastest move: push back in; last loop_beats dissolve into frame 0 and the hook caption returns"
+    }
+  ]
+}

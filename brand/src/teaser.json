@@ -1,0 +1,112 @@
+{
+ "preset": "hayret",
+ "loop": true,
+ "loop_beats": 2,
+ "meta": {
+  "title": "hayret.piksel teaser"
+ },
+ "segments": [
+  {
+   "id": "S1",
+   "role": "hook",
+   "beats": 4,
+   "scene": "hero",
+   "params": {
+    "trace": true
+   },
+   "camera": {
+    "zoom": [
+     1.0,
+     1.18
+    ],
+    "orbit": 3
+   },
+   "caption": {
+    "text": "MERAK\nEDİYOR\nMUSUN?",
+    "at": [
+     0,
+     3.4
+    ]
+   }
+  },
+  {
+   "id": "S2",
+   "role": "hit",
+   "beats": 4,
+   "scene": "network",
+   "transition_in": "crash",
+   "params": {
+    "flare": true,
+    "nodes": 260
+   },
+   "camera": {
+    "zoom": [
+     2.4,
+     0.8
+    ],
+    "ease": "outCubic"
+   },
+   "props": [
+    {
+     "kind": "ship",
+     "x": 0,
+     "y": -120,
+     "s": 0.6,
+     "layer": "back",
+     "par": 0.35,
+     "speed": 40,
+     "span": 340
+    }
+   ]
+  },
+  {
+   "id": "S3",
+   "role": "metaphor",
+   "beats": 7,
+   "scene": "object",
+   "transition_in": "morph",
+   "params": {
+    "kind": "jar",
+    "inner": "star",
+    "brand": "auto",
+    "brand_at": 1.0,
+    "reveal": 1.5
+   },
+   "camera": {
+    "zoom": [
+     1.5,
+     1.0
+    ],
+    "ease": "outCubic"
+   },
+   "caption": {
+    "text": "HER GÜN\nBİR\n*HAYRET*",
+    "at": [
+     1.5,
+     6.5
+    ]
+   }
+  },
+  {
+   "id": "S4",
+   "role": "loop",
+   "beats": 3,
+   "scene": "network",
+   "transition_in": "morph",
+   "params": {
+    "nodes": 200
+   },
+   "camera": {
+    "zoom": [
+     0.8,
+     2.6
+    ],
+    "ease": "inCubic"
+   }
+  }
+ ],
+ "music": {
+  "style": "hicaz_maqsum"
+ },
+ "version": 2
+}

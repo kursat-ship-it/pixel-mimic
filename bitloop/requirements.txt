@@ -1,0 +1,5 @@
+# See ../requirements.txt (pinned) and ../requirements-qc.txt. Minimums:
+numpy>=1.24
+Pillow>=10.1
+scipy>=1.10        # used by voices/sfx filters (lfilter) and vision blur/sobel
+# system: ffmpeg + ffprobe on PATH

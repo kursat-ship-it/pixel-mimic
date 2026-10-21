@@ -1,0 +1,435 @@
+{
+ "source": "source.mp4",
+ "input": "ref/ref_h264.mp4 (not committed)",
+ "video": {
+  "duration": 48.021,
+  "width": 1080,
+  "height": 1920,
+  "fps": 60.0,
+  "has_audio": true,
+  "channels": 2
+ },
+ "crop": {
+  "w": 1080,
+  "h": 488,
+  "x": 0,
+  "y": 676,
+  "note": "moving picture band between static UI (phone screen recording)"
+ },
+ "analysed": "proxy.mp4",
+ "shots": [
+  [
+   0.0,
+   3.517
+  ],
+  [
+   3.517,
+   16.0
+  ],
+  [
+   16.0,
+   24.0
+  ],
+  [
+   24.0,
+   30.533
+  ],
+  [
+   30.533,
+   44.633
+  ],
+  [
+   44.633,
+   48.0
+  ]
+ ],
+ "pacing": {
+  "count": 6,
+  "mean_shot_s": 8.0,
+  "shortest_s": 3.37,
+  "longest_s": 14.1,
+  "mean_shot_beats": 15.7
+ },
+ "audio": {
+  "present": true,
+  "silent": false,
+  "levels_db": {
+   "L": -16.6,
+   "R": -16.9,
+   "mono": -17.0
+  },
+  "phase_inverted": false,
+  "noise_floor_db": -17.1,
+  "bpm": 117.45,
+  "beat_seconds": 0.5108,
+  "first_beat": 1.533,
+  "beats": [
+   1.533,
+   2.043,
+   2.531,
+   3.042,
+   3.529,
+   4.04,
+   4.551,
+   5.039,
+   5.55,
+   6.037,
+   6.548,
+   7.036,
+   7.546,
+   8.034,
+   8.545,
+   9.033,
+   9.543,
+   10.054,
+   10.542,
+   11.029,
+   11.54,
+   12.051,
+   12.562,
+   13.05,
+   13.56,
+   14.048,
+   14.559,
+   15.047,
+   15.557,
+   16.068,
+   16.579,
+   17.09,
+   17.601,
+   18.112,
+   18.599,
+   19.087,
+   19.551,
+   20.039,
+   20.55,
+   21.037,
+   21.548,
+   22.036,
+   22.547,
+   23.034,
+   23.545,
+   24.056,
+   24.543,
+   25.054,
+   25.542,
+   26.053,
+   26.54,
+   27.028,
+   27.539,
+   28.05,
+   28.537,
+   29.048,
+   29.536,
+   30.047,
+   30.534,
+   31.045,
+   31.533,
+   32.044,
+   32.531,
+   33.042,
+   33.53,
+   34.04,
+   34.551,
+   35.062,
+   35.55,
+   36.037,
+   36.548,
+   37.059,
+   37.57,
+   38.058,
+   38.545,
+   39.056,
+   39.544,
+   40.054,
+   40.542,
+   41.053,
+   41.54
+  ],
+  "best_30s_starts": [
+   {
+    "start": 5.55,
+    "density": 1.625
+   },
+   {
+    "start": 3.53,
+    "density": 1.611
+   },
+   {
+    "start": 7.55,
+    "density": 1.58
+   },
+   {
+    "start": 1.53,
+    "density": 1.566
+   },
+   {
+    "start": 9.54,
+    "density": 1.538
+   }
+  ],
+  "peak_candidates": [
+   {
+    "t": 8.03,
+    "rise": 1.56,
+    "level_after": 1.71,
+    "kind": "lift"
+   },
+   {
+    "t": 23.03,
+    "rise": 3.76,
+    "level_after": 1.01,
+    "kind": "drop"
+   },
+   {
+    "t": 40.54,
+    "rise": 3.08,
+    "level_after": 1.3,
+    "kind": "drop"
+   }
+  ],
+  "quality_warning": null
+ },
+ "shot_details": [
+  {
+   "shot": 1,
+   "start": 0.0,
+   "end": 3.52,
+   "camera": {
+    "pan_x": -0.0009,
+    "tilt_y": -0.0244,
+    "zoom": 0.061,
+    "rotate": 0.0182,
+    "kind": [
+     "push_in",
+     "move_down",
+     "roll/orbit"
+    ],
+    "speed": 0.061,
+    "pace": "medium"
+   },
+   "look": {
+    "brightness": 0.216,
+    "contrast": 0.209,
+    "dark_ratio": 0.14,
+    "colourfulness": 0.201,
+    "dominant": [
+     "#27102F",
+     "#602D48",
+     "#8854B6",
+     "#DEBFD9"
+    ]
+   }
+  },
+  {
+   "shot": 2,
+   "start": 3.52,
+   "end": 16.0,
+   "camera": {
+    "pan_x": -0.0024,
+    "tilt_y": -0.0014,
+    "zoom": -0.0091,
+    "rotate": 0.0084,
+    "kind": [
+     "pull_out"
+    ],
+    "speed": 0.009,
+    "pace": "slow"
+   },
+   "look": {
+    "brightness": 0.166,
+    "contrast": 0.186,
+    "dark_ratio": 0.456,
+    "colourfulness": 0.178,
+    "dominant": [
+     "#1A0C26",
+     "#5B3789",
+     "#BB9DD4",
+     "#984E2F"
+    ]
+   }
+  },
+  {
+   "shot": 3,
+   "start": 16.0,
+   "end": 24.0,
+   "camera": {
+    "pan_x": -0.0017,
+    "tilt_y": 0.0144,
+    "zoom": -0.0034,
+    "rotate": -0.0099,
+    "kind": [
+     "move_up"
+    ],
+    "speed": 0.014,
+    "pace": "slow"
+   },
+   "look": {
+    "brightness": 0.237,
+    "contrast": 0.244,
+    "dark_ratio": 0.446,
+    "colourfulness": 0.236,
+    "dominant": [
+     "#15091E",
+     "#7F4EBB",
+     "#4F2C61",
+     "#D6BAC3"
+    ]
+   }
+  },
+  {
+   "shot": 4,
+   "start": 24.0,
+   "end": 30.53,
+   "camera": {
+    "pan_x": -0.0038,
+    "tilt_y": 0.0035,
+    "zoom": -0.0229,
+    "rotate": 0.0093,
+    "kind": [
+     "pull_out"
+    ],
+    "speed": 0.023,
+    "pace": "slow"
+   },
+   "look": {
+    "brightness": 0.142,
+    "contrast": 0.124,
+    "dark_ratio": 0.182,
+    "colourfulness": 0.132,
+    "dominant": [
+     "#1E0D2C",
+     "#361941",
+     "#824F73",
+     "#CEAAB8"
+    ]
+   }
+  },
+  {
+   "shot": 5,
+   "start": 30.53,
+   "end": 44.63,
+   "camera": {
+    "pan_x": 0.0009,
+    "tilt_y": 0.0084,
+    "zoom": -0.0046,
+    "rotate": 0.004,
+    "kind": [
+     "move_up"
+    ],
+    "speed": 0.008,
+    "pace": "slow"
+   },
+   "look": {
+    "brightness": 0.25,
+    "contrast": 0.255,
+    "dark_ratio": 0.172,
+    "colourfulness": 0.203,
+    "dominant": [
+     "#2B1232",
+     "#835080",
+     "#EEDAD9",
+     "#DEA74F"
+    ]
+   }
+  },
+  {
+   "shot": 6,
+   "start": 44.63,
+   "end": 48.0,
+   "camera": {
+    "pan_x": -0.001,
+    "tilt_y": -0.0185,
+    "zoom": 0.1225,
+    "rotate": 0.0077,
+    "kind": [
+     "push_in",
+     "move_down"
+    ],
+    "speed": 0.122,
+    "pace": "fast"
+   },
+   "look": {
+    "brightness": 0.147,
+    "contrast": 0.124,
+    "dark_ratio": 0.153,
+    "colourfulness": 0.124,
+    "dominant": [
+     "#210F2F",
+     "#3F1D4C",
+     "#754A90",
+     "#C199D1"
+    ]
+   }
+  }
+ ],
+ "flashes": [],
+ "look_summary": {
+  "low_key_shots": 0.0,
+  "moving_camera_shots": 1.0,
+  "mean_brightness": 0.193,
+  "camera_kinds": [
+   "move_down",
+   "move_up",
+   "pull_out",
+   "push_in",
+   "roll/orbit"
+  ]
+ },
+ "fingerprint": {
+  "file": "fingerprint.json",
+  "cadence": {
+   "moving_frames": 948,
+   "hold_ratio": 0.011,
+   "frames_per_drawing": 1.01,
+   "drawings_per_second": 23.7,
+   "label": "on ones"
+  },
+  "peaks": [
+   {
+    "t": 3.417,
+    "height": 0.5,
+    "prominence": 0.308,
+    "build_slope": -0.0595,
+    "breath_s": 1.208,
+    "breath_depth": 0.149,
+    "rise_frames": 25,
+    "hold_s": 0.958,
+    "decay_s": 2.25,
+    "beat_offset_frames": -2.7
+   },
+   {
+    "t": 24.125,
+    "height": 0.522,
+    "prominence": 0.292,
+    "build_slope": -0.0126,
+    "breath_s": 2.667,
+    "breath_depth": 0.182,
+    "rise_frames": 47,
+    "hold_s": 0.25,
+    "decay_s": 0.542,
+    "beat_offset_frames": 1.7
+   },
+   {
+    "t": 30.333,
+    "height": 0.607,
+    "prominence": 0.491,
+    "build_slope": 0.0172,
+    "breath_s": 0.833,
+    "breath_depth": 0.22,
+    "rise_frames": 14,
+    "hold_s": 0.25,
+    "decay_s": 0.375,
+    "beat_offset_frames": -4.8
+   }
+  ],
+  "static_overlay": 0.0,
+  "rhythm": {
+   "on_beat_ratio": 0.4,
+   "mean_offset_frames": 14.11,
+   "phase_mean": 0.957,
+   "phase_R": 0.593,
+   "cuts_per_beat": 0.064
+  }
+ }
+}

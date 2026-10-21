@@ -1,0 +1,6 @@
+# Optional QC / analysis extras used by tools/qc/*.py (av_sync uses librosa if present; loudness needs pyloudnorm).
+-r requirements.txt
+librosa==1.0.0
+pyloudnorm==0.2.0
+opencv-python-headless==5.0.0.93
+pytest                 # optional: the test files also run directly as scripts

@@ -1,0 +1,36 @@
+# environments
+venv/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# renders & heavy media (never commit): videos, audio renders, frame dumps, intermediates
+*.mp4
+*.mov
+*.webm
+*.wav
+*.raw
+*.npy
+*.log
+*.mbtree
+frames/
+keyframes/
+renders/
+projects/*/out/*
+!projects/*/out/upload.json
+!projects/*/out/cover.png
+!projects/*/out/contact_sheet.png
+projects/*/music.wav
+ref/*.mp4
+ref/keyframes/
+ref/analysis/*.mp4
+ref/analysis/*.wav
+ref/analysis/strip_*.jpg
+/tmp/
+
+# secrets
+.env
+*.pem
+*.key
+secrets*.json

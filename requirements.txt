@@ -1,0 +1,5 @@
+# Runtime (engine + tests). Pinned from the working venv (Python 3.13). System: ffmpeg + ffprobe on PATH (libx264, aac).
+numpy==2.5.4
+pillow==13.0.0
+scipy==1.18.1
+soundfile==0.14.0      # tests/test_vision.py reads rendered audio

@@ -1,0 +1,48 @@
+{
+ "preset": "hayret",
+ "loop": false,
+ "segments": [
+  {
+   "id": "S1",
+   "role": "hook",
+   "beats": 4,
+   "scene": "void",
+   "energy": 1.0
+  },
+  {
+   "id": "S2",
+   "role": "step",
+   "beats": 8,
+   "scene": "void",
+   "energy": 2.5
+  },
+  {
+   "id": "S3",
+   "role": "build",
+   "beats": 4,
+   "scene": "junction",
+   "energy": 1.5
+  },
+  {
+   "id": "S4",
+   "role": "hit",
+   "beats": 4,
+   "scene": "network",
+   "params": {
+    "flare": true
+   },
+   "energy": 2.5
+  },
+  {
+   "id": "S5",
+   "role": "metaphor",
+   "beats": 6,
+   "scene": "void",
+   "energy": 1.2
+  }
+ ],
+ "music": {
+  "style": "hicaz_maqsum"
+ },
+ "version": 2
+}

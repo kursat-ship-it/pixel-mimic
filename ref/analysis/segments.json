@@ -1,0 +1,362 @@
+[
+ {
+  "id": "B1",
+  "start": 0.0,
+  "end": 3.52,
+  "dur": 3.52,
+  "beats": 6.9,
+  "label": "Hook: neuron fires",
+  "keyframe": "keyframes/B1_1.50s.jpg",
+  "palette": [
+   [
+    "#11071A",
+    0.44
+   ],
+   [
+    "#2C1436",
+    0.409
+   ],
+   [
+    "#663B9F",
+    0.049
+   ],
+   [
+    "#B087DC",
+    0.04
+   ],
+   [
+    "#F4ECEB",
+    0.039
+   ],
+   [
+    "#AB603A",
+    0.024
+   ]
+  ],
+  "start_offset_from_beat_ms": -1533
+ },
+ {
+  "id": "B2",
+  "start": 3.52,
+  "end": 7.3,
+  "dur": 3.78,
+  "beats": 7.4,
+  "label": "Membrane: sodium in",
+  "keyframe": "keyframes/B2_5.41s.jpg",
+  "palette": [
+   [
+    "#110618",
+    0.413
+   ],
+   [
+    "#281233",
+    0.371
+   ],
+   [
+    "#6A3A9A",
+    0.086
+   ],
+   [
+    "#753325",
+    0.072
+   ],
+   [
+    "#B385DF",
+    0.04
+   ],
+   [
+    "#F4E9E2",
+    0.018
+   ]
+  ],
+  "start_offset_from_beat_ms": -9
+ },
+ {
+  "id": "B3",
+  "start": 7.3,
+  "end": 12.0,
+  "dur": 4.7,
+  "beats": 9.2,
+  "label": "Axon: hops myelin",
+  "keyframe": "keyframes/B3_9.65s.jpg",
+  "palette": [
+   [
+    "#11071A",
+    0.537
+   ],
+   [
+    "#221031",
+    0.355
+   ],
+   [
+    "#48324D",
+    0.04
+   ],
+   [
+    "#695A79",
+    0.03
+   ],
+   [
+    "#B3A3C1",
+    0.02
+   ],
+   [
+    "#F3ECF2",
+    0.017
+   ]
+  ],
+  "start_offset_from_beat_ms": -246
+ },
+ {
+  "id": "B4",
+  "start": 12.0,
+  "end": 16.0,
+  "dur": 4.0,
+  "beats": 7.8,
+  "label": "Speed: 100+ m/s",
+  "keyframe": "keyframes/B4_14.00s.jpg",
+  "palette": [
+   [
+    "#10071A",
+    0.591
+   ],
+   [
+    "#221031",
+    0.324
+   ],
+   [
+    "#433255",
+    0.032
+   ],
+   [
+    "#6D5F89",
+    0.029
+   ],
+   [
+    "#F2EEF5",
+    0.013
+   ],
+   [
+    "#D4C2AC",
+    0.01
+   ]
+  ],
+  "start_offset_from_beat_ms": -51
+ },
+ {
+  "id": "B5",
+  "start": 16.0,
+  "end": 20.0,
+  "dur": 4.0,
+  "beats": 7.8,
+  "label": "Synapse terminal",
+  "keyframe": "keyframes/B5_18.00s.jpg",
+  "palette": [
+   [
+    "#11071A",
+    0.669
+   ],
+   [
+    "#6F41AB",
+    0.117
+   ],
+   [
+    "#3D2265",
+    0.098
+   ],
+   [
+    "#AD87D8",
+    0.066
+   ],
+   [
+    "#EFE8F3",
+    0.036
+   ],
+   [
+    "#EBAF41",
+    0.015
+   ]
+  ],
+  "start_offset_from_beat_ms": -68
+ },
+ {
+  "id": "B6",
+  "start": 20.0,
+  "end": 24.0,
+  "dur": 4.0,
+  "beats": 7.8,
+  "label": "Chemicals cross, build",
+  "keyframe": "keyframes/B6_23.50s.jpg",
+  "palette": [
+   [
+    "#12081C",
+    0.734
+   ],
+   [
+    "#4B2451",
+    0.097
+   ],
+   [
+    "#6E3FAC",
+    0.082
+   ],
+   [
+    "#AE85DB",
+    0.047
+   ],
+   [
+    "#F2EBF5",
+    0.026
+   ],
+   [
+    "#E1A44A",
+    0.015
+   ]
+  ],
+  "start_offset_from_beat_ms": -39
+ },
+ {
+  "id": "B7",
+  "start": 24.0,
+  "end": 30.5,
+  "dur": 6.5,
+  "beats": 12.7,
+  "label": "HIT: next neuron fires -> network",
+  "keyframe": "keyframes/B7_24.10s.jpg",
+  "palette": [
+   [
+    "#251134",
+    0.454
+   ],
+   [
+    "#14091F",
+    0.336
+   ],
+   [
+    "#411F47",
+    0.152
+   ],
+   [
+    "#7F5BB7",
+    0.027
+   ],
+   [
+    "#A55B4A",
+    0.021
+   ],
+   [
+    "#EED5D6",
+    0.011
+   ]
+  ],
+  "start_offset_from_beat_ms": -56
+ },
+ {
+  "id": "B8",
+  "start": 30.5,
+  "end": 35.2,
+  "dur": 4.7,
+  "beats": 9.2,
+  "label": "Network = brain, 86B",
+  "keyframe": "keyframes/B8_32.85s.jpg",
+  "palette": [
+   [
+    "#13081E",
+    0.452
+   ],
+   [
+    "#291237",
+    0.399
+   ],
+   [
+    "#622C4A",
+    0.062
+   ],
+   [
+    "#8655C3",
+    0.034
+   ],
+   [
+    "#EED7E8",
+    0.029
+   ],
+   [
+    "#CD8C55",
+    0.024
+   ]
+  ],
+  "start_offset_from_beat_ms": -34
+ },
+ {
+  "id": "B9",
+  "start": 35.2,
+  "end": 44.6,
+  "dur": 9.4,
+  "beats": 18.4,
+  "label": "Bulb: ~20 W + brand",
+  "keyframe": "keyframes/B9_38.00s.jpg",
+  "palette": [
+   [
+    "#0D0515",
+    0.539
+   ],
+   [
+    "#2B1335",
+    0.344
+   ],
+   [
+    "#67354E",
+    0.049
+   ],
+   [
+    "#F3E5E0",
+    0.031
+   ],
+   [
+    "#E5AF4D",
+    0.021
+   ],
+   [
+    "#A8789F",
+    0.016
+   ]
+  ],
+  "start_offset_from_beat_ms": 138
+ },
+ {
+  "id": "B10",
+  "start": 44.6,
+  "end": 48.0,
+  "dur": 3.4,
+  "beats": 6.7,
+  "label": "Loop back to start",
+  "keyframe": "keyframes/B10_47.80s.jpg",
+  "palette": [
+   [
+    "#251134",
+    0.497
+   ],
+   [
+    "#12081D",
+    0.293
+   ],
+   [
+    "#3D1D4A",
+    0.155
+   ],
+   [
+    "#78486C",
+    0.023
+   ],
+   [
+    "#956DBD",
+    0.017
+   ],
+   [
+    "#E8D3E3",
+    0.015
+   ]
+  ],
+  "start_offset_from_beat_ms": 3060
+ }
+]

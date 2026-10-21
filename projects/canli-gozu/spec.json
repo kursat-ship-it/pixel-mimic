@@ -1,0 +1,1879 @@
+{
+  "version": 2,
+  "meta": {
+    "title": "Aynı Dünya, 6 Farklı Göz: Hayvanlar Ne Görüyor? 👁️",
+    "description": "Arı morötesini görür, köpek iki renk kanalıyla, yılan ısıyı, yarasa yankıyı... Mantis karidesinin 12 renk alıcısı var ama birbirine yakın renkleri bizden kötü ayırt ediyor: 12–25 nm'lik farkı seçemiyor, biz birkaç nanometrelik farkı seçebiliyoruz (Thoen ve ark., 2014). Videodaki renkler bilimsel verilere dayanan ÇEVİRİLER: bir hayvanın gerçekte ne yaşadığını bilemeyiz (Nagel, 1974). Kelebek Graphium sarpedon'un gözünde 15 tür ışık alıcısı var, ama gündelik renk görüşünde muhtemelen 4 sınıf kullanıyor (Chen ve ark., 2016): alıcı sayısı ≠ renk sayısı. Sence hangisi en tuhaf? 👇",
+    "hashtags": [
+      "#bilim",
+      "#hayvanlar",
+      "#görme",
+      "#pikselsanat",
+      "#chiptune",
+      "#hayretpiksel"
+    ],
+    "cover_t": 37.5
+  },
+  "format": {
+    "w": 1080,
+    "h": 1920,
+    "fps": 30,
+    "grid": 6
+  },
+  "pacing": "calm",
+  "palette": "hayret",
+  "visions": {
+    "insan": {
+      "label": "İNSAN · 3 koni",
+      "receptors": 3,
+      "map": "rgb",
+      "why": "Baseline trichromat. Daylight meadow in natural hues; the yellow flower is plain yellow (no pattern), the red ball pops on green grass.",
+      "palette": {
+        "colors": [
+          "#0E1B2E",
+          "#1C3550",
+          "#2F5F86",
+          "#5E9CC8",
+          "#1A2414",
+          "#2E4A22",
+          "#3F7A2E",
+          "#63A83A",
+          "#9FD05A",
+          "#D9EFA0",
+          "#FFF8E6",
+          "#1A2230",
+          "#2B3A4A",
+          "#46596B",
+          "#6F8494",
+          "#A3B3BE",
+          "#8EC3E6",
+          "#BFE3F5",
+          "#E8F6FC",
+          "#7A4A00",
+          "#D18A00",
+          "#FFC21A",
+          "#FFE680",
+          "#5E0F14",
+          "#B3202A",
+          "#E8403A",
+          "#FF8C7A",
+          "#4A2E1A",
+          "#8A5A32",
+          "#C49060",
+          "#7A6A5A",
+          "#04060E",
+          "#F4ECDC"
+        ],
+        "ramps": {
+          "bg": [
+            "#0E1B2E",
+            "#1C3550",
+            "#2F5F86",
+            "#5E9CC8"
+          ],
+          "body": [
+            "#1A2414",
+            "#2E4A22",
+            "#3F7A2E",
+            "#63A83A",
+            "#9FD05A",
+            "#D9EFA0",
+            "#FFF8E6"
+          ],
+          "dim": [
+            "#1A2230",
+            "#2B3A4A",
+            "#46596B",
+            "#6F8494",
+            "#A3B3BE"
+          ],
+          "pale": [
+            "#5E9CC8",
+            "#8EC3E6",
+            "#BFE3F5",
+            "#E8F6FC"
+          ],
+          "energy": [
+            "#7A4A00",
+            "#D18A00",
+            "#FFC21A",
+            "#FFE680"
+          ],
+          "accent": [
+            "#5E0F14",
+            "#B3202A",
+            "#E8403A",
+            "#FF8C7A"
+          ]
+        },
+        "caption": {
+          "box": "#04060E",
+          "text": "#F4ECDC",
+          "hi": "#41E8D2",
+          "hi2": "#FF9A86"
+        }
+      }
+    },
+    "ari": {
+      "label": "ARI · morötesi",
+      "receptors": 3,
+      "map": "bee_false_colour",
+      "why": "UV becomes visible as magenta; bee's 'green' shown as red. Red objects lose contrast (bees see red only weakly through the L receptor).",
+      "palette": {
+        "colors": [
+          "#0E2A2A",
+          "#1E5A52",
+          "#4FA88E",
+          "#A8E8C8",
+          "#1A0606",
+          "#3E100C",
+          "#6E2014",
+          "#9E3A1C",
+          "#C8602A",
+          "#E8904A",
+          "#FFD0A0",
+          "#120A14",
+          "#2A1428",
+          "#462240",
+          "#6A345A",
+          "#8E4A70",
+          "#D0F8E8",
+          "#F4FFF8",
+          "#4A0A4A",
+          "#8E1A90",
+          "#D040D8",
+          "#FF90F8",
+          "#2A0606",
+          "#5A0E0E",
+          "#8A1E1E",
+          "#C04040",
+          "#04060E",
+          "#F4ECDC"
+        ],
+        "ramps": {
+          "bg": [
+            "#0E2A2A",
+            "#1E5A52",
+            "#4FA88E",
+            "#A8E8C8"
+          ],
+          "body": [
+            "#1A0606",
+            "#3E100C",
+            "#6E2014",
+            "#9E3A1C",
+            "#C8602A",
+            "#E8904A",
+            "#FFD0A0"
+          ],
+          "dim": [
+            "#120A14",
+            "#2A1428",
+            "#462240",
+            "#6A345A",
+            "#8E4A70"
+          ],
+          "pale": [
+            "#A8E8C8",
+            "#D0F8E8",
+            "#F4FFF8"
+          ],
+          "energy": [
+            "#4A0A4A",
+            "#8E1A90",
+            "#D040D8",
+            "#FF90F8"
+          ],
+          "accent": [
+            "#2A0606",
+            "#5A0E0E",
+            "#8A1E1E",
+            "#C04040"
+          ]
+        },
+        "caption": {
+          "box": "#04060E",
+          "text": "#F4ECDC",
+          "hi": "#41E8D2",
+          "hi2": "#FF9A86"
+        }
+      }
+    },
+    "kopek": {
+      "label": "KÖPEK · 2 koni",
+      "receptors": 2,
+      "map": "dichromat",
+      "pixel": 2,
+      "why": "Blue-yellow only (Machado 2009 deuteranopia matrix). The red ball and the green grass become the same dull olive. Coarser pixels = lower acuity.",
+      "palette": {
+        "colors": [
+          "#0D1626",
+          "#1C2E4D",
+          "#34507D",
+          "#5878A8",
+          "#1C1A12",
+          "#3A3522",
+          "#5E573A",
+          "#8A8154",
+          "#B5AA72",
+          "#DCD29A",
+          "#F6F0D2",
+          "#15161A",
+          "#2A2C30",
+          "#45484C",
+          "#6C6E6E",
+          "#9A9A94",
+          "#8AA4C8",
+          "#BCCBE0",
+          "#E6ECF2",
+          "#4A4220",
+          "#8C7C36",
+          "#C9B451",
+          "#F0DE80",
+          "#2E2A1C",
+          "#575034",
+          "#807650",
+          "#A89C70",
+          "#04060E",
+          "#F4ECDC"
+        ],
+        "ramps": {
+          "bg": [
+            "#0D1626",
+            "#1C2E4D",
+            "#34507D",
+            "#5878A8"
+          ],
+          "body": [
+            "#1C1A12",
+            "#3A3522",
+            "#5E573A",
+            "#8A8154",
+            "#B5AA72",
+            "#DCD29A",
+            "#F6F0D2"
+          ],
+          "dim": [
+            "#15161A",
+            "#2A2C30",
+            "#45484C",
+            "#6C6E6E",
+            "#9A9A94"
+          ],
+          "pale": [
+            "#5878A8",
+            "#8AA4C8",
+            "#BCCBE0",
+            "#E6ECF2"
+          ],
+          "energy": [
+            "#4A4220",
+            "#8C7C36",
+            "#C9B451",
+            "#F0DE80"
+          ],
+          "accent": [
+            "#2E2A1C",
+            "#575034",
+            "#807650",
+            "#A89C70"
+          ]
+        },
+        "caption": {
+          "box": "#04060E",
+          "text": "#F4ECDC",
+          "hi": "#41E8D2",
+          "hi2": "#FF9A86"
+        }
+      }
+    },
+    "yilan": {
+      "label": "YILAN · ısı",
+      "receptors": "IR çukur",
+      "map": "thermal",
+      "blur": 2.0,
+      "why": "Cold = indigo, warm = yellow-white. Warm mouse, warm beehive, bat glow; stone and water vanish. Slight blur = pinhole optics.",
+      "palette": {
+        "colors": [
+          "#04020A",
+          "#0E0624",
+          "#1C0A44",
+          "#2E0E5E",
+          "#3E1070",
+          "#6E1A7E",
+          "#A8286E",
+          "#D84A4A",
+          "#F2803A",
+          "#FFC24A",
+          "#0A0418",
+          "#160A30",
+          "#24104A",
+          "#341660",
+          "#4A1E74",
+          "#FFF0A0",
+          "#FFFFF4",
+          "#FF9A5A",
+          "#FFE8C0",
+          "#04060E",
+          "#F4ECDC"
+        ],
+        "ramps": {
+          "bg": [
+            "#04020A",
+            "#0E0624",
+            "#1C0A44",
+            "#2E0E5E"
+          ],
+          "body": [
+            "#1C0A44",
+            "#3E1070",
+            "#6E1A7E",
+            "#A8286E",
+            "#D84A4A",
+            "#F2803A",
+            "#FFC24A"
+          ],
+          "dim": [
+            "#0A0418",
+            "#160A30",
+            "#24104A",
+            "#341660",
+            "#4A1E74"
+          ],
+          "pale": [
+            "#A8286E",
+            "#F2803A",
+            "#FFC24A",
+            "#FFF0A0"
+          ],
+          "energy": [
+            "#F2803A",
+            "#FFC24A",
+            "#FFF0A0",
+            "#FFFFF4"
+          ],
+          "accent": [
+            "#6E1A7E",
+            "#D84A4A",
+            "#FF9A5A",
+            "#FFE8C0"
+          ]
+        },
+        "caption": {
+          "box": "#04060E",
+          "text": "#F4ECDC",
+          "hi": "#41E8D2",
+          "hi2": "#FF9A86"
+        }
+      }
+    },
+    "yarasa": {
+      "label": "YARASA · yankı",
+      "receptors": "ses",
+      "map": "sonar",
+      "why": "Firuze-mono (brand turquoise family) so 'sound' reads as a different sense, not a colour. Sky = no echo = black.",
+      "palette": {
+        "colors": [
+          "#000505",
+          "#021612",
+          "#053026",
+          "#0A4C3A",
+          "#127456",
+          "#22A07A",
+          "#4CD6A8",
+          "#A6FFE0",
+          "#F0FFF8",
+          "#FFFFFF",
+          "#04060E",
+          "#F4ECDC"
+        ],
+        "ramps": {
+          "bg": [
+            "#000505",
+            "#021612",
+            "#053026",
+            "#0A4C3A"
+          ],
+          "body": [
+            "#053026",
+            "#0A4C3A",
+            "#127456",
+            "#22A07A",
+            "#4CD6A8",
+            "#A6FFE0",
+            "#F0FFF8"
+          ],
+          "dim": [
+            "#021612",
+            "#053026",
+            "#0A4C3A",
+            "#127456",
+            "#22A07A"
+          ],
+          "pale": [
+            "#22A07A",
+            "#4CD6A8",
+            "#A6FFE0",
+            "#F0FFF8"
+          ],
+          "energy": [
+            "#4CD6A8",
+            "#A6FFE0",
+            "#F0FFF8",
+            "#FFFFFF"
+          ],
+          "accent": [
+            "#127456",
+            "#4CD6A8",
+            "#A6FFE0",
+            "#F0FFF8"
+          ]
+        },
+        "caption": {
+          "box": "#04060E",
+          "text": "#F4ECDC",
+          "hi": "#41E8D2",
+          "hi2": "#FF9A86"
+        }
+      }
+    },
+    "mantis12": {
+      "label": "MANTİS · 12 alıcı",
+      "receptors": 12,
+      "map": "bands12",
+      "why": "What everyone imagines: hyper-saturated 12-band rainbow. Shown first, then corrected.",
+      "palette": {
+        "colors": [
+          "#07030F",
+          "#1A0E2E",
+          "#2A1650",
+          "#3C1F70",
+          "#1F5BFF",
+          "#1FB4FF",
+          "#1FFFD8",
+          "#1FFF6A",
+          "#7CFF1F",
+          "#E8FF1F",
+          "#FFB81F",
+          "#6A1FFF",
+          "#C81FFF",
+          "#FF1FC8",
+          "#FF1F4B",
+          "#FF6A1F",
+          "#FFFFFF",
+          "#F6E8FF",
+          "#FFF0C8",
+          "#04060E",
+          "#F4ECDC"
+        ],
+        "ramps": {
+          "bg": [
+            "#07030F",
+            "#1A0E2E",
+            "#2A1650",
+            "#3C1F70"
+          ],
+          "body": [
+            "#1F5BFF",
+            "#1FB4FF",
+            "#1FFFD8",
+            "#1FFF6A",
+            "#7CFF1F",
+            "#E8FF1F",
+            "#FFB81F"
+          ],
+          "dim": [
+            "#07030F",
+            "#1A0E2E",
+            "#2A1650",
+            "#3C1F70",
+            "#6A1FFF"
+          ],
+          "pale": [
+            "#C81FFF",
+            "#FF1FC8",
+            "#FF1F4B",
+            "#FF6A1F",
+            "#FFFFFF"
+          ],
+          "energy": [
+            "#6A1FFF",
+            "#C81FFF",
+            "#FF1FC8",
+            "#F6E8FF"
+          ],
+          "accent": [
+            "#FF1F4B",
+            "#FF6A1F",
+            "#FFB81F",
+            "#FFF0C8"
+          ]
+        },
+        "caption": {
+          "box": "#04060E",
+          "text": "#F4ECDC",
+          "hi": "#41E8D2",
+          "hi2": "#FF9A86"
+        }
+      }
+    },
+    "mantis_kaba": {
+      "label": "MANTİS · gerçekte?",
+      "receptors": 12,
+      "map": "coarse_classes",
+      "why": "Twist: 12 channels but coarse colour judgement. Hues snap to 5 broad flat classes; fine gradients disappear.",
+      "palette": {
+        "colors": [
+          "#07030F",
+          "#1E1438",
+          "#2E2456",
+          "#3F6FD8",
+          "#4FCB6A",
+          "#E8C838",
+          "#E0503A",
+          "#F4ECDC",
+          "#B048D8",
+          "#04060E"
+        ],
+        "ramps": {
+          "bg": [
+            "#07030F",
+            "#1E1438",
+            "#2E2456"
+          ],
+          "body": [
+            "#2E2456",
+            "#3F6FD8",
+            "#4FCB6A",
+            "#E8C838",
+            "#E0503A"
+          ],
+          "dim": [
+            "#07030F",
+            "#1E1438",
+            "#2E2456"
+          ],
+          "pale": [
+            "#3F6FD8",
+            "#4FCB6A",
+            "#E8C838",
+            "#F4ECDC"
+          ],
+          "energy": [
+            "#2E2456",
+            "#B048D8",
+            "#E8C838",
+            "#F4ECDC"
+          ],
+          "accent": [
+            "#2E2456",
+            "#E0503A",
+            "#E8C838",
+            "#F4ECDC"
+          ]
+        },
+        "caption": {
+          "box": "#04060E",
+          "text": "#F4ECDC",
+          "hi": "#41E8D2",
+          "hi2": "#FF9A86"
+        }
+      }
+    }
+  },
+  "world_palette": {
+    "colors": [
+      "#0E1B2E",
+      "#1C3550",
+      "#2F5F86",
+      "#5E9CC8",
+      "#1A2414",
+      "#2E4A22",
+      "#3F7A2E",
+      "#63A83A",
+      "#9FD05A",
+      "#D9EFA0",
+      "#FFF8E6",
+      "#1A2230",
+      "#2B3A4A",
+      "#46596B",
+      "#6F8494",
+      "#A3B3BE",
+      "#8EC3E6",
+      "#BFE3F5",
+      "#E8F6FC",
+      "#7A4A00",
+      "#D18A00",
+      "#FFC21A",
+      "#FFE680",
+      "#5E0F14",
+      "#B3202A",
+      "#E8403A",
+      "#FF8C7A",
+      "#4A2E1A",
+      "#8A5A32",
+      "#C49060",
+      "#7A6A5A",
+      "#04060E",
+      "#F4ECDC"
+    ],
+    "ramps": {
+      "bg": [
+        "#0E1B2E",
+        "#1C3550",
+        "#2F5F86",
+        "#5E9CC8"
+      ],
+      "body": [
+        "#1A2414",
+        "#2E4A22",
+        "#3F7A2E",
+        "#63A83A",
+        "#9FD05A",
+        "#D9EFA0",
+        "#FFF8E6"
+      ],
+      "dim": [
+        "#1A2230",
+        "#2B3A4A",
+        "#46596B",
+        "#6F8494",
+        "#A3B3BE"
+      ],
+      "pale": [
+        "#5E9CC8",
+        "#8EC3E6",
+        "#BFE3F5",
+        "#E8F6FC"
+      ],
+      "energy": [
+        "#7A4A00",
+        "#D18A00",
+        "#FFC21A",
+        "#FFE680"
+      ],
+      "accent": [
+        "#5E0F14",
+        "#B3202A",
+        "#E8403A",
+        "#FF8C7A"
+      ]
+    },
+    "caption": {
+      "box": "#04060E",
+      "text": "#F4ECDC",
+      "hi": "#41E8D2",
+      "hi2": "#FF9A86"
+    }
+  },
+  "narration_defaults": {
+    "reveal": "word",
+    "rate": "16th"
+  },
+  "readability": {
+    "per_word": 0.35,
+    "base": 0.6
+  },
+  "music": {
+    "_concept": "ONE melody = the world; every creature 'hears' it through its own eye. The eye motif (sonic logo 5→1→2→3 + answer) is replayed per section in that creature's SCALE and TIMBRE, and the pad's NUMBER OF NOTES = number of colour channels: human triad (3), bee triad shifted up into lydian sparkle (3, UV = 'above us'), dog open fifth with no third (2), snake one low warm drone (heat), bat: no harmony — the CLICKS are the beat and they accelerate into a feeding buzz, mantis shrimp: a 12-note chromatic cluster that COLLAPSES to a bare octave on the twist ('12 receptors, poor discrimination'). Drop = all timbres at once in D lydian; Nagel = near silence, one sonar ping + human triad; sonic logo at drop and loop seam.",
+    "bpm": 108,
+    "meter": "4/4",
+    "key": "D",
+    "scale": "major",
+    "tuning": "12tet",
+    "flavour": "gameboy",
+    "progression": [
+      [
+        "D3",
+        "F#3",
+        "A3"
+      ]
+    ],
+    "chord_bars": 2,
+    "swing": 0,
+    "seed": 1974,
+    "hf_shelf_db": -3.0,
+    "motif": {
+      "notes": [
+        4,
+        0,
+        1,
+        2,
+        null,
+        2,
+        4,
+        null
+      ],
+      "rhythm": [
+        0.5
+      ]
+    },
+    "voices": {
+      "goz": {
+        "role": "lead",
+        "type": "pulse",
+        "duty": 0.25,
+        "octave": 5,
+        "vol": 0.07,
+        "pan": 0.1,
+        "env": {
+          "a": 0.004,
+          "d": 0.2,
+          "s": 0.45,
+          "r": 0.08
+        },
+        "_note": "human: plain pulse lead, the reference timbre"
+      },
+      "vizilti": {
+        "role": "lead",
+        "type": "pulse",
+        "duty": 0.125,
+        "octave": 6,
+        "vol": 0.05,
+        "pan": 0.15,
+        "vibrato": 0.3,
+        "vib_delay": 0.0,
+        "env": {
+          "a": 0.002,
+          "d": 0.12,
+          "s": 0.5,
+          "r": 0.05
+        },
+        "_note": "bee: thin 12.5% pulse, octave up, fast vibrato = wing buzz"
+      },
+      "kuyruk": {
+        "role": "lead",
+        "type": "triangle",
+        "octave": 5,
+        "vol": 0.085,
+        "pan": -0.1,
+        "env": {
+          "a": 0.002,
+          "d": 0.14,
+          "s": 0.3,
+          "r": 0.05
+        },
+        "_note": "dog: round triangle, bouncy, pentatonic (fewer 'colours')"
+      },
+      "isi": {
+        "role": "lead",
+        "type": "fm",
+        "ratio": 1.0,
+        "index": 2.6,
+        "idecay": 2,
+        "octave": 4,
+        "vol": 0.06,
+        "pan": 0.0,
+        "vibrato": 0.15,
+        "vib_delay": 0.2,
+        "env": {
+          "a": 0.05,
+          "d": 0.4,
+          "s": 0.6,
+          "r": 0.2
+        },
+        "_note": "snake: warm low FM, slow heat-shimmer vibrato, phrygian"
+      },
+      "sonar": {
+        "role": "lead",
+        "type": "fm",
+        "ratio": 7.0,
+        "index": 3.5,
+        "idecay": 30,
+        "octave": 6,
+        "vol": 0.045,
+        "pan": -0.2,
+        "echo": 0.75,
+        "env": {
+          "a": 0.001,
+          "d": 0.06,
+          "s": 0.0,
+          "r": 0.03
+        },
+        "_note": "bat: pings with an echo 3 8ths later (call → echo)"
+      },
+      "prizma": {
+        "role": "arp",
+        "type": "pulse",
+        "duty": 0.125,
+        "octave": 5,
+        "vol": 0.035,
+        "pattern": "up",
+        "rate": 4,
+        "pan": -0.3,
+        "_note": "mantis: 16th arp racing through the 12-note cluster"
+      },
+      "bass": {
+        "role": "bass",
+        "type": "pulse",
+        "duty": 0.5,
+        "octave": 3,
+        "vol": 0.056,
+        "pattern": "octave",
+        "rate": 2,
+        "filter": "soft",
+        "_note": "pulse bass (phone speakers, QC lesson), octave 3"
+      },
+      "pad": {
+        "role": "pad",
+        "type": "saw",
+        "octave": 4,
+        "vol": 0.022,
+        "filter": "soft",
+        "env": {
+          "a": 0.15,
+          "d": 0.6,
+          "s": 0.6,
+          "r": 0.3
+        },
+        "max_notes": 12,
+        "_note": "NEW max_notes (engine caps pads at 4 notes): number of pad notes = number of colour channels"
+      },
+      "lead": null,
+      "counter": null,
+      "arp": null
+    },
+    "drums": {
+      "K": "X.......X.......",
+      "H": "..x...x...x...x.",
+      "S": "....o.......o..."
+    },
+    "sections": [
+      {
+        "name": "insan",
+        "beats": 8,
+        "energy": 1.6,
+        "scale": "major",
+        "progression": [
+          [
+            "D3",
+            "F#3",
+            "A3"
+          ]
+        ],
+        "voices": [
+          "goz",
+          "bass",
+          "pad"
+        ]
+      },
+      {
+        "name": "ari",
+        "beats": 10,
+        "energy": 1.9,
+        "scale": "lydian",
+        "progression": [
+          [
+            "E4",
+            "G#4",
+            "B4"
+          ]
+        ],
+        "fill": true,
+        "voices": [
+          "vizilti",
+          "bass",
+          "pad"
+        ],
+        "drums": {
+          "K": "X.......X.......",
+          "H": "x.x.x.x.x.x.x.x.",
+          "S": "....o.......o..."
+        }
+      },
+      {
+        "name": "kopek",
+        "level_db": -1.0,
+        "beats": 10,
+        "energy": 1.9,
+        "scale": "pentatonic_major",
+        "progression": [
+          [
+            "D3",
+            "A3"
+          ]
+        ],
+        "fill": true,
+        "voices": [
+          "kuyruk",
+          "bass",
+          "pad"
+        ],
+        "drums": {
+          "K": "X...X.x.X...X.x.",
+          "H": "..x...x...x...x.",
+          "S": "....o.......o..."
+        }
+      },
+      {
+        "name": "yilan",
+        "level_db": -1.5,
+        "beats": 10,
+        "energy": 2.0,
+        "scale": "phrygian",
+        "progression": [
+          [
+            "D2",
+            "A2"
+          ]
+        ],
+        "fill": true,
+        "voices": [
+          "isi",
+          "bass",
+          "pad"
+        ],
+        "drums": "half_time"
+      },
+      {
+        "name": "yarasa",
+        "level_db": -1.0,
+        "beats": 10,
+        "energy": 2.3,
+        "scale": "pentatonic_minor",
+        "progression": [
+          [
+            "D3",
+            "A3"
+          ]
+        ],
+        "stop": 0.5,
+        "voices": [
+          "sonar",
+          "bass"
+        ],
+        "drums": {
+          "K": "X.......X.......",
+          "B": "x...x...x.x.x.x.x.x.x.x.rrrrrrrr",
+          "_B": "NEW: 32-char = 2-bar grid; r = 32nd ratchet (terminal buzz)"
+        },
+        "_note": "NEW drum 'B' = bat chirp (FM down-sweep 4→1.5 kHz, 18 ms). 8ths → 16ths → 32nd 'terminal buzz' (real bats: up to ~200 calls/s)."
+      },
+      {
+        "name": "mantis12",
+        "level_db": -1.5,
+        "beats": 10,
+        "energy": 2.6,
+        "scale": "chromatic",
+        "progression": [
+          [
+            "D3",
+            "D#3",
+            "E3",
+            "F3",
+            "F#3",
+            "G3",
+            "G#3",
+            "A3",
+            "A#3",
+            "B3",
+            "C4",
+            "C#4"
+          ]
+        ],
+        "chord_bars": 4,
+        "voices": [
+          "prizma",
+          "goz",
+          "bass",
+          "pad"
+        ],
+        "drums": {
+          "K": "X.......X.......",
+          "H": "x.x.x.x.x.x.x.x.",
+          "S": "....X.......X..."
+        }
+      },
+      {
+        "name": "mantis_kaba",
+        "level_db": -2.5,
+        "beats": 7,
+        "energy": 1.3,
+        "scale": "major",
+        "progression": [
+          [
+            "D2",
+            "D3"
+          ]
+        ],
+        "riser": true,
+        "riser_kind": "noise",
+        "voices": [
+          "bass",
+          "pad"
+        ],
+        "drums": "none",
+        "_note": "the cluster collapses to a bare octave on the twist word 'Ama'"
+      },
+      {
+        "name": "dusus",
+        "level_db": 1.5,
+        "beats": 8,
+        "energy": 3.2,
+        "scale": "lydian",
+        "drop": true,
+        "progression": [
+          [
+            "D3",
+            "F#3",
+            "A3",
+            "C#4"
+          ],
+          [
+            "E3",
+            "G#3",
+            "B3",
+            "D4"
+          ]
+        ],
+        "chord_bars": 1,
+        "voices": [
+          "goz",
+          "vizilti",
+          "kuyruk",
+          "sonar",
+          "prizma",
+          "bass",
+          "pad"
+        ],
+        "drums": {
+          "K": "X...x...X...x...",
+          "S": "....X.......X...",
+          "H": "x.x.x.x.x.x.x.x.",
+          "B": "...x.......x...."
+        }
+      },
+      {
+        "name": "nagel",
+        "level_db": -4.0,
+        "beats": 12,
+        "energy": 1.4,
+        "scale": "major",
+        "progression": [
+          [
+            "D3",
+            "F#3",
+            "A3"
+          ],
+          [
+            "B2",
+            "D3",
+            "F#3"
+          ]
+        ],
+        "chord_bars": 2,
+        "voices": [
+          "sonar",
+          "pad",
+          "bass"
+        ],
+        "drums": {
+          "K": "X...............",
+          "B": "x..............."
+        }
+      },
+      {
+        "name": "dongu",
+        "level_db": -1.0,
+        "beats": 3,
+        "energy": 1.6,
+        "scale": "major",
+        "progression": [
+          [
+            "D3",
+            "F#3",
+            "A3"
+          ]
+        ],
+        "voices": [
+          "goz",
+          "bass",
+          "pad"
+        ],
+        "drums": {
+          "K": "X.......X.......",
+          "H": "..x...x...x...x.",
+          "S": "....o.......o..."
+        },
+        "_note": "same groove as frame 0 (seamless loop)"
+      }
+    ],
+    "logo": {
+      "at": [
+        "reveal",
+        "loop"
+      ],
+      "voice": "goz"
+    },
+    "sfx": {
+      "tick": null
+    }
+  },
+  "brand": {
+    "handle": "@hayret.piksel",
+    "auto": false
+  },
+  "loop": true,
+  "loop_beats": 1,
+  "loop_transition": {
+    "type": "dissolve",
+    "beats": 1
+  },
+  "segments": [
+    {
+      "id": "S1",
+      "role": "hook",
+      "scene": "vision_world",
+      "beats": 8,
+      "vision": "insan",
+      "params": {
+        "time": "day",
+        "focus": "flower",
+        "bee_path": "approach",
+        "peek": {
+          "at": 5.0,
+          "beats": 0.75,
+          "mode": "ari"
+        }
+      },
+      "layers": {
+        "back": [
+          {
+            "kind": "rays",
+            "x": 56,
+            "y": -122,
+            "par": 1.0,
+            "n": 7
+          }
+        ],
+        "front": [
+          "dust",
+          "pollen"
+        ]
+      },
+      "camera": {
+        "zoom": [
+          1.25,
+          1.45
+        ],
+        "pan": [
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            18
+          ]
+        ],
+        "ease": "inOutSine"
+      },
+      "transition_in": "cut",
+      "narration": [
+        {
+          "text": "Aynı çiçek. Bir *arı* ne görüyor?",
+          "at": 0,
+          "place": "top",
+          "size": "head",
+          "reveal": "word",
+          "rate": "16th"
+        }
+      ],
+      "events": [
+        {
+          "at": 5.0,
+          "kind": "pulse",
+          "label": "PEEK: 0,75 vuruşluk arı-görüşü göz kırpması (morötesi hedef bir anlığına görünür)"
+        },
+        {
+          "at": 6.0,
+          "kind": "mark",
+          "label": "arı çiçeğe yaklaşır"
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "role": "rehook",
+      "scene": "vision_world",
+      "beats": 10,
+      "vision": "ari",
+      "params": {
+        "time": "day",
+        "focus": "flower",
+        "bee_path": "land",
+        "uv_glow": true
+      },
+      "layers": {
+        "back": [
+          {
+            "kind": "rays",
+            "x": 56,
+            "y": -122,
+            "par": 1.0,
+            "n": 7
+          }
+        ],
+        "front": [
+          "dust",
+          "pollen"
+        ]
+      },
+      "camera": {
+        "zoom": [
+          1.45,
+          1.6
+        ],
+        "pan": [
+          [
+            2,
+            18
+          ],
+          [
+            2,
+            22
+          ]
+        ],
+        "ease": "inOutSine"
+      },
+      "transition_in": {
+        "type": "iris",
+        "beats": 1.5,
+        "_note": "hayret-eye iris = the eye opens INTO the new vision, same scene & camera continue"
+      },
+      "subject": [
+        -22,
+        -2,
+        26,
+        46
+      ],
+      "narration": [
+        {
+          "text": "Arılar *morötesini* görür: çiçekte gizli bir hedef belirir.",
+          "at": 0.5,
+          "place": "top"
+        },
+        {
+          "text": "UV deseni",
+          "at": 5,
+          "place": "callout",
+          "target": [
+            2,
+            42
+          ],
+          "side": "below",
+          "reveal": "word",
+          "rate": "8th",
+          "_note": "render: points at the lower petal tip (UV ring) from below so the box never covers the bullseye"
+        }
+      ],
+      "events": [
+        {
+          "at": 0,
+          "kind": "rehook",
+          "label": "dünya renk değiştirir: morötesi"
+        },
+        {
+          "at": 5,
+          "kind": "pop",
+          "label": "boğa gözü deseni parlar"
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "role": "step",
+      "scene": "vision_world",
+      "beats": 10,
+      "vision": "kopek",
+      "params": {
+        "time": "day",
+        "focus": "ball",
+        "dog": true,
+        "pixel": 2,
+        "peek": {
+          "at": 5.0,
+          "beats": 1.25,
+          "mode": "insan"
+        }
+      },
+      "layers": {
+        "back": [
+          {
+            "kind": "rays",
+            "x": 56,
+            "y": -122,
+            "par": 1.0,
+            "n": 7
+          }
+        ],
+        "front": [
+          "dust",
+          "pollen"
+        ]
+      },
+      "camera": {
+        "zoom": [
+          1.35,
+          1.45
+        ],
+        "pan": [
+          [
+            -44,
+            64
+          ],
+          [
+            -48,
+            70
+          ]
+        ],
+        "ease": "inOutSine"
+      },
+      "subject": [
+        -60,
+        64,
+        -36,
+        88
+      ],
+      "transition_in": {
+        "type": "match",
+        "_note": "match from flower centre to ball (both round)"
+      },
+      "narration": [
+        {
+          "text": "Köpekte iki tür koni var: kırmızı top çimde _kaybolur_.",
+          "at": 0,
+          "place": "top"
+        }
+      ],
+      "events": [
+        {
+          "at": 0,
+          "kind": "rehook",
+          "label": "yeni göz: köpek"
+        },
+        {
+          "at": 5,
+          "kind": "pop",
+          "label": "top çime karışır (yan yana insan/köpek ayrımı 1 vuruş)"
+        }
+      ]
+    },
+    {
+      "id": "S4",
+      "role": "step",
+      "scene": "vision_world",
+      "beats": 10,
+      "vision": "yilan",
+      "params": {
+        "time": "dusk",
+        "focus": "mouse",
+        "snake": true,
+        "heat_blur": 2.0
+      },
+      "layers": {
+        "back": [
+          "stars",
+          {
+            "kind": "nebula",
+            "ramps": [
+              "dim",
+              "pale"
+            ]
+          }
+        ],
+        "front": [
+          "dust"
+        ]
+      },
+      "camera": {
+        "zoom": [
+          1.3,
+          1.42
+        ],
+        "pan": [
+          [
+            56,
+            68
+          ],
+          [
+            58,
+            74
+          ]
+        ],
+        "ease": "inOutSine"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "beats": 1.5
+      },
+      "narration": [
+        {
+          "text": "Yılanın yüzündeki çukurlar *ısıyı* algılar: fare karanlıkta parlar.",
+          "at": 0.5,
+          "place": "mid"
+        }
+      ],
+      "subject": [
+        48,
+        68,
+        74,
+        86
+      ],
+      "events": [
+        {
+          "at": 0,
+          "kind": "rehook",
+          "label": "yeni göz: ısı"
+        },
+        {
+          "at": 4,
+          "kind": "pulse",
+          "label": "farenin ısı izi nabız gibi atar"
+        }
+      ]
+    },
+    {
+      "id": "S5",
+      "role": "rehook",
+      "scene": "vision_world",
+      "beats": 10,
+      "vision": "yarasa",
+      "params": {
+        "time": "night",
+        "focus": "bat",
+        "sonar": {
+          "origin": "bat",
+          "rings_on": "drum:B",
+          "persistence_beats": 1.5
+        }
+      },
+      "layers": {
+        "back": [
+          "stars",
+          {
+            "kind": "nebula",
+            "ramps": [
+              "dim",
+              "pale"
+            ]
+          }
+        ],
+        "front": [
+          "dust"
+        ]
+      },
+      "camera": {
+        "zoom": [
+          1.15,
+          1.2
+        ],
+        "pan": [
+          [
+            8,
+            -14
+          ],
+          [
+            12,
+            -18
+          ]
+        ],
+        "ease": "inOutSine",
+        "_note": "render: widened so the hive label (moved to (50, 6)) and the bat are both in view"
+      },
+      "subject": [
+        -54,
+        -60,
+        -38,
+        -44
+      ],
+      "transition_in": {
+        "type": "crt",
+        "floor": 0.6,
+        "_note": "render: floor keeps a dim after-image (QC: no near-black frames); light switches off → the world exists only where echoes return"
+      },
+      "props": [
+        {
+          "kind": "plate",
+          "skin": "hive",
+          "x": 50,
+          "y": 2,
+          "s": 1.4,
+          "model": "KOVAN 07",
+          "layer": "mid",
+          "par": 1.0,
+          "depth": 0.21,
+          "from": 1.0,
+          "legible": false,
+          "_note": "SUBTLE tag: hive label drawn only as sonar contours when a ring passes"
+        }
+      ],
+      "narration": [
+        {
+          "text": "Yarasa ise *sesle* görür: bağırır, yankıdan dünyayı çizer.",
+          "at": 0.5,
+          "place": "panel"
+        }
+      ],
+      "events": [
+        {
+          "at": 0,
+          "kind": "rehook",
+          "label": "karanlık + tık sesleri"
+        },
+        {
+          "at": 8,
+          "kind": "mark",
+          "label": "beslenme vızıltısı: tıklar hızlanır"
+        }
+      ]
+    },
+    {
+      "id": "S6",
+      "role": "rehook",
+      "scene": "vision_world",
+      "beats": 10,
+      "vision": "mantis12",
+      "params": {
+        "time": "day",
+        "focus": "shrimp",
+        "underwater": true
+      },
+      "layers": {
+        "back": [
+          {
+            "kind": "rays",
+            "x": 56,
+            "y": -122,
+            "par": 1.0,
+            "n": 7
+          }
+        ],
+        "front": [
+          "dust",
+          "pollen"
+        ]
+      },
+      "camera": {
+        "zoom": [
+          1.5,
+          1.62
+        ],
+        "pan": [
+          [
+            2,
+            112
+          ],
+          [
+            0,
+            116
+          ]
+        ],
+        "ease": "inOutSine"
+      },
+      "transition_in": {
+        "type": "tiles",
+        "_note": "Çini tiles flip into the 12-band world"
+      },
+      "subject": [
+        -20,
+        122,
+        26,
+        136
+      ],
+      "narration": [
+        {
+          "text": "Mantis karidesinde *12* renk alıcısı var; bizde sadece 3.",
+          "at": 0.5,
+          "place": "top",
+          "size": "body"
+        }
+      ],
+      "events": [
+        {
+          "at": 0,
+          "kind": "rehook",
+          "label": "sayı: 12 alıcı"
+        }
+      ]
+    },
+    {
+      "id": "S7",
+      "role": "twist",
+      "scene": "vision_world",
+      "beats": 7,
+      "vision": "mantis_kaba",
+      "params": {
+        "time": "day",
+        "focus": "shrimp",
+        "underwater": true,
+        "collapse": {
+          "from": "mantis12",
+          "beats": 1.0
+        }
+      },
+      "layers": {
+        "back": [
+          {
+            "kind": "rays",
+            "x": 56,
+            "y": -122,
+            "par": 1.0,
+            "n": 7
+          }
+        ],
+        "front": [
+          "dust",
+          "pollen"
+        ]
+      },
+      "camera": {
+        "zoom": [
+          1.62,
+          1.68
+        ],
+        "pan": [
+          [
+            0,
+            116
+          ],
+          [
+            0,
+            118
+          ]
+        ],
+        "ease": "inOutSine"
+      },
+      "transition_in": {
+        "type": "glitch",
+        "_note": "the 12 bands snap to 5 flat classes; fast-transition budget spent on the twist"
+      },
+      "subject": [
+        -20,
+        122,
+        26,
+        136
+      ],
+      "narration": [
+        {
+          "text": "Ama renkleri bizden _kötü_ ayırt ediyor!",
+          "at": 0,
+          "place": "mid",
+          "size": "head"
+        }
+      ],
+      "events": [
+        {
+          "at": 0,
+          "kind": "twist",
+          "label": "12 alıcı ≠ iyi renk görüşü (Thoen 2014)"
+        }
+      ]
+    },
+    {
+      "id": "S8",
+      "role": "reveal",
+      "scene": "vision_mosaic",
+      "beats": 8,
+      "params": {
+        "tiles": [
+          "insan",
+          "ari",
+          "kopek",
+          "yilan",
+          "yarasa",
+          "mantis12"
+        ],
+        "grid": [
+          2,
+          3
+        ],
+        "crop": [
+          -44,
+          -36,
+          46,
+          69
+        ],
+        "stagger_beats": 0.25
+      },
+      "layers": {
+        "back": [
+          "tiles",
+          "rays"
+        ],
+        "front": [
+          "dust",
+          "bokeh"
+        ]
+      },
+      "camera": {
+        "zoom": [
+          1.0,
+          1.06
+        ],
+        "ease": "inOutSine"
+      },
+      "transition_in": {
+        "type": "mosaic",
+        "_note": "literal: the frame breaks into 6 eye-tiles on the drop"
+      },
+      "narration": [
+        {
+          "text": "Altı göz, tek dünya: hepsi birer _çeviri_.",
+          "at": 0,
+          "place": "top",
+          "size": "head",
+          "xy": [
+            0.5,
+            0.335
+          ]
+        }
+      ],
+      "events": [
+        {
+          "at": 0,
+          "kind": "reveal",
+          "label": "drop + sonic logo; 6 göz yan yana"
+        }
+      ]
+    },
+    {
+      "id": "S9",
+      "role": "payoff",
+      "scene": "vision_world",
+      "beats": 12,
+      "vision": "hayret",
+      "params": {
+        "time": "night",
+        "focus": "bat_hive",
+        "bat_close": true,
+        "hive_label": "@hayret.piksel"
+      },
+      "layers": {
+        "back": [
+          "stars",
+          {
+            "kind": "nebula",
+            "ramps": [
+              "dim",
+              "pale"
+            ]
+          }
+        ],
+        "front": [
+          "dust"
+        ]
+      },
+      "camera": {
+        "zoom": [
+          1.1,
+          1.15
+        ],
+        "pan": [
+          [
+            16,
+            -8
+          ],
+          [
+            16,
+            -12
+          ]
+        ],
+        "ease": "inOutSine",
+        "_note": "render: bat (left) + hive label (right) both in the safe area, label above the NAGEL dialog"
+      },
+      "subject": [
+        -54,
+        -60,
+        -38,
+        -44
+      ],
+      "transition_in": {
+        "type": "silhouette",
+        "shape": "assets/bat_shape.png",
+        "_note": "morph through the bat silhouette into the brand night"
+      },
+      "props": [
+        {
+          "kind": "plate",
+          "skin": "hive",
+          "x": 50,
+          "y": 2,
+          "s": 1.4,
+          "model": "KOVAN 07",
+          "layer": "mid",
+          "par": 1.0,
+          "depth": 0.21,
+          "from": 0.5,
+          "legible": true,
+          "_note": "LEGIBLE tag: painted label on the beehive (target: hive_label surface)"
+        }
+      ],
+      "narration": [
+        {
+          "text": "Bir yarasa olmak *nasıl bir şey*? Yankıyı çizebiliriz; hissini bilemeyiz.",
+          "at": 0.5,
+          "place": "dialog",
+          "speaker": "NAGEL, 1974"
+        }
+      ],
+      "events": [
+        {
+          "at": 6,
+          "kind": "mark",
+          "label": "yarasa başını çevirip kameraya bakar (göz logosu yansıması)"
+        }
+      ]
+    },
+    {
+      "id": "S10",
+      "role": "loop",
+      "scene": "vision_world",
+      "beats": 3,
+      "vision": "insan",
+      "params": {
+        "time": "day",
+        "focus": "flower",
+        "bee_path": "approach"
+      },
+      "layers": {
+        "back": [
+          {
+            "kind": "rays",
+            "x": 56,
+            "y": -122,
+            "par": 1.0,
+            "n": 7
+          }
+        ],
+        "front": [
+          "dust",
+          "pollen"
+        ]
+      },
+      "layer_sync": "loop",
+      "camera": {
+        "zoom": [
+          1.2,
+          1.25
+        ],
+        "pan": [
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "ease": "outCubic"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "beats": 1.5,
+        "_note": "sunrise back to the hook frame; last frame == frame 0"
+      },
+      "events": []
+    }
+  ]
+}

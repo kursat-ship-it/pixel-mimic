@@ -1,0 +1,22 @@
+{
+  "title": "Evrenin Bütün Kurallarını Bilseydik Ne Olurdu? 🌌",
+  "description": "Fizikçiler görelilik ile kuantumu birleştiren bir 'her şeyin teorisi' arıyor. Hawking 1980'de yüzyıl bitmeden bulma şansını yarı yarıya gördü; 2002'de fikrini değiştirdi. Planck 2018 verilerine göre evrenin ~%95'i karanlık madde + karanlık enerji: varlıklarını ölçüyoruz ama ne olduklarını bilmiyoruz. Ama bulsak bile: kaos ve satranç gösteriyor ki kuralları bilmek her hamleyi bilmek değil (Feynman). Einstein (1936): 'Dünyanın ebedi gizemi anlaşılabilir olmasıdır.' Sence her şeyi bilmek merakı bitirir mi? 👇\n\n#bilim #evren #fizik #pikselsanat #hayretpiksel",
+  "hashtags": [
+    "#bilim",
+    "#evren",
+    "#fizik",
+    "#pikselsanat",
+    "#hayretpiksel"
+  ],
+  "duration_s": 48.0,
+  "file": "out/evren-anlamak.mp4",
+  "master": "out/evren-anlamak_master.mp4",
+  "cover": "out/cover.png",
+  "cover_t": 32.4,
+  "resolution": "1080x1920",
+  "fps": 30,
+  "loop": true,
+  "posted": false,
+  "sources": "sources.md",
+  "note": "Nothing posted. Render v2 after independent QC (see qc_report.md); previous upload kept as out/evren-anlamak_v1.mp4."
+}

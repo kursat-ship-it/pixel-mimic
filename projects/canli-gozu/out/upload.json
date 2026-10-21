@@ -1,0 +1,23 @@
+{
+ "title": "Aynı Dünya, 6 Farklı Göz: Hayvanlar Ne Görüyor? 👁️",
+ "description": "Arı morötesini görür, köpek iki renk kanalıyla, yılan ısıyı, yarasa yankıyı... Mantis karidesinin 12 renk alıcısı var ama birbirine yakın renkleri bizden kötü ayırt ediyor: 12–25 nm'lik farkı seçemiyor, biz birkaç nanometrelik farkı seçebiliyoruz (Thoen ve ark., 2014). Videodaki renkler bilimsel verilere dayanan ÇEVİRİLER: bir hayvanın gerçekte ne yaşadığını bilemeyiz (Nagel, 1974). Kelebek Graphium sarpedon'un gözünde 15 tür ışık alıcısı var, ama gündelik renk görüşünde muhtemelen 4 sınıf kullanıyor (Chen ve ark., 2016): alıcı sayısı ≠ renk sayısı. Sence hangisi en tuhaf? 👇\n\n#bilim #hayvanlar #görme #pikselsanat #chiptune #hayretpiksel",
+ "hashtags": [
+  "#bilim",
+  "#hayvanlar",
+  "#görme",
+  "#pikselsanat",
+  "#chiptune",
+  "#hayretpiksel"
+ ],
+ "file": "out/canli-gozu.mp4",
+ "master": "out/canli-gozu_master.mp4",
+ "cover": "out/cover.png",
+ "cover_t": 37.5,
+ "duration_s": 48.9,
+ "resolution": "1080x1920",
+ "fps": 30,
+ "loop": true,
+ "posted": false,
+ "sources": "sources.md",
+ "note": "Nothing posted. QC v2 (see qc_report.md). Graphium sarpedon fact sourced (sources.md: Chen et al. 2016)."
+}

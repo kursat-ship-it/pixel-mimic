@@ -1,0 +1,18 @@
+[
+ {"id":"P1","from":20.6,"hit":24.0,"to":26.5,"strip":"analysis/strip_22.2_24.6.jpg",
+  "build":"Caption leaves at 22.5 s; wordless 1.5 s: vesicle dots cross the gap, the next neuron's soma glows brighter and an orange ring contracts around it (summation)",
+  "hold":"Ring tight, glow at max, camera still for ~0.4 s",
+  "hit_what":"Hard cut on the downbeat to a frontal neuron exploding in a white-gold flare with a shockwave ring, dendrites lit",
+  "after":"Fast pull-out (≈2 s) revealing dozens of neurons; sparks propagate as a wave; no text until 32.25 s",
+  "sound":"Music builds then lands on the beat at 24.0 (analyze.py drop candidate 23.03 s)",
+  "techniques":["contracting ring = countdown","wordless build","cut on downbeat","flare + shockwave","immediate scale reveal"],
+  "why_it_works":"The single-cell story completes its loop (one neuron triggers the next) and instantly opens into the system — scale jump = awe."},
+ {"id":"P2","from":30.0,"hit":35.4,"to":44.6,"strip":"analysis/strip_34.8_36.6.jpg",
+  "build":"Network sparks converge into a brain silhouette (30.5 s), gold waves sweep, caption '86 BILLION'",
+  "hold":"Caption fades 34.9 s, brain glowing",
+  "hit_what":"Glass bulb outline materialises around the brain: the brain IS the filament",
+  "after":"Long 9 s hold on the metaphor with '~20 WATTS' and the brand etched on the glass",
+  "sound":"Drop candidate 40.54 s inside the hold; steady pulse",
+  "techniques":["metaphor reveal by pull-out","big number in amber","brand placed inside the hero object","longest hold of the film"],
+  "why_it_works":"Turns an abstract number into a gut-level image (your whole brain = one dim bulb)."}
+]

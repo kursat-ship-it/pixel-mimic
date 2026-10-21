@@ -1,0 +1,156 @@
+===== spec_proxy.json (existing features: image scene + mock vision stills, union palette) =====
+id   role      scene      beats  start    end  in       caption
+S1   hook      image        8.0   0.00   4.44  cut      [top] Aynı çiçek. Bir *arı* ne görüyor?
+S2   rehook    image       10.0   4.44  10.00  iris     [top] Arılar *morötesini* görür: çiçekte gizli | [callout] UV deseni
+S3   step      image       10.0  10.00  15.56  match    [top] Köpekte iki tür koni var: kırmızı top çi
+S4   step      image       10.0  15.56  21.11  dissolve [auto] Yılanın yüzündeki çukurlar *ısıyı* algıl
+S5   rehook    image       10.0  21.11  26.67  crt      [panel] Yarasa ise *sesle* görür: bağırır, yankı
+S6   rehook    image       10.0  26.67  32.22  tiles    [top] Mantis karidesinde *12* renk alıcısı var
+S7   twist     image        7.0  32.22  36.11  glitch   [mid] Ama renkleri bizden _kötü_ ayırt ediyor!
+S8   reveal    image        8.0  36.11  40.56  mosaic   [top] Altı göz, tek dünya: hepsi birer _çeviri
+S9   payoff    image       12.0  40.56  47.22  silhouette [dialog] Bir yarasa olmak *nasıl bir şey*? Yankıy
+S10  loop      image        3.0  47.22  48.89  dissolve 
+total 88.0 beats = 48.89 s
+
+RETENTION MAP · 48.9 s · 4/4 · 108 BPM · 10 segments
+  s  0         5         10        15        20        25        30        35        40        45        
+     !·······!"····"····|!··········!··········!··········!··········!·······♪········@············|··↻
+     legend: ! hook/re-hook  | cut/transition  " caption  ▲ drop  ♪ sonic logo  @ legible tag  ↻ loop
+    t(s)   beat  lane   event
+    0.00   0.00  HOOK   S1 hook     image
+    0.00   0.00  MUSIC  insan: e1.6 4/4 108 BPM D major 
+    0.00   0.00  TEXT   “Aynı çiçek. Bir arı ne görüyor?” (word, top)  [question]
+    2.78   5.00  EVENT  pulse · PEEK: 0,75 vuruşluk arı-görüşü göz kırpması (morötesi hedef bir anlığına görünür)
+    3.33   6.00  EVENT  mark · arı çiçeğe yaklaşır
+    4.44   8.00  EVENT  rehook · dünya renk değiştirir: morötesi
+    4.44   8.00  MUSIC  ari: e1.9 4/4 108 BPM D lydian 
+    4.44   8.00  TRANS  S2 rehook   image  ← iris (1.5b)
+    4.72   8.50  TEXT   “Arılar morötesini görür: çiçekte gizli bir…” (word, top)
+    7.22  13.00  EVENT  pop · boğa gözü deseni parlar
+    7.22  13.00  TEXT   “UV deseni” (word, callout)
+   10.00  18.00  EVENT  rehook · yeni göz: köpek
+   10.00  18.00  MUSIC  kopek: e1.9 4/4 108 BPM D pentatonic_major 
+   10.00  18.00  TEXT   “Köpekte iki tür koni var: kırmızı top çimd…” (word, top)
+   10.00  18.00  TRANS  S3 step     image  ← match (1.25b)
+   12.78  23.00  EVENT  pop · top çime karışır (yan yana insan/köpek ayrımı 1 vuruş)
+   15.56  28.00  EVENT  rehook · yeni göz: ısı
+   15.56  28.00  MUSIC  yilan: e2 4/4 108 BPM D phrygian 
+   15.56  28.00  TRANS  S4 step     image  ← dissolve (1.5b)
+   15.83  28.50  TEXT   “Yılanın yüzündeki çukurlar ısıyı algılar: …” (word, auto)
+   17.78  32.00  EVENT  pulse · farenin ısı izi nabız gibi atar
+   21.11  38.00  EVENT  rehook · karanlık + tık sesleri
+   21.11  38.00  MUSIC  yarasa: e2.3 4/4 108 BPM D pentatonic_minor stop 0.5b
+   21.11  38.00  TRANS  S5 rehook   image  ← crt (1.5b)
+   21.39  38.50  TEXT   “Yarasa ise sesle görür: bağırır, yankıdan …” (word, panel)
+   21.67  39.00  TAG    @ plate subtle (S5)
+   25.56  46.00  EVENT  mark · beslenme vızıltısı: tıklar hızlanır
+   26.67  48.00  EVENT  rehook · sayı: 12 alıcı
+   26.67  48.00  MUSIC  mantis12: e2.6 4/4 108 BPM D chromatic 
+   26.67  48.00  TRANS  S6 rehook   image  ← tiles (1.5b)
+   26.94  48.50  TEXT   “Mantis karidesinde 12 renk alıcısı var; bi…” (word, top)  [number]
+   32.22  58.00  EVENT  twist · 12 alıcı ≠ iyi renk görüşü (Thoen 2014)
+   32.22  58.00  MUSIC  mantis_kaba: e1.3 4/4 108 BPM D major riser→
+   32.22  58.00  TEXT   “Ama renkleri bizden kötü ayırt ediyor!” (word, mid)  [claim]
+   32.22  58.00  TRANS  S7 twist    image  ← glitch (0.75b)
+   36.11  65.00  EVENT  reveal · drop + sonic logo; 6 göz yan yana
+   36.11  65.00  LOGO   sonic logo (long note)
+   36.11  65.00  MUSIC  dusus: e3.2 4/4 108 BPM D lydian DROP
+   36.11  65.00  TEXT   “Altı göz, tek dünya: hepsi birer çeviri.” (word, top)
+   36.11  65.00  TRANS  S8 reveal   image  ← mosaic (1.25b)
+   40.56  73.00  MUSIC  nagel: e1.4 4/4 108 BPM D major 
+   40.56  73.00  TRANS  S9 payoff   image  ← silhouette (2.5b)
+   40.83  73.50  TAG    @ plate LEGIBLE (S9)
+   40.83  73.50  TEXT   “Bir yarasa olmak nasıl bir şey? Yankıyı çi…” (word, dialog)  [question]
+   43.89  79.00  EVENT  mark · yarasa başını çevirip kameraya bakar (göz logosu yansıması)
+   47.22  85.00  MUSIC  dongu: e1.6 4/4 108 BPM D major 
+   47.22  85.00  TRANS  S10 loop     image  ← dissolve (1.5b)
+   48.89  88.00  LOGO   sonic logo (long note)
+   48.89  88.00  LOOP   seam ← dissolve → frame 0
+  visual change every 0.91 s on average · longest static 3.82 s at 28.19 s · longest re-hook gap 5.6 s · 11 hooks/re-hooks
+
+warn: duration 48.9 s outside the 20–45 s sweet spot
+OK
+
+===== spec.json (TARGET: errors below = the new scenes listed in render_brief.md; expected until built) =====
+id   role      scene      beats  start    end  in       caption
+S1   hook      vision_world   8.0   0.00   4.44  cut      [top] Aynı çiçek. Bir *arı* ne görüyor?
+S2   rehook    vision_world  10.0   4.44  10.00  iris     [top] Arılar *morötesini* görür: çiçekte gizli | [callout] UV deseni
+S3   step      vision_world  10.0  10.00  15.56  match    [top] Köpekte iki tür koni var: kırmızı top çi
+S4   step      vision_world  10.0  15.56  21.11  dissolve [auto] Yılanın yüzündeki çukurlar *ısıyı* algıl
+S5   rehook    vision_world  10.0  21.11  26.67  crt      [panel] Yarasa ise *sesle* görür: bağırır, yankı
+S6   rehook    vision_world  10.0  26.67  32.22  tiles    [top] Mantis karidesinde *12* renk alıcısı var
+S7   twist     vision_world   7.0  32.22  36.11  glitch   [mid] Ama renkleri bizden _kötü_ ayırt ediyor!
+S8   reveal    vision_mosaic   8.0  36.11  40.56  mosaic   [top] Altı göz, tek dünya: hepsi birer _çeviri
+S9   payoff    vision_world  12.0  40.56  47.22  silhouette [dialog] Bir yarasa olmak *nasıl bir şey*? Yankıy
+S10  loop      vision_world   3.0  47.22  48.89  dissolve 
+total 88.0 beats = 48.89 s
+
+RETENTION MAP · 48.9 s · 4/4 · 108 BPM · 10 segments
+  s  0         5         10        15        20        25        30        35        40        45        
+     !·······!"····"····|!··········!··········!··········!··········!·······♪········@············|··↻
+     legend: ! hook/re-hook  | cut/transition  " caption  ▲ drop  ♪ sonic logo  @ legible tag  ↻ loop
+    t(s)   beat  lane   event
+    0.00   0.00  HOOK   S1 hook     vision_world
+    0.00   0.00  MUSIC  insan: e1.6 4/4 108 BPM D major 
+    0.00   0.00  TEXT   “Aynı çiçek. Bir arı ne görüyor?” (word, top)  [question]
+    2.78   5.00  EVENT  pulse · PEEK: 0,75 vuruşluk arı-görüşü göz kırpması (morötesi hedef bir anlığına görünür)
+    3.33   6.00  EVENT  mark · arı çiçeğe yaklaşır
+    4.44   8.00  EVENT  rehook · dünya renk değiştirir: morötesi
+    4.44   8.00  MUSIC  ari: e1.9 4/4 108 BPM D lydian 
+    4.44   8.00  TRANS  S2 rehook   vision_world  ← iris (1.5b)
+    4.72   8.50  TEXT   “Arılar morötesini görür: çiçekte gizli bir…” (word, top)
+    7.22  13.00  EVENT  pop · boğa gözü deseni parlar
+    7.22  13.00  TEXT   “UV deseni” (word, callout)
+   10.00  18.00  EVENT  rehook · yeni göz: köpek
+   10.00  18.00  MUSIC  kopek: e1.9 4/4 108 BPM D pentatonic_major 
+   10.00  18.00  TEXT   “Köpekte iki tür koni var: kırmızı top çimd…” (word, top)
+   10.00  18.00  TRANS  S3 step     vision_world  ← match (1.25b)
+   12.78  23.00  EVENT  pop · top çime karışır (yan yana insan/köpek ayrımı 1 vuruş)
+   15.56  28.00  EVENT  rehook · yeni göz: ısı
+   15.56  28.00  MUSIC  yilan: e2 4/4 108 BPM D phrygian 
+   15.56  28.00  TRANS  S4 step     vision_world  ← dissolve (1.5b)
+   15.83  28.50  TEXT   “Yılanın yüzündeki çukurlar ısıyı algılar: …” (word, auto)
+   17.78  32.00  EVENT  pulse · farenin ısı izi nabız gibi atar
+   21.11  38.00  EVENT  rehook · karanlık + tık sesleri
+   21.11  38.00  MUSIC  yarasa: e2.3 4/4 108 BPM D pentatonic_minor stop 0.5b
+   21.11  38.00  TRANS  S5 rehook   vision_world  ← crt (1.5b)
+   21.39  38.50  TEXT   “Yarasa ise sesle görür: bağırır, yankıdan …” (word, panel)
+   21.67  39.00  TAG    @ plate subtle (S5)
+   25.56  46.00  EVENT  mark · beslenme vızıltısı: tıklar hızlanır
+   26.67  48.00  EVENT  rehook · sayı: 12 alıcı
+   26.67  48.00  MUSIC  mantis12: e2.6 4/4 108 BPM D chromatic 
+   26.67  48.00  TRANS  S6 rehook   vision_world  ← tiles (1.5b)
+   26.94  48.50  TEXT   “Mantis karidesinde 12 renk alıcısı var; bi…” (word, top)  [number]
+   32.22  58.00  EVENT  twist · 12 alıcı ≠ iyi renk görüşü (Thoen 2014)
+   32.22  58.00  MUSIC  mantis_kaba: e1.3 4/4 108 BPM D major riser→
+   32.22  58.00  TEXT   “Ama renkleri bizden kötü ayırt ediyor!” (word, mid)  [claim]
+   32.22  58.00  TRANS  S7 twist    vision_world  ← glitch (0.75b)
+   36.11  65.00  EVENT  reveal · drop + sonic logo; 6 göz yan yana
+   36.11  65.00  LOGO   sonic logo (long note)
+   36.11  65.00  MUSIC  dusus: e3.2 4/4 108 BPM D lydian DROP
+   36.11  65.00  TEXT   “Altı göz, tek dünya: hepsi birer çeviri.” (word, top)
+   36.11  65.00  TRANS  S8 reveal   vision_mosaic  ← mosaic (1.25b)
+   40.56  73.00  MUSIC  nagel: e1.4 4/4 108 BPM D major 
+   40.56  73.00  TRANS  S9 payoff   vision_world  ← silhouette (2.5b)
+   40.83  73.50  TAG    @ plate LEGIBLE (S9)
+   40.83  73.50  TEXT   “Bir yarasa olmak nasıl bir şey? Yankıyı çi…” (word, dialog)  [question]
+   43.89  79.00  EVENT  mark · yarasa başını çevirip kameraya bakar (göz logosu yansıması)
+   47.22  85.00  MUSIC  dongu: e1.6 4/4 108 BPM D major 
+   47.22  85.00  TRANS  S10 loop     vision_world  ← dissolve (1.5b)
+   48.89  88.00  LOGO   sonic logo (long note)
+   48.89  88.00  LOOP   seam ← dissolve → frame 0
+  visual change every 0.91 s on average · longest static 3.82 s at 28.19 s · longest re-hook gap 5.6 s · 11 hooks/re-hooks
+
+warn: duration 48.9 s outside the 20–45 s sweet spot
+warn: narration layout check skipped: 'vision_world'
+ERROR: S1: unknown scene 'vision_world' (hero, lattice, chain, streaks, pod, junction, network, silhouette, object, image, void, fractal_staff, noise_scope, series_tree, shepard_stairs, koch, mandel_zoom, future_book, laplace_demon, dominoes, libet_clock, future_tree)
+ERROR: S2: unknown scene 'vision_world' (hero, lattice, chain, streaks, pod, junction, network, silhouette, object, image, void, fractal_staff, noise_scope, series_tree, shepard_stairs, koch, mandel_zoom, future_book, laplace_demon, dominoes, libet_clock, future_tree)
+ERROR: S3: unknown scene 'vision_world' (hero, lattice, chain, streaks, pod, junction, network, silhouette, object, image, void, fractal_staff, noise_scope, series_tree, shepard_stairs, koch, mandel_zoom, future_book, laplace_demon, dominoes, libet_clock, future_tree)
+ERROR: S4: unknown scene 'vision_world' (hero, lattice, chain, streaks, pod, junction, network, silhouette, object, image, void, fractal_staff, noise_scope, series_tree, shepard_stairs, koch, mandel_zoom, future_book, laplace_demon, dominoes, libet_clock, future_tree)
+ERROR: S5: unknown scene 'vision_world' (hero, lattice, chain, streaks, pod, junction, network, silhouette, object, image, void, fractal_staff, noise_scope, series_tree, shepard_stairs, koch, mandel_zoom, future_book, laplace_demon, dominoes, libet_clock, future_tree)
+ERROR: S6: unknown scene 'vision_world' (hero, lattice, chain, streaks, pod, junction, network, silhouette, object, image, void, fractal_staff, noise_scope, series_tree, shepard_stairs, koch, mandel_zoom, future_book, laplace_demon, dominoes, libet_clock, future_tree)
+ERROR: S7: unknown scene 'vision_world' (hero, lattice, chain, streaks, pod, junction, network, silhouette, object, image, void, fractal_staff, noise_scope, series_tree, shepard_stairs, koch, mandel_zoom, future_book, laplace_demon, dominoes, libet_clock, future_tree)
+ERROR: S8: unknown scene 'vision_mosaic' (hero, lattice, chain, streaks, pod, junction, network, silhouette, object, image, void, fractal_staff, noise_scope, series_tree, shepard_stairs, koch, mandel_zoom, future_book, laplace_demon, dominoes, libet_clock, future_tree)
+ERROR: S9: unknown scene 'vision_world' (hero, lattice, chain, streaks, pod, junction, network, silhouette, object, image, void, fractal_staff, noise_scope, series_tree, shepard_stairs, koch, mandel_zoom, future_book, laplace_demon, dominoes, libet_clock, future_tree)
+ERROR: S10: unknown scene 'vision_world' (hero, lattice, chain, streaks, pod, junction, network, silhouette, object, image, void, fractal_staff, noise_scope, series_tree, shepard_stairs, koch, mandel_zoom, future_book, laplace_demon, dominoes, libet_clock, future_tree)
+10 error(s)

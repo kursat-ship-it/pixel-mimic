@@ -1,0 +1,224 @@
+{
+ "preset": "hayret",
+ "loop": false,
+ "segments": [
+  {
+   "id": "A",
+   "role": "metaphor",
+   "beats": 8,
+   "scene": "object",
+   "params": {
+    "kind": "jar",
+    "inner": "star",
+    "brand": "auto",
+    "brand_at": 0,
+    "reveal": 0
+   },
+   "camera": {
+    "zoom": [
+     1.05,
+     1.0
+    ]
+   },
+   "caption": {
+    "text": "HEPSİ BİR\nKAVANOZDA\n*%100 MERAK*",
+    "at": [
+     0,
+     8
+    ]
+   }
+  },
+  {
+   "id": "B",
+   "role": "free",
+   "beats": 8,
+   "scene": "network",
+   "params": {
+    "nodes": 260
+   },
+   "camera": {
+    "zoom": [
+     1.4,
+     1.3
+    ]
+   },
+   "props": [
+    {
+     "kind": "ship",
+     "x": 0,
+     "y": -70,
+     "s": 1.0,
+     "layer": "back",
+     "par": 0.5,
+     "speed": 0.0,
+     "span": 200,
+     "moving": false
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "role": "free",
+   "beats": 8,
+   "scene": "hero",
+   "params": {
+    "trace": false
+   },
+   "camera": {
+    "zoom": [
+     1.0,
+     1.0
+    ]
+   },
+   "layers": {
+    "back": [
+     "nebula",
+     "stars",
+     "skyline"
+    ],
+    "front": [
+     "bokeh",
+     "dust"
+    ]
+   },
+   "props": [
+    {
+     "kind": "neon_sign",
+     "x": 0,
+     "y": -125,
+     "s": 0.8,
+     "layer": "back",
+     "par": 0.25
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "role": "free",
+   "beats": 8,
+   "scene": "chain",
+   "camera": {
+    "zoom": [
+     1.0,
+     1.0
+    ]
+   },
+   "props": [
+    {
+     "kind": "terminal",
+     "x": 0,
+     "y": -95,
+     "s": 1.0,
+     "layer": "mid"
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "role": "free",
+   "beats": 8,
+   "scene": "pod",
+   "params": {
+    "release_at": 0
+   },
+   "camera": {
+    "zoom": [
+     1.0,
+     1.0
+    ]
+   },
+   "props": [
+    {
+     "kind": "plate",
+     "x": 0,
+     "y": 120,
+     "s": 1.2,
+     "layer": "front",
+     "par": 1.0
+    }
+   ]
+  },
+  {
+   "id": "F",
+   "role": "free",
+   "beats": 8,
+   "scene": "silhouette",
+   "params": {
+    "shape": "heart",
+    "assemble": 0
+   },
+   "camera": {
+    "zoom": [
+     1.0,
+     1.0
+    ]
+   },
+   "props": [
+    {
+     "kind": "stamp",
+     "x": 18,
+     "y": 112,
+     "s": 1.0,
+     "layer": "front",
+     "par": 1.0,
+     "at": 0
+    }
+   ]
+  },
+  {
+   "id": "G",
+   "role": "free",
+   "beats": 8,
+   "scene": "object",
+   "params": {
+    "kind": "battery",
+    "brand": "auto",
+    "brand_at": 0,
+    "reveal": 0,
+    "level": 0.75
+   },
+   "camera": {
+    "zoom": [
+     1.0,
+     1.0
+    ]
+   },
+   "props": [
+    {
+     "kind": "patch",
+     "x": 0,
+     "y": -118,
+     "s": 0.9,
+     "layer": "front",
+     "par": 1.0
+    }
+   ]
+  },
+  {
+   "id": "H",
+   "role": "free",
+   "beats": 8,
+   "scene": "void",
+   "props": [
+    {
+     "kind": "chalkboard",
+     "x": 0,
+     "y": -20,
+     "s": 1.2,
+     "layer": "mid"
+    },
+    {
+     "kind": "billboard",
+     "x": 0,
+     "y": 110,
+     "s": 1.0,
+     "layer": "mid"
+    }
+   ]
+  }
+ ],
+ "music": {
+  "style": "hicaz_maqsum"
+ },
+ "version": 2
+}

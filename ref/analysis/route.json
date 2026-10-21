@@ -1,0 +1,5 @@
+{"medium":"2d-pixel","style":"pixel-story","engine":"pixel-art","confidence":0.7,
+ "why":["Measured 6-px art grid with Bayer dithering, limited violet/amber palette → 2d-pixel","pixel-story is the only installed 2d-pixel style; its engine has dithered glow/light/sparkles/particles and crisp pixel text",
+        "Gaps: engine is 16:9 480×270×4 and RPG-caption based; reference is 9:16, character-less, with smooth zoom-throughs → needs vertical canvas, top black-box captions, zoom by redrawing geometry (not bitmap scaling)"],
+ "alternatives":[{"style":"motion-graphics","why":"HyperFrames handles continuous zoom/morph camera easily; would need a pixelate+dither post-filter to match the look"}],
+ "new_style_proposed":true}

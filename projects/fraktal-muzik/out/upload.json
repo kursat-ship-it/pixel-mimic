@@ -1,0 +1,16 @@
+{
+ "title": "Bu Melodinin İçinde Kendisi Saklı 🎧",
+ "description": "Bu melodinin her 4. notasını alırsan yine aynı melodiyi duyarsın. 🎧 Danimarkalı besteci Per Nørgård 1959'da bu 'sonsuzluk serisi'ni buldu: her 4. nota serinin kendisini, her 2. nota ters çevrilmiş hâlini veriyor. Voss & Clarke (1975) ise müzikteki gürlük ve perde dalgalanmalarının fraktal benzeri 1/f ('pembe gürültü') yasasına uyduğunu gösterdi. Bu videodaki melodi ve bas baştan sona o seriden üretildi: 4 kanal, 4 hız, tek melodi. Sence müzik gizli bir matematik mi? 👇",
+ "hashtags": [
+  "#fraktal",
+  "#matematik",
+  "#müzik",
+  "#pixelart",
+  "#chiptune",
+  "#hayretpiksel"
+ ],
+ "duration_s": 42.0,
+ "file": "out/fraktal-muzik.mp4",
+ "master_file": "out/fraktal-muzik_master.mp4",
+ "posted": false
+}
