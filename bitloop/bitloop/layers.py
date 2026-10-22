@@ -233,6 +233,7 @@ DEFAULT_STACK = {
     "void": (["horizon", "nebula", "stars", "tiles"], ["bokeh", "dust"]),
     "pendulum_grid": (["horizon", "nebula", "stars"], ["bokeh", "dust"]),
     "formula_scope": (["grid", "nebula"], ["dust"]),
+    "chladni": (["horizon", "nebula"], ["dust"]),
 }
 
 

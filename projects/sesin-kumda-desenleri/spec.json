@@ -1,0 +1,449 @@
+{
+  "version": 2,
+  "meta": {
+    "title": "Sesin Kumda Çizdiği Gizli Desenler 🎧",
+    "description": "Ses görünmez... ama kum onu ele verir. Titreyen bir plakanın üstündeki kum, sesin çizdiği nodal çizgilerde toplanır: Chladni desenleri. Frekans değiştikçe desen de değişir. Sence sesin şekli nasıl? 👇",
+    "hashtags": [
+      "#bilim",
+      "#ses",
+      "#chladni",
+      "#pixelart",
+      "#chiptune",
+      "#hayretpiksel"
+    ],
+    "lang": "tr",
+    "cover_t": 17.2
+  },
+  "format": {
+    "w": 1080,
+    "h": 1920,
+    "fps": 30,
+    "grid": 6
+  },
+  "pacing": "calm",
+  "palette": "hayret",
+  "narration_defaults": {
+    "reveal": "word",
+    "rate": "8th",
+    "size": "head",
+    "place": "top",
+    "case": "upper"
+  },
+  "music": {
+    "bpm": 120,
+    "meter": "4/4",
+    "key": "A",
+    "scale": "natural_minor",
+    "tuning": "12tet",
+    "flavour": "fm",
+    "progression": [
+      [
+        "A3",
+        "C4",
+        "E4"
+      ]
+    ],
+    "chord_bars": 2,
+    "seed": 1787,
+    "hf_shelf_db": -3.0,
+    "voices": {
+      "drone": {
+        "role": "bass",
+        "type": "triangle",
+        "octave": 2,
+        "vol": 0.08,
+        "pattern": "sustain",
+        "filter": "soft"
+      },
+      "lead": {
+        "role": "lead",
+        "type": "fm",
+        "ratio": 1.0,
+        "index": 0.6,
+        "octave": 5,
+        "vol": 0.055,
+        "env": {
+          "a": 0.02,
+          "d": 0.3,
+          "s": 0.5,
+          "r": 0.25
+        }
+      },
+      "pad": {
+        "role": "pad",
+        "type": "fm",
+        "ratio": 2.0,
+        "index": 0.7,
+        "octave": 3,
+        "vol": 0.03,
+        "filter": "soft",
+        "env": {
+          "a": 0.4,
+          "d": 0.8,
+          "s": 0.6,
+          "r": 0.5
+        }
+      },
+      "counter": null,
+      "arp": null
+    },
+    "drums": {
+      "K": "X..............."
+    },
+    "sections": [
+      {
+        "name": "giris",
+        "beats": 4,
+        "energy": 1.0,
+        "voices": [
+          "pad"
+        ],
+        "drums": "none"
+      },
+      {
+        "name": "ortaya",
+        "beats": 6,
+        "energy": 1.4,
+        "voices": [
+          "pad",
+          "drone"
+        ],
+        "drums": "none"
+      },
+      {
+        "name": "harita",
+        "beats": 6,
+        "energy": 1.8,
+        "voices": [
+          "pad",
+          "drone",
+          "lead"
+        ],
+        "drums": "none"
+      },
+      {
+        "name": "gizli",
+        "beats": 6,
+        "energy": 2.2,
+        "voices": [
+          "pad",
+          "drone",
+          "lead"
+        ],
+        "drums": "none"
+      },
+      {
+        "name": "yogun",
+        "beats": 6,
+        "energy": 2.6,
+        "voices": [
+          "pad",
+          "drone",
+          "lead"
+        ],
+        "drums": "none"
+      },
+      {
+        "name": "build",
+        "beats": 5,
+        "energy": 3.0,
+        "voices": [
+          "pad",
+          "drone",
+          "lead"
+        ],
+        "riser": true,
+        "riser_kind": "shepard",
+        "drums": "none"
+      },
+      {
+        "name": "reveal",
+        "beats": 5,
+        "energy": 3.4,
+        "drop": true,
+        "voices": [
+          "pad",
+          "drone",
+          "lead"
+        ],
+        "drums": "none"
+      },
+      {
+        "name": "dongu",
+        "beats": 2,
+        "energy": 1.6,
+        "voices": [
+          "pad",
+          "drone"
+        ],
+        "drums": "none"
+      }
+    ],
+    "logo": {
+      "at": [
+        "reveal",
+        "loop"
+      ],
+      "voice": "lead"
+    }
+  },
+  "brand": {
+    "handle": "@hayret.piksel",
+    "auto": false
+  },
+  "loop": true,
+  "loop_beats": 1.0,
+  "loop_transition": {
+    "type": "dissolve",
+    "beats": 1
+  },
+  "segments": [
+    {
+      "id": "S1",
+      "role": "hook",
+      "scene": "chladni",
+      "beats": 4,
+      "params": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 140.0,
+        "h": 140.0,
+        "particles": 1600,
+        "settle_s": 1.0,
+        "label_dot": 1.0,
+        "label_y": -80.0,
+        "driver_y": 78.0,
+        "n": 1,
+        "m": 1,
+        "label": "mod 1,1"
+      },
+      "transition_in": "cut",
+      "narration": [
+        {
+          "text": "ses görünmez.",
+          "at": 0
+        }
+      ],
+      "events": []
+    },
+    {
+      "id": "S2",
+      "role": "step",
+      "scene": "chladni",
+      "beats": 6,
+      "params": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 140.0,
+        "h": 140.0,
+        "particles": 1600,
+        "settle_s": 1.0,
+        "label_dot": 1.0,
+        "label_y": -80.0,
+        "driver_y": 78.0,
+        "n": 2,
+        "m": 1,
+        "label": "mod 2,1"
+      },
+      "transition_in": "dissolve",
+      "narration": [
+        {
+          "text": "ama kum onu ele verir.",
+          "at": 0
+        }
+      ],
+      "events": []
+    },
+    {
+      "id": "S3",
+      "role": "step",
+      "scene": "chladni",
+      "beats": 6,
+      "params": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 140.0,
+        "h": 140.0,
+        "particles": 1600,
+        "settle_s": 1.0,
+        "label_dot": 1.0,
+        "label_y": -80.0,
+        "driver_y": 78.0,
+        "n": 2,
+        "m": 2,
+        "label": "mod 2,2"
+      },
+      "transition_in": "match",
+      "narration": [
+        {
+          "text": "her frekansın bir şekli vardır.",
+          "at": 0
+        }
+      ],
+      "events": []
+    },
+    {
+      "id": "S4",
+      "role": "step",
+      "scene": "chladni",
+      "beats": 6,
+      "params": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 140.0,
+        "h": 140.0,
+        "particles": 1600,
+        "settle_s": 1.0,
+        "label_dot": 1.0,
+        "label_y": -80.0,
+        "driver_y": 78.0,
+        "n": 3,
+        "m": 2,
+        "label": "mod 3,2"
+      },
+      "transition_in": "dissolve",
+      "narration": [
+        {
+          "text": "bu desen, sesin haritasıdır.",
+          "at": 0
+        }
+      ],
+      "events": []
+    },
+    {
+      "id": "S5",
+      "role": "twist",
+      "scene": "chladni",
+      "beats": 6,
+      "params": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 140.0,
+        "h": 140.0,
+        "particles": 1600,
+        "settle_s": 1.0,
+        "label_dot": 1.0,
+        "label_y": -80.0,
+        "driver_y": 78.0,
+        "n": 4,
+        "m": 3,
+        "label": "mod 4,3"
+      },
+      "transition_in": "glitch",
+      "events": [
+        {
+          "at": 0,
+          "kind": "twist",
+          "label": "kum titremeyen yere kaçar"
+        }
+      ],
+      "narration": [
+        {
+          "text": "kum, titremeyen yere kaçar.",
+          "at": 0
+        }
+      ]
+    },
+    {
+      "id": "S6",
+      "role": "build",
+      "scene": "chladni",
+      "beats": 5,
+      "params": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 140.0,
+        "h": 140.0,
+        "particles": 1600,
+        "settle_s": 1.0,
+        "label_dot": 1.0,
+        "label_y": -80.0,
+        "driver_y": 78.0,
+        "n": 5,
+        "m": 3,
+        "label": "mod 5,3"
+      },
+      "transition_in": "dissolve",
+      "narration": [
+        {
+          "text": "frekans yükseldikçe desen çoğalır.",
+          "at": 0
+        }
+      ],
+      "events": []
+    },
+    {
+      "id": "S7",
+      "role": "reveal",
+      "scene": "chladni",
+      "beats": 5,
+      "params": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 140.0,
+        "h": 140.0,
+        "particles": 1600,
+        "settle_s": 1.0,
+        "label_dot": 1.0,
+        "label_y": -80.0,
+        "driver_y": 78.0,
+        "n": 4,
+        "m": 4,
+        "label": "mod 4,4"
+      },
+      "props": [
+        {
+          "kind": "plate",
+          "x": 0,
+          "y": 88,
+          "s": 1.3,
+          "model": "KUM LAB",
+          "layer": "front",
+          "par": 1.0,
+          "from": 1.0,
+          "legible": true
+        }
+      ],
+      "transition_in": "iris",
+      "events": [
+        {
+          "at": 0,
+          "kind": "reveal",
+          "label": "sesin gizli deseni"
+        }
+      ],
+      "narration": [
+        {
+          "text": "işte sesin gizli deseni.",
+          "at": 0,
+          "place": "title",
+          "size": "title",
+          "rate": "16th"
+        }
+      ]
+    },
+    {
+      "id": "S8",
+      "role": "loop",
+      "scene": "chladni",
+      "beats": 2,
+      "params": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 140.0,
+        "h": 140.0,
+        "particles": 1600,
+        "settle_s": 1.0,
+        "label_dot": 1.0,
+        "label_y": -80.0,
+        "driver_y": 78.0,
+        "n": 1,
+        "m": 1,
+        "label": "mod 1,1"
+      },
+      "transition_in": "dissolve",
+      "layer_sync": "first",
+      "events": []
+    }
+  ]
+}
