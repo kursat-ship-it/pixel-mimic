@@ -143,9 +143,9 @@
         "role": "bass",
         "pattern": "sustain",
         "octave": 2,
-        "vol": 0.1,
+        "vol": 0.11,
         "math_fn": "hardtekk",
-        "math_mode": "freq",
+        "math_mode": "amp",
         "math_waveform": "pulse",
         "math_scale": 0.55,
         "math_carrier_hz": 90,
@@ -163,9 +163,9 @@
         "role": "bass",
         "pattern": "sustain",
         "octave": 2,
-        "vol": 0.1,
+        "vol": 0.12,
         "math_fn": "phonk808",
-        "math_mode": "freq",
+        "math_mode": "direct",
         "math_waveform": "sine",
         "math_scale": 0.5,
         "math_carrier_hz": 39,
@@ -182,9 +182,9 @@
         "role": "bass",
         "pattern": "sustain",
         "octave": 2,
-        "vol": 0.07,
+        "vol": 0.08,
         "math_fn": "acid",
-        "math_mode": "freq",
+        "math_mode": "amp",
         "math_waveform": "pulse",
         "math_scale": 0.7,
         "math_carrier_hz": 110,
@@ -202,9 +202,9 @@
         "role": "bass",
         "pattern": "sustain",
         "octave": 2,
-        "vol": 0.08,
+        "vol": 0.09,
         "math_fn": "funk",
-        "math_mode": "freq",
+        "math_mode": "amp",
         "math_waveform": "triangle",
         "math_scale": 0.5,
         "math_carrier_hz": 110,
@@ -221,9 +221,9 @@
         "role": "bass",
         "pattern": "sustain",
         "octave": 2,
-        "vol": 0.07,
+        "vol": 0.08,
         "math_fn": "phonkmel",
-        "math_mode": "freq",
+        "math_mode": "direct",
         "math_waveform": "sine",
         "math_scale": 0.4,
         "math_carrier_hz": 220,
@@ -240,9 +240,9 @@
         "role": "bass",
         "pattern": "sustain",
         "octave": 2,
-        "vol": 0.06,
+        "vol": 0.07,
         "math_fn": "trance",
-        "math_mode": "freq",
+        "math_mode": "direct",
         "math_waveform": "sine",
         "math_scale": 0.4,
         "math_carrier_hz": 440,
@@ -259,10 +259,10 @@
         "role": "bass",
         "pattern": "sustain",
         "octave": 2,
-        "vol": 0.09,
+        "vol": 0.1,
         "math_fn": "psy",
-        "math_mode": "freq",
-        "math_waveform": "pulse",
+        "math_mode": "direct",
+        "math_waveform": "sine",
         "math_scale": 0.5,
         "math_carrier_hz": 65,
         "filter": null,
@@ -271,17 +271,16 @@
           "d": 0.1,
           "s": 0.85,
           "r": 0.2
-        },
-        "duty": 0.5
+        }
       },
       "math_pad": {
         "type": "math",
         "role": "bass",
         "pattern": "sustain",
         "octave": 2,
-        "vol": 0.045,
+        "vol": 0.05,
         "math_fn": "build",
-        "math_mode": "freq",
+        "math_mode": "direct",
         "math_waveform": "sine",
         "math_scale": 0.3,
         "math_carrier_hz": 50,
@@ -297,14 +296,13 @@
       "counter": null
     },
     "drums": {
-      "K": "X...X...X...X...",
-      "H": "..x...x...x...x."
+      "K": "X..............."
     },
     "sections": [
       {
         "name": "giris",
         "beats": 2,
-        "energy": 0.8,
+        "energy": 1.2,
         "voices": [
           "math_pad"
         ],
@@ -315,13 +313,9 @@
         "beats": 4,
         "energy": 2.2,
         "voices": [
-          "math_kick",
-          "math_pad"
+          "math_kick"
         ],
-        "drums": {
-          "K": "X...X...X...X...",
-          "H": "..x...x...x...x."
-        }
+        "drums": "none"
       },
       {
         "name": "phonk808",
@@ -330,10 +324,7 @@
         "voices": [
           "math_bass"
         ],
-        "drums": {
-          "K": "X.......X.......",
-          "S": "....o.......o..."
-        }
+        "drums": "none"
       },
       {
         "name": "acid",
@@ -342,10 +333,7 @@
         "voices": [
           "math_acid"
         ],
-        "drums": {
-          "K": "X...X...X...X...",
-          "H": "x.x.x.x.x.x.x.x."
-        }
+        "drums": "none"
       },
       {
         "name": "funk",
@@ -354,11 +342,7 @@
         "voices": [
           "math_funk"
         ],
-        "drums": {
-          "K": "X...X.x.X...X.x.",
-          "H": "..x...x...x...x.",
-          "S": "....o.......o..."
-        }
+        "drums": "none"
       },
       {
         "name": "phonkmel",
@@ -367,7 +351,7 @@
         "voices": [
           "math_mel"
         ],
-        "drums": "boom_bap"
+        "drums": "none"
       },
       {
         "name": "jersey",
@@ -377,11 +361,7 @@
           "math_kick",
           "math_bass"
         ],
-        "drums": {
-          "K": "X.XX.X.XX.XX.X..",
-          "H": "xxxxxxxxxxxxxxxx",
-          "S": "....o.......o..."
-        }
+        "drums": "none"
       },
       {
         "name": "trance",
@@ -390,7 +370,7 @@
         "voices": [
           "math_arp"
         ],
-        "drums": "four_on_floor"
+        "drums": "none"
       },
       {
         "name": "psy",
@@ -399,7 +379,7 @@
         "voices": [
           "math_psy"
         ],
-        "drums": "four_on_floor"
+        "drums": "none"
       },
       {
         "name": "build",
@@ -411,10 +391,7 @@
         ],
         "riser": true,
         "riser_kind": "noise",
-        "drums": {
-          "K": "X...............",
-          "S": "....x...x...x.x."
-        }
+        "drums": "none"
       },
       {
         "name": "drop",
@@ -432,22 +409,17 @@
           "math_pad"
         ],
         "drums": {
-          "K": "X...X...X...X...",
-          "S": "....X.......X...",
-          "H": "x.x.x.x.x.x.x.x."
+          "K": "X...X...X...X..."
         }
       },
       {
         "name": "loop",
         "beats": 2,
-        "energy": 2.4,
+        "energy": 2.0,
         "voices": [
           "math_pad"
         ],
-        "drums": {
-          "K": "X.......X.......",
-          "H": "..x...x...x...x."
-        }
+        "drums": "none"
       }
     ],
     "logo": {

@@ -22,11 +22,12 @@ F = {
     "build":    "y = sin(2π·(100+50t)·t)\n·(t/3)",
 }
 
-# math voices: `math_fn` points at the SAME FORMULA entry the scene plots; `math_carrier_hz` = the audible carrier the
-# curve modulates (39/65/220/440 are the formula's own frequencies; the sub-audio gates get a musical carrier).
-def mv(fn, hz, vol, scale, waveform="sine", duty=None, env=None):
+# math voices: `math_fn` points at the SAME FORMULA entry the scene plots.
+#   "direct" = the plotted wave IS the waveform (39/65/200/220/440 Hz formulas are already audio-rate).
+#   "amp"    = the plotted wave gates an audible carrier (the sub-audio gates: 8/4/2 Hz).
+def mv(fn, hz, vol, scale, mode="direct", waveform="sine", duty=None, env=None):
     v = {"type": "math", "role": "bass", "pattern": "sustain", "octave": 2, "vol": vol,
-         "math_fn": fn, "math_mode": "freq", "math_waveform": waveform, "math_scale": scale,
+         "math_fn": fn, "math_mode": mode, "math_waveform": waveform, "math_scale": scale,
          "math_carrier_hz": hz, "filter": None,
          "env": env or {"a": .01, "d": .1, "s": .85, "r": .2}}
     if duty is not None: v["duty"] = duty
@@ -59,39 +60,33 @@ spec = {
   "progression": [["F2", "Ab2", "C3"]], "chord_bars": 2, "swing": 0, "seed": 2026,
   "hf_shelf_db": -3.0,
   "voices": {
-   "math_kick": mv("hardtekk", 90, 0.10, 0.55, "pulse", 0.25, {"a": .002, "d": .04, "s": .8, "r": .03}),
-   "math_bass": mv("phonk808", 39, 0.10, 0.5, "sine"),
-   "math_acid": mv("acid", 110, 0.07, 0.7, "pulse", 0.25),
-   "math_funk": mv("funk", 110, 0.08, 0.5, "triangle"),
-   "math_mel":  mv("phonkmel", 220, 0.07, 0.4, "sine"),
-   "math_arp":  mv("trance", 440, 0.06, 0.4, "sine"),
-   "math_psy":  mv("psy", 65, 0.09, 0.5, "pulse", 0.5),
-   "math_pad":  mv("build", 50, 0.045, 0.3, "sine", None, {"a": .3, "d": .8, "s": .6, "r": .4}),
+   "math_kick": mv("hardtekk", 90, 0.11, 0.55, "amp", "pulse", 0.25, {"a": .002, "d": .04, "s": .8, "r": .03}),
+   "math_bass": mv("phonk808", 39, 0.12, 0.5, "direct"),
+   "math_acid": mv("acid", 110, 0.08, 0.7, "amp", "pulse", 0.25),
+   "math_funk": mv("funk", 110, 0.09, 0.5, "amp", "triangle"),
+   "math_mel":  mv("phonkmel", 220, 0.08, 0.4, "direct"),
+   "math_arp":  mv("trance", 440, 0.07, 0.4, "direct"),
+   "math_psy":  mv("psy", 65, 0.10, 0.5, "direct"),
+   "math_pad":  mv("build", 50, 0.05, 0.3, "direct", "sine", None, {"a": .3, "d": .8, "s": .6, "r": .4}),
    "lead": None, "counter": None,
   },
-  "drums": {"K": "X...X...X...X...", "H": "..x...x...x...x."},
+  "drums": {"K": "X..............."},
   "sections": [
-   {"name": "giris",     "beats": 2, "energy": 0.8, "voices": ["math_pad"], "drums": "none"},
-   {"name": "hardtekk",  "beats": 4, "energy": 2.2, "voices": ["math_kick", "math_pad"],
-    "drums": {"K": "X...X...X...X...", "H": "..x...x...x...x."}},
-   {"name": "phonk808",  "beats": 4, "energy": 2.4, "voices": ["math_bass"],
-    "drums": {"K": "X.......X.......", "S": "....o.......o..."}},
-   {"name": "acid",      "beats": 4, "energy": 2.6, "voices": ["math_acid"],
-    "drums": {"K": "X...X...X...X...", "H": "x.x.x.x.x.x.x.x."}},
-   {"name": "funk",      "beats": 4, "energy": 2.7, "voices": ["math_funk"],
-    "drums": {"K": "X...X.x.X...X.x.", "H": "..x...x...x...x.", "S": "....o.......o..."}},
-   {"name": "phonkmel",  "beats": 4, "energy": 2.8, "voices": ["math_mel"], "drums": "boom_bap"},
-   {"name": "jersey",    "beats": 4, "energy": 3.0, "voices": ["math_kick", "math_bass"],
-    "drums": {"K": "X.XX.X.XX.XX.X..", "H": "xxxxxxxxxxxxxxxx", "S": "....o.......o..."}},
-   {"name": "trance",    "beats": 4, "energy": 3.2, "voices": ["math_arp"], "drums": "four_on_floor"},
-   {"name": "psy",       "beats": 4, "energy": 3.4, "voices": ["math_psy"], "drums": "four_on_floor"},
+   {"name": "giris",     "beats": 2, "energy": 1.2, "voices": ["math_pad"], "drums": "none"},
+   {"name": "hardtekk",  "beats": 4, "energy": 2.2, "voices": ["math_kick"], "drums": "none"},
+   {"name": "phonk808",  "beats": 4, "energy": 2.4, "voices": ["math_bass"], "drums": "none"},
+   {"name": "acid",      "beats": 4, "energy": 2.6, "voices": ["math_acid"], "drums": "none"},
+   {"name": "funk",      "beats": 4, "energy": 2.7, "voices": ["math_funk"], "drums": "none"},
+   {"name": "phonkmel",  "beats": 4, "energy": 2.8, "voices": ["math_mel"], "drums": "none"},
+   {"name": "jersey",    "beats": 4, "energy": 3.0, "voices": ["math_kick", "math_bass"], "drums": "none"},
+   {"name": "trance",    "beats": 4, "energy": 3.2, "voices": ["math_arp"], "drums": "none"},
+   {"name": "psy",       "beats": 4, "energy": 3.4, "voices": ["math_psy"], "drums": "none"},
    {"name": "build",     "beats": 4, "energy": 3.7, "voices": ["math_arp", "math_pad"], "riser": True, "riser_kind": "noise",
-    "drums": {"K": "X...............", "S": "....x...x...x.x."}},
+    "drums": "none"},
    {"name": "drop",      "beats": 4, "energy": 4.2, "drop": True,
     "voices": ["math_kick", "math_bass", "math_acid", "math_funk", "math_mel", "math_arp", "math_psy", "math_pad"],
-    "drums": {"K": "X...X...X...X...", "S": "....X.......X...", "H": "x.x.x.x.x.x.x.x."}},
-   {"name": "loop",      "beats": 2, "energy": 2.4, "voices": ["math_pad"],
-    "drums": {"K": "X.......X.......", "H": "..x...x...x...x."}},
+    "drums": {"K": "X...X...X...X..."}},
+   {"name": "loop",      "beats": 2, "energy": 2.0, "voices": ["math_pad"], "drums": "none"},
   ],
   "logo": {"at": ["reveal", "loop"], "voice": "math_mel"},
  },

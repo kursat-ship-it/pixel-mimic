@@ -135,29 +135,28 @@ def note(v, midi, dur, glide_from=None, flavour="2a03"):
     n = max(1, int(dur * SR))
     typ = v.get("type", "pulse")
     if typ == "math":
-        # math voice: evaluate the math function per sample, use it to modulate frequency or amplitude
+        # math voice: the SAME f(t) the visual plots IS the sound.
+        #   "direct": audio = f(t)                    (the plotted wave = the waveform; tone formulas)
+        #   "amp":    audio = sin(carrier·t)·f(t)     (the plotted wave gates an audible carrier; gate formulas)
+        #   "freq":   audio = sin(∫ carrier·(1+s·f(t))) (the plotted wave bends the pitch contour)
         fn = v.get("math_fn")
-        mode = v.get("math_mode", "freq")  # "freq" | "amp" | "direct"
+        mode = v.get("math_mode", "direct")
         scale = float(v.get("math_scale", 1.0))
         base_freq = float(v["math_carrier_hz"]) if v.get("math_carrier_hz") else hz(midi)
         t = np.arange(n) / SR
-        y_vals = np.zeros(n)
+        y_vals = np.empty(n)
         for i, ti in enumerate(t):
             try:
                 y_vals[i] = float(fn(ti))
             except Exception:
                 y_vals[i] = 0.0
-        if mode == "amp":
-            # y directly modulates amplitude
+        if mode == "direct":
             y = y_vals * scale
-        elif mode == "direct":
-            # y is the waveform
-            y = y_vals * scale
-        else:
-            # "freq" mode: y modulates frequency around base
-            # y in [-1,1] → frequency multiplier (1 + scale * y)
+        elif mode == "amp":
+            y = np.sin(2 * math.pi * base_freq * t) * y_vals * scale
+        else:  # freq
             ph = np.cumsum(base_freq * (1.0 + scale * y_vals)) / SR
-            waveform = v.get("math_waveform", "sine")  # sine, pulse, triangle
+            waveform = v.get("math_waveform", "sine")
             if waveform == "pulse":
                 duty = v.get("duty", .25)
                 y = np.where((ph % 1.0) < duty, 1.0, -1.0) * .5
@@ -165,7 +164,7 @@ def note(v, midi, dur, glide_from=None, flavour="2a03"):
                 tri = 1 - 4 * np.abs((ph % 1.0) - .5)
                 st = v.get("steps", 7.5)
                 y = (np.round(tri * st) / st if st else tri)
-            else:  # sine
+            else:
                 y = np.sin(2 * math.pi * ph)
             y = y * scale
     else:
