@@ -1,0 +1,59 @@
+id   role      scene      beats  start    end  in       caption
+S1   hook      chladni      4.0   0.00   2.00  cut      [top] ses görünmez. kum?
+S2   step      chladni      6.0   2.00   5.00  dissolve [top] ama kum onu ele verir.
+S3   step      chladni      6.0   5.00   8.00  match    [top] her frekansın bir şekli vardır.
+S4   step      chladni      6.0   8.00  11.00  dissolve [top] bu desen, sesin haritasıdır.
+S5   twist     chladni      6.0  11.00  14.00  glitch   [top] kum, titremeyen yere kaçar.
+S6   build     chladni      5.0  14.00  16.50  dissolve [top] frekans yükseldikçe desen çoğalır.
+S7   reveal    chladni      5.0  16.50  19.00  iris     [title] işte sesin gizli deseni.
+S8   loop      chladni      2.0  19.00  20.00  dissolve 
+total 40.0 beats = 20.00 s
+
+RETENTION MAP · 20.0 s · 4/4 · 120 BPM · 8 segments
+  s  0         5         10        15        
+     !··|·····|!····|······!·····!····♪@···|↻
+     legend: ! hook/re-hook  | cut/transition  " caption  ▲ drop  ♪ sonic logo  @ legible tag  ↻ loop
+    t(s)   beat  lane   event
+    0.00   0.00  HOOK   S1 hook     chladni
+    0.00   0.00  MUSIC  giris: e1 4/4 120 BPM A minor 
+    0.00   0.00  TEXT   “ses görünmez. kum?” (word, top)  [question]
+    2.00   4.00  MUSIC  ortaya: e1.4 4/4 120 BPM A minor 
+    2.00   4.00  TEXT   “ama kum onu ele verir.” (word, top)
+    2.00   4.00  TRANS  S2 step     chladni  ← dissolve (2.5b)
+    5.00  10.00  EVENT  rehook
+    5.00  10.00  MUSIC  harita: e1.8 4/4 120 BPM A minor 
+    5.00  10.00  TEXT   “her frekansın bir şekli vardır.” (word, top)
+    5.00  10.00  TRANS  S3 step     chladni  ← match (1.25b)
+    8.00  16.00  MUSIC  gizli: e2.2 4/4 120 BPM A minor 
+    8.00  16.00  TEXT   “bu desen, sesin haritasıdır.” (word, top)
+    8.00  16.00  TRANS  S4 step     chladni  ← dissolve (2.5b)
+   11.00  22.00  EVENT  twist · kum titremeyen yere kaçar
+   11.00  22.00  MUSIC  yogun: e2.6 4/4 120 BPM A minor 
+   11.00  22.00  TEXT   “kum, titremeyen yere kaçar.” (word, top)
+   11.00  22.00  TRANS  S5 twist    chladni  ← glitch (0.75b)
+   14.00  28.00  EVENT  rehook
+   14.00  28.00  MUSIC  build: e3 4/4 120 BPM A minor shepard riser→
+   14.00  28.00  TEXT   “frekans yükseldikçe desen çoğalır.” (word, top)
+   14.00  28.00  TRANS  S6 build    chladni  ← dissolve (2.5b)
+   16.50  33.00  EVENT  reveal · sesin gizli deseni
+   16.50  33.00  LOGO   sonic logo (long note)
+   16.50  33.00  MUSIC  reveal: e3.4 4/4 120 BPM A minor DROP
+   16.50  33.00  TEXT   “işte sesin gizli deseni.” (word, title)
+   16.50  33.00  TRANS  S7 reveal   chladni  ← iris (1.5b)
+   17.00  34.00  TAG    @ plate LEGIBLE (S7)
+   19.00  38.00  MUSIC  dongu: e1.6 4/4 120 BPM A minor 
+   19.00  38.00  TRANS  S8 loop     chladni  ← dissolve (2.5b)
+   20.00  40.00  LOGO   sonic logo (long note)
+   20.00  40.00  LOOP   seam ← dissolve → frame 0
+  visual change every 0.87 s on average · longest static 2.00 s at 12.00 s · longest re-hook gap 6.0 s · 5 hooks/re-hooks
+
+warn: duration 20.0 s outside the 20–45 s sweet spot
+warn: S1: narration 1: on screen 0.7 s after full reveal < 1.6 s reading time (3 words) — lengthen 'until'/the segment, use a faster rate or shorten the text
+warn: S2: narration 1: on screen 1.7 s after full reveal < 2.4 s reading time (5 words) — lengthen 'until'/the segment, use a faster rate or shorten the text
+warn: S3: narration 1: on screen 1.7 s after full reveal < 2.4 s reading time (5 words) — lengthen 'until'/the segment, use a faster rate or shorten the text
+warn: S4: narration 1: on screen 1.8 s after full reveal < 2.0 s reading time (4 words) — lengthen 'until'/the segment, use a faster rate or shorten the text
+warn: S5: narration 1: on screen 1.8 s after full reveal < 2.0 s reading time (4 words) — lengthen 'until'/the segment, use a faster rate or shorten the text
+warn: S6: narration 1: on screen 1.5 s after full reveal < 2.0 s reading time (4 words) — lengthen 'until'/the segment, use a faster rate or shorten the text
+warn: S7: narration 1: on screen 1.9 s after full reveal < 2.0 s reading time (4 words) — lengthen 'until'/the segment, use a faster rate or shorten the text
+warn: S7: narration block 1 covers 36% of the subject (move it / set 'place')
+OK
