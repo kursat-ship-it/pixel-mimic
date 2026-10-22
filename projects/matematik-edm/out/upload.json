@@ -1,0 +1,23 @@
+{
+  "title": "Her Ses = Tek Bir Grafik: Matematikle EDM 🎧",
+  "description": "Dokuz matematik fonksiyonu, dokuz ayrı elektronik ses karakteri... ve finalde hepsi tek bir parçada birleşiyor. Gördüğün eğri, duyduğun sesin ta kendisi: 39 Hz'lik 808'den 440 Hz'lik trance arpejine. Sence hangisi en sert? 👇",
+  "hashtags": [
+    "#matematik",
+    "#elektronikmüzik",
+    "#edm",
+    "#pixelart",
+    "#chiptune",
+    "#hayretpiksel"
+  ],
+  "duration_s": 20.0,
+  "file": "out/matematik-edm.mp4",
+  "master": "out/matematik-edm_master.mp4",
+  "cover": "out/cover.png",
+  "cover_t": 19.4,
+  "resolution": "1080x1920",
+  "fps": 30,
+  "loop": true,
+  "posted": false,
+  "sources": "sources.md",
+  "note": "Nothing posted."
+}
