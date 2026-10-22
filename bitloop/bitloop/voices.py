@@ -4,7 +4,9 @@ pitches may be microtonal. Flavours colour the whole roster:
   gameboy  pulse + 32-step 4-bit wavetable channel, gritty low-passed output
   sid    C64: pulse-width modulation, saw, resonant low-pass filter sweeps, ring-ish detune
   fm     2-operator FM (OPL / Genesis-like): bells, e-pianos, punchy basses
-Voice types: pulse, triangle, saw, wave, fm, noise."""
+  math   **direct math-to-audio**: evaluates the same f(t) function as the visual (FormulaScope),
+         maps y = f(t) → pitch/amplitude for perfect visual-audio sync.
+Voice types: pulse, triangle, saw, wave, fm, noise, math."""
 import math
 import numpy as np
 
@@ -99,14 +101,76 @@ def osc(v, f):
         r = np.random.default_rng(v.get("_seed", 0)); vals = r.choice([-1.0, 1.0], n // per + 2)
         if v.get("short"): vals = np.tile(vals[:93], len(vals) // 93 + 1)[:len(vals)]   # 93-step metallic LFSR
         return np.repeat(vals, per)[:n] * .5
+    if typ == "math":
+        # math voice: the function f(t) is evaluated directly per sample.
+        # v["math_fn"] is a callable taking (t_seconds) -> y in [-1, 1] (or any range, scaled).
+        # v["math_scale"] maps y → frequency multiplier or direct frequency.
+        # v["math_mode"] = "freq" (y → frequency multiplier around base midi) or "amp" (y → amplitude) or "direct" (y → waveform).
+        fn = v.get("math_fn")
+        mode = v.get("math_mode", "freq")  # "freq" | "amp" | "direct"
+        scale = float(v.get("math_scale", 1.0))
+        if fn is None:
+            return np.zeros(n)
+        t = np.arange(n) / SR
+        y = np.zeros(n)
+        for i, ti in enumerate(t):
+            try:
+                y[i] = float(fn(ti))
+            except Exception:
+                y[i] = 0.0
+        if mode == "amp":
+            return y * scale
+        elif mode == "freq":
+            # y in [-1,1] → frequency multiplier around base frequency
+            # base frequency comes from midi param in note()
+            return None  # handled in note() by modulating frequency
+        elif mode == "direct":
+            # y is the waveform itself (must be [-1,1])
+            return y * scale
     raise ValueError(f"unknown voice type {typ}")
 
 
 def note(v, midi, dur, glide_from=None, flavour="2a03"):
     """Render one note (seconds) for voice v."""
     n = max(1, int(dur * SR))
-    f = freq_curve(n, midi, v, glide_from)
-    y = osc(v, f)
+    typ = v.get("type", "pulse")
+    if typ == "math":
+        # math voice: evaluate the math function per sample, use it to modulate frequency or amplitude
+        fn = v.get("math_fn")
+        mode = v.get("math_mode", "freq")  # "freq" | "amp" | "direct"
+        scale = float(v.get("math_scale", 1.0))
+        base_freq = float(v["math_carrier_hz"]) if v.get("math_carrier_hz") else hz(midi)
+        t = np.arange(n) / SR
+        y_vals = np.zeros(n)
+        for i, ti in enumerate(t):
+            try:
+                y_vals[i] = float(fn(ti))
+            except Exception:
+                y_vals[i] = 0.0
+        if mode == "amp":
+            # y directly modulates amplitude
+            y = y_vals * scale
+        elif mode == "direct":
+            # y is the waveform
+            y = y_vals * scale
+        else:
+            # "freq" mode: y modulates frequency around base
+            # y in [-1,1] → frequency multiplier (1 + scale * y)
+            ph = np.cumsum(base_freq * (1.0 + scale * y_vals)) / SR
+            waveform = v.get("math_waveform", "sine")  # sine, pulse, triangle
+            if waveform == "pulse":
+                duty = v.get("duty", .25)
+                y = np.where((ph % 1.0) < duty, 1.0, -1.0) * .5
+            elif waveform == "triangle":
+                tri = 1 - 4 * np.abs((ph % 1.0) - .5)
+                st = v.get("steps", 7.5)
+                y = (np.round(tri * st) / st if st else tri)
+            else:  # sine
+                y = np.sin(2 * math.pi * ph)
+            y = y * scale
+    else:
+        f = freq_curve(n, midi, v, glide_from)
+        y = osc(v, f)
     e = v.get("env", {})
     env = adsr(n, e.get("a", .004), e.get("d", .09), e.get("s", .35), e.get("r", .03),
                steps=(15 if flavour in ("2a03", "gameboy") else 0))

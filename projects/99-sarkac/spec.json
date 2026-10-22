@@ -169,7 +169,7 @@
       },
       {
         "name": "kilit",
-        "beats": 6,
+        "beats": 8,
         "energy": 3.0,
         "drop": true,
         "voices": [
@@ -180,6 +180,19 @@
         "drums": {
           "K": "X...X...X...X...",
           "S": "....X.......X...",
+          "H": "..x...x...x...x."
+        }
+      },
+      {
+        "name": "dongu",
+        "beats": 2,
+        "energy": 1.8,
+        "voices": [
+          "pad",
+          "bass"
+        ],
+        "drums": {
+          "K": "X.......X.......",
           "H": "..x...x...x...x."
         }
       }
@@ -335,7 +348,7 @@
       "id": "S5",
       "role": "reveal",
       "scene": "pendulum_grid",
-      "beats": 6,
+      "beats": 8,
       "params": {
         "rows": 11,
         "cols": 9,
@@ -351,7 +364,7 @@
           "y": 94
         },
         "freeze": {
-          "at": 29,
+          "at": 30,
           "beats": 1
         }
       },
@@ -404,6 +417,43 @@
           "dust"
         ]
       }
+    },
+    {
+      "id": "S6",
+      "role": "loop",
+      "scene": "pendulum_grid",
+      "beats": 2,
+      "params": {
+        "rows": 11,
+        "cols": 9,
+        "phase": "lock",
+        "outlier_ring": {
+          "at": 26,
+          "beats": 1
+        },
+        "formula": {
+          "text": "R(t) = |Σ e^(iφj)| / 99",
+          "at": 28,
+          "dot": 1.0,
+          "y": 94
+        },
+        "freeze": {
+          "at": 30,
+          "beats": 1
+        }
+      },
+      "transition_in": "dissolve",
+      "layer_sync": "first",
+      "layers": {
+        "back": [
+          "stars",
+          "nebula"
+        ],
+        "front": [
+          "dust"
+        ]
+      },
+      "events": []
     }
   ]
 }

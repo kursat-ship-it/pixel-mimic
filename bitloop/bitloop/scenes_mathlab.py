@@ -3,7 +3,10 @@ of the brief's functions, scrolling right-to-left, with a BLACK tracking dot at 
 pixel particles bursting on every beat, and the formula drawn small at the bottom.
 
 The curve is computed EXACTLY from the function at every frame (scene-local time t). `own_layers` counts the moving
-plot + particles so the brand's >=3-layer rule holds even with a thin backdrop."""
+plot + particles so the brand's >=3-layer rule holds even with a thin backdrop.
+
+The scene exposes the math function via `scene.math_fn` so the audio engine can use the SAME function for
+perfect visual-audio sync (math voice type)."""
 import math
 import numpy as np
 from .scenes import Scene, pulse, TAU
@@ -97,6 +100,15 @@ class FormulaScope(Scene):
             from .bitmap import draw_text
             draw_text(cv, p["formula_text"], 0.0, p["formula_y"], p["formula_dot"],
                       pal.ramp("pale", .95), snap=True)
+
+    @property
+    def math_fn(self):
+        """Return the active math function f(t) for the audio engine (math voice type).
+        Returns a callable f(t_seconds) -> y in [-1, 1]."""
+        if len(self.FS) > 1:
+            # For "all" mode, return the build function (the most complex/complete)
+            return self.FS[-1]["f"]
+        return self.FS[0]["f"]
 
 
 from .scenes import SCENES  # noqa: E402

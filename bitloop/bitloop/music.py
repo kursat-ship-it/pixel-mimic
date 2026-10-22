@@ -199,6 +199,15 @@ def logo_targets(spec):
     return sorted(set(out))
 
 
+def _math_callable(name):
+    """Resolve a spec math_fn string ("hardtekk" / "from_scene:phonk808") to the SAME callable the visual scene uses."""
+    from .scenes_mathlab import FORMULA
+    key = str(name or "hardtekk")
+    if key.startswith("from_scene:"):
+        key = key.split(":", 1)[1]
+    return FORMULA.get(key, FORMULA["hardtekk"])["f"]
+
+
 def _voices(spec):
     m = spec["music"]; fl = m["flavour"]; out = {}
     for name, u in m["voices"].items():
@@ -207,7 +216,10 @@ def _voices(spec):
         for k, val in rd.items():
             if k == "env": v["env"] = {**val, **v.get("env", {})}
             else: v.setdefault(k, val)
-        v["_name"] = name; out[name] = v
+        v["_name"] = name
+        if v.get("type") == "math":
+            v["math_fn"] = _math_callable(v.get("math_fn"))
+        out[name] = v
     return out
 
 

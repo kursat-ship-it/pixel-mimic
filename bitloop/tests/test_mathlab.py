@@ -53,6 +53,22 @@ def test_all_mode_renders():
     assert fr.shape == (1920, 1080, 3) and fr.dtype == np.uint8
 
 
+def test_math_voice_renders_from_same_fn():
+    """The math voice must use the SAME callable the visual plots (one source), and the formula must modulate the sound."""
+    from bitloop.voices import note as vnote
+    from bitloop.music import _math_callable
+    f = _math_callable("from_scene:phonk808")
+    assert f is FORMULA["phonk808"]["f"]          # same object → same source, not a copy
+    assert _math_callable("phonk808") is f
+    v = {"type": "math", "math_fn": f, "math_mode": "freq", "math_waveform": "sine",
+         "math_scale": 0.5, "math_carrier_hz": 220, "env": {"a": .01, "d": .1, "s": .85, "r": .2}}
+    y = vnote(v, 69, 0.5, flavour="sid")
+    assert y.shape[0] > 0 and np.all(np.isfinite(y)) and np.abs(y).max() > 1e-4
+    v2 = dict(v); v2["math_fn"] = lambda t: 0.0   # flat function → plain carrier
+    z = vnote(v2, 69, 0.5, flavour="sid")
+    assert not np.array_equal(y, z)               # the formula measurably changes the audio
+
+
 if __name__ == "__main__":
     for k, v in list(globals().items()):
         if k.startswith("test_"):
