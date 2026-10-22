@@ -10,7 +10,7 @@ from bitloop.scenes_chladni import Chladni
 def mini(**p):
     lay = {"back": ["horizon", "nebula"], "front": ["dust"]}
     s = {"meta": {"lang": "tr"}, "loop": True,
-         "music": {"bpm": 120, "meter": "4/4", "key": "A", "scale": "natural_minor", "flavour": "fm"},
+         "music": {"bpm": 120, "meter": "4/4", "key": "A", "scale": "minor", "flavour": "fm"},
          "segments": [
             {"id": "A", "role": "step", "beats": 20, "scene": "chladni", "params": p, "layers": lay,
              "caption": {"text": "SES GÖRÜNMEZ, KUM ELE VERİR?", "at": [0, 3]}},

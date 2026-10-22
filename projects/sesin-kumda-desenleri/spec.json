@@ -33,7 +33,7 @@
     "bpm": 120,
     "meter": "4/4",
     "key": "A",
-    "scale": "natural_minor",
+    "scale": "minor",
     "tuning": "12tet",
     "flavour": "fm",
     "progression": [

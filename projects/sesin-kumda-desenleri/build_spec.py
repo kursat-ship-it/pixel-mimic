@@ -35,7 +35,7 @@ spec = {
  "palette": "hayret",
  "narration_defaults": {"reveal": "word", "rate": "8th", "size": "head", "place": "top", "case": "upper"},
  "music": {
-  "bpm": BPM, "meter": "4/4", "key": "A", "scale": "natural_minor", "tuning": "12tet", "flavour": "fm",
+  "bpm": BPM, "meter": "4/4", "key": "A", "scale": "minor", "tuning": "12tet", "flavour": "fm",
   "progression": [["A3", "C4", "E4"]], "chord_bars": 2, "seed": 1787, "hf_shelf_db": -3.0,
   "voices": {
    "drone": {"role": "bass", "type": "triangle", "octave": 2, "vol": 0.08, "pattern": "sustain", "filter": "soft"},
