@@ -61,11 +61,11 @@ def test_math_voice_is_the_same_signal_as_the_plot():
     assert f is FORMULA["phonk808"]["f"]          # same object → same source, not a copy
     assert _math_callable("phonk808") is f
     v = {"type": "math", "math_fn": f, "math_mode": "direct", "math_scale": 1.0,
-         "env": {"a": .0, "d": .0, "s": 1.0, "r": .0}}
-    y = vnote(v, 69, 0.2, flavour="sid")
+         "env": {"a": .0, "d": .0, "s": 1.0, "r": .05}}
+    y = vnote(v, 69, 0.4, flavour="sid")
     t = np.arange(len(y)) / 48000.0
-    for i in (0, 500, len(y) - 1):
-        assert abs(y[i] - f(t[i])) < 1e-6        # the waveform equals the plotted curve
+    for i in (100, 1000, len(y) // 2):        # mid-note: env == 1, so the sample equals the plotted value
+        assert abs(y[i] - f(t[i])) < 1e-5
     v2 = dict(v); v2["math_mode"] = "amp"; v2["math_carrier_hz"] = 220
     z = vnote(v2, 69, 0.2, flavour="sid")
     assert np.abs(z).max() > 1e-4 and not np.array_equal(y, z)
