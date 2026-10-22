@@ -220,7 +220,7 @@
       "transition_in": "cut",
       "narration": [
         {
-          "text": "ses görünmez.",
+          "text": "ses görünmez. kum?",
           "at": 0
         }
       ],
@@ -274,13 +274,18 @@
         "label": "mod 2,2"
       },
       "transition_in": "match",
+      "events": [
+        {
+          "at": 0,
+          "kind": "rehook"
+        }
+      ],
       "narration": [
         {
           "text": "her frekansın bir şekli vardır.",
           "at": 0
         }
-      ],
-      "events": []
+      ]
     },
     {
       "id": "S4",
@@ -364,13 +369,18 @@
         "label": "mod 5,3"
       },
       "transition_in": "dissolve",
+      "events": [
+        {
+          "at": 0,
+          "kind": "rehook"
+        }
+      ],
       "narration": [
         {
           "text": "frekans yükseldikçe desen çoğalır.",
           "at": 0
         }
-      ],
-      "events": []
+      ]
     },
     {
       "id": "S7",

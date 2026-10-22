@@ -207,7 +207,7 @@
       "transition_in": "cut",
       "narration": [
         {
-          "text": "ses görünmez.",
+          "text": "ses görünmez. kum?",
           "at": 0
         }
       ],
@@ -235,13 +235,18 @@
       "beats": 6,
       "params": {},
       "transition_in": "match",
+      "events": [
+        {
+          "at": 0,
+          "kind": "rehook"
+        }
+      ],
       "narration": [
         {
           "text": "her frekansın bir şekli vardır.",
           "at": 0
         }
-      ],
-      "events": []
+      ]
     },
     {
       "id": "S4",
@@ -285,13 +290,18 @@
       "beats": 5,
       "params": {},
       "transition_in": "dissolve",
+      "events": [
+        {
+          "at": 0,
+          "kind": "rehook"
+        }
+      ],
       "narration": [
         {
           "text": "frekans yükseldikçe desen çoğalır.",
           "at": 0
         }
-      ],
-      "events": []
+      ]
     },
     {
       "id": "S7",
