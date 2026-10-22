@@ -1,0 +1,76 @@
+id   role      scene      beats  start    end  in       caption
+S0   hook      formula_scope   2.0   0.00   1.00  cut      [title] matematikle elektronik müzik
+S1   step      formula_scope   4.0   1.00   3.00  whip     [top] hardtekk kick
+S2   step      formula_scope   4.0   3.00   5.00  cut      [top] phonk 808
+S3   step      formula_scope   4.0   5.00   7.00  slide    [top] acid bassline
+S4   step      formula_scope   4.0   7.00   9.00  cut      [top] funk ritmi
+S5   step      formula_scope   4.0   9.00  11.00  slide    [top] phonk melodisi
+S6   step      formula_scope   4.0  11.00  13.00  cut      [top] jersey club
+S7   step      formula_scope   4.0  13.00  15.00  slide    [top] trance arpeggio
+S8   step      formula_scope   4.0  15.00  17.00  cut      [top] psytrance bass
+S9   build     formula_scope   4.0  17.00  19.00  glitch   [top] hazır mısın?
+S10  reveal    formula_scope   4.0  19.00  21.00  crash    [title] her ses = tek bir grafik
+S11  loop      formula_scope   2.0  21.00  22.00  dissolve 
+total 44.0 beats = 22.00 s
+
+RETENTION MAP · 22.0 s · 4/4 · 120 BPM · 12 segments
+  s  0         5         10        15        20      
+     !·|·!·!··|···|···|!···|·!·|···|···|!··@··|·↻
+     legend: ! hook/re-hook  | cut/transition  " caption  ▲ drop  ♪ sonic logo  @ legible tag  ↻ loop
+    t(s)   beat  lane   event
+    0.00   0.00  HOOK   S0 hook     formula_scope
+    0.00   0.00  MUSIC  giris: e1.2 4/4 120 BPM F phrygian_dominant 
+    0.00   0.00  TEXT   “matematikle elektronik müzik” (word, title)
+    1.00   2.00  EVENT  shake
+    1.00   2.00  MUSIC  hardtekk: e2.2 4/4 120 BPM F phrygian_dominant 
+    1.00   2.00  TEXT   “hardtekk kick” (word, top)
+    1.00   2.00  TRANS  S1 step     formula_scope  ← whip (0.5b)
+    2.00   4.00  EVENT  rehook
+    3.00   6.00  CUT    S2 step     formula_scope  ← cut
+    3.00   6.00  MUSIC  phonk808: e2.4 4/4 120 BPM F phrygian_dominant 
+    3.00   6.00  TEXT   “phonk 808” (word, top)  [number]
+    5.00  10.00  MUSIC  acid: e2.6 4/4 120 BPM F phrygian_dominant 
+    5.00  10.00  TEXT   “acid bassline” (word, top)
+    5.00  10.00  TRANS  S3 step     formula_scope  ← slide (0.75b)
+    7.00  14.00  CUT    S4 step     formula_scope  ← cut
+    7.00  14.00  MUSIC  funk: e2.7 4/4 120 BPM F phrygian_dominant 
+    7.00  14.00  TEXT   “funk ritmi” (word, top)
+    9.00  18.00  EVENT  twist · melodi girer: ses = grafik
+    9.00  18.00  MUSIC  phonkmel: e2.8 4/4 120 BPM F phrygian_dominant 
+    9.00  18.00  TEXT   “phonk melodisi” (word, top)
+    9.00  18.00  TRANS  S5 step     formula_scope  ← slide (0.75b)
+   11.00  22.00  CUT    S6 step     formula_scope  ← cut
+   11.00  22.00  EVENT  shake
+   11.00  22.00  MUSIC  jersey: e3 4/4 120 BPM F phrygian_dominant 
+   11.00  22.00  TEXT   “jersey club” (word, top)
+   12.00  24.00  EVENT  rehook
+   13.00  26.00  MUSIC  trance: e3.2 4/4 120 BPM F phrygian_dominant 
+   13.00  26.00  TEXT   “trance arpeggio” (word, top)
+   13.00  26.00  TRANS  S7 step     formula_scope  ← slide (0.75b)
+   15.00  30.00  CUT    S8 step     formula_scope  ← cut
+   15.00  30.00  MUSIC  psy: e3.4 4/4 120 BPM F phrygian_dominant 
+   15.00  30.00  TEXT   “psytrance bass” (word, top)
+   17.00  34.00  EVENT  shake
+   17.00  34.00  MUSIC  build: e3.7 4/4 120 BPM F phrygian_dominant riser→
+   17.00  34.00  TRANS  S9 build    formula_scope  ← glitch (0.5b)
+   17.50  35.00  TEXT   “hazır mısın?” (word, top)  [question]
+   19.00  38.00  EVENT  reveal · drop: tüm katmanlar
+   19.00  38.00  LOGO   sonic logo (long note)
+   19.00  38.00  MUSIC  drop: e4.2 4/4 120 BPM F phrygian_dominant DROP
+   19.00  38.00  TEXT   “her ses = tek bir grafik” (word, title)
+   19.00  38.00  TRANS  S10 reveal   formula_scope  ← crash (1.2b)
+   19.20  38.40  TAG    @ plate LEGIBLE (S10)
+   21.00  42.00  MUSIC  loop: e2 4/4 120 BPM F phrygian_dominant 
+   21.00  42.00  TRANS  S11 loop     formula_scope  ← dissolve (1.5b)
+   22.00  44.00  LOGO   sonic logo (long note)
+   22.00  44.00  LOOP   seam ← dissolve → frame 0
+  visual change every 0.56 s on average · longest static 1.75 s at 13.25 s · longest re-hook gap 6.0 s · 6 hooks/re-hooks
+
+warn: S0: narration 1: on screen 0.5 s after full reveal < 1.6 s reading time (3 words) — lengthen 'until'/the segment, use a faster rate or shorten the text
+warn: S9: narration 1: on screen 1.0 s after full reveal < 1.3 s reading time (2 words) — lengthen 'until'/the segment, use a faster rate or shorten the text
+warn: S10: narration 1: on screen 1.1 s after full reveal < 2.4 s reading time (5 words) — lengthen 'until'/the segment, use a faster rate or shorten the text
+warn: S0: narration block 1 covers 45% of the subject (move it / set 'place')
+warn: S9: narration block 1 covers 100% of the subject (move it / set 'place')
+warn: S10: narration block 1 covers 45% of the subject (move it / set 'place')
+warn: no curiosity gap / bold claim in the first 3 s (question, number or '!')
+OK

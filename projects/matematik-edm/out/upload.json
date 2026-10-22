@@ -9,11 +9,11 @@
     "#chiptune",
     "#hayretpiksel"
   ],
-  "duration_s": 20.0,
+  "duration_s": 22.0,
   "file": "out/matematik-edm.mp4",
   "master": "out/matematik-edm_master.mp4",
   "cover": "out/cover.png",
-  "cover_t": 19.4,
+  "cover_t": 20.5,
   "resolution": "1080x1920",
   "fps": 30,
   "loop": true,

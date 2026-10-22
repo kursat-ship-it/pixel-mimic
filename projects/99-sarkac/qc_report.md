@@ -1,7 +1,7 @@
 # QC raporu: 99-sarkac (v1)
 
 **Konu:** 9×11 = 99 sarkaç, Kuramoto çiftlenmesiyle kendiliğinden senkronize olur; 17:16 doğal frekanslı tek aykırı dışarıda kalır.
-**Süre:** 15,0 sn (30 vuruş, 120 BPM, 4/4), 1080×1920, 30 fps, sabit kamera. `pacing: calm`, marka paleti "Çini Gecesi".
+**Süre:** 17,0 sn (34 vuruş, 120 BPM, 4/4), 1080×1920, 30 fps, sabit kamera. `pacing: calm`, marka paleti "Çini Gecesi".
 **Teslim:** `out/99-sarkac.mp4` (upload, 8,6 MB) · `out/99-sarkac_master.mp4` (CRF 18) · `out/cover.png` · `out/contact_sheet.png` · `out/upload.json` (`posted: false`). **Hiçbir yerde paylaşılmadı.**
 
 ## Puanlar (v1)
@@ -11,11 +11,11 @@
 | **Retention** | 8/10 | Kanca 0 sn, yeniden kancalar ~2 sn'de bir, ters köşe 9 sn (%60), drop+logo 12 sn, ödül 13-15 sn. 15 sn tatlı noktanın altında ve metin yoğun (bilerek). |
 | **Ses** | 8/10 | −14,2 LUFS, TP −3,8 dBTP, LRA 4,4; tık'lar kaosta poliritmden tek ritme çözülüyor; aykırı yarım ses yukarıda. Telefon kaybı ~6 LU (hafif bass-ağır). Kulakla denetlenemedi (bu ortamda ses yok). |
 | **Bilgi doğruluğu** | 9/10 | Kuramoto (1975) + düzen parametresi (Strogatz 2000) + metronom senkronu (Pantaleone 2002) kaynaklı; 17:16 açıkça **sanatsal seçim** olarak işaretli (`sources.md`). |
-| **Teslim** | 9/10 | 450 kare = 15,000 sn; 0 decode hatası; bt709; faststart; SSIM 0,976. Loop dikişi 3,64 (medyan 1,85'in ~2 katı; donma→döngü doğası). |
+| **Teslim** | 9/10 | 510 kare = 17,000 sn; 0 decode hatası; bt709; faststart; SSIM 0,976. Loop dikişi 3,64 (medyan 1,85'in ~2 katı; donma→döngü doğası). |
 | **Metadata** | 9/10 | Başlık 49 karakter, 6 hashtag, cover_t 13,0, `posted: false`. |
 
 ## Ölçümler (CI, `out/qc_measurements.txt`)
-- **Bütünlük:** 450 kare · 15,000 sn · h264 High 1080×1920 yuv420p bt709 · AAC 48 kHz 196 kb/s · **0 decode hatası** · faststart ✓ · 8,6 MB.
+- **Bütünlük:** 450 kare · 17,000 sn · h264 High 1080×1920 yuv420p bt709 · AAC 48 kHz 196 kb/s · **0 decode hatası** · faststart ✓ · 8,6 MB.
 - **Görsel:** medyan parlaklık 25,9/255 · **near-black kare yok** · en uzun durağan 3 kare (0,10 sn) · bölüm hareketi 1,99→1,81→2,39→2,72→**4,53** (S5'te zirve = ifşa/drop) · loop dikişi 3,64 vs medyan 1,85.
 - **Ses:** **I −14,2 LUFS** (hedef −14 ±0,5) · LRA 4,4 · **TP −3,8 dBTP** (≤ −1) · telefon sim. −20,2 (kayıp ~6 LU) · bölüm LUFS S1 −14,7 → S5 −13,3 (yükseliyor).
 - **A/V sync:** **en iyi lag 0 kare** (r 0,115) · kesmeler ±1 karede (S2 −100 ms, S3 0, S4 −100 ms, S5 +33 ms).

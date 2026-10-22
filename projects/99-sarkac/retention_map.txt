@@ -1,51 +1,54 @@
 id   role      scene      beats  start    end  in       caption
-S1   hook      network      6.0   0.00   3.00  cut      [top] 99 sarkaç. biri farklı. | [top] bulabilir misin?
-S2   rehook    network      6.0   3.00   6.00  dissolve [top] ipucu: ritmi takip et.
-S3   step      network      6.0   6.00   9.00  match    [top] her tik, bir titreşim. | [top] kaos nasıl düzene dönüşüyor?
-S4   twist     network      6.0   9.00  12.00  glitch   [top] ama biri hâlâ farklı...
-S5   reveal    network      6.0  12.00  15.00  iris     [top] gördün mü? | [top] 17'ye karşı 16! | [top] kaosun içindeki düzen.
-total 30.0 beats = 15.00 s
+S1   hook      pendulum_grid   6.0   0.00   3.00  cut      [top] 99 sarkaç. biri farklı. | [top] bulabilir misin?
+S2   rehook    pendulum_grid   6.0   3.00   6.00  dissolve [top] ipucu: ritmi takip et.
+S3   step      pendulum_grid   6.0   6.00   9.00  match    [top] her tik, bir titreşim. | [top] kaos nasıl düzene dönüşüyor?
+S4   twist     pendulum_grid   6.0   9.00  12.00  glitch   [top] ama biri hâlâ farklı...
+S5   reveal    pendulum_grid   8.0  12.00  16.00  iris     [top] gördün mü? | [top] 17'ye karşı 16! | [top] kaosun içindeki düzen.
+S6   loop      pendulum_grid   2.0  16.00  17.00  dissolve 
+total 34.0 beats = 17.00 s
 
-RETENTION MAP · 15.0 s · 4/4 · 120 BPM · 5 segments
-  s  0         5         10        15   
-     !··!!·!·"··|···!!|!·!···♪·@·"·↻
+RETENTION MAP · 17.0 s · 4/4 · 120 BPM · 6 segments
+  s  0         5         10        15       
+     !··!!·!·"··|···!!|!·!···♪·@·"···|·↻
      legend: ! hook/re-hook  | cut/transition  " caption  ▲ drop  ♪ sonic logo  @ legible tag  ↻ loop
     t(s)   beat  lane   event
-    0.00   0.00  HOOK   S1 hook     network
+    0.00   0.00  HOOK   S1 hook     pendulum_grid
     0.00   0.00  MUSIC  kaos: e1.2 4/4 120 BPM A dorian 
     0.00   0.00  TEXT   “99 sarkaç. biri farklı.” (word, top)  [number]
     2.00   4.00  TEXT   “bulabilir misin?” (word, top)  [question]
     3.00   6.00  MUSIC  beliriyor: e1.6 4/4 120 BPM A dorian 
-    3.00   6.00  TRANS  S2 rehook   network  ← dissolve (2.5b)
+    3.00   6.00  TRANS  S2 rehook   pendulum_grid  ← dissolve (2.5b)
     4.00   8.00  TEXT   “ipucu: ritmi takip et.” (word, top)
     6.00  12.00  MUSIC  dalgalar: e2 4/4 120 BPM A dorian 
     6.00  12.00  TEXT   “her tik, bir titreşim.” (word, top)
-    6.00  12.00  TRANS  S3 step     network  ← match (1.25b)
+    6.00  12.00  TRANS  S3 step     pendulum_grid  ← match (1.25b)
     8.00  16.00  TEXT   “kaos nasıl düzene dönüşüyor?” (word, top)  [question]
     9.00  18.00  MUSIC  yaklasma: e2.4 4/4 120 BPM A dorian shepard riser→
-    9.00  18.00  TRANS  S4 twist    network  ← glitch (0.75b)
+    9.00  18.00  TRANS  S4 twist    pendulum_grid  ← glitch (0.75b)
    10.00  20.00  EVENT  twist · biri hâlâ farklı
    10.00  20.00  TEXT   “ama biri hâlâ farklı...” (word, top)
    12.00  24.00  EVENT  reveal · drop + sonic logo
    12.00  24.00  LOGO   sonic logo (long note)
    12.00  24.00  MUSIC  kilit: e3 4/4 120 BPM A dorian DROP
    12.00  24.00  TEXT   “gördün mü?” (word, top)  [question]
-   12.00  24.00  TRANS  S5 reveal   network  ← iris (1.5b)
+   12.00  24.00  TRANS  S5 reveal   pendulum_grid  ← iris (1.5b)
    13.00  26.00  EVENT  flash · kırmızı halka aykırıyı kilitler
    13.00  26.00  TAG    @ plate LEGIBLE (S5)
    13.00  26.00  TEXT   “17'ye karşı 16!” (word, top)  [number]
    14.00  28.00  TEXT   “kaosun içindeki düzen.” (word, top)
-   15.00  30.00  LOGO   sonic logo (long note)
-   15.00  30.00  LOOP   seam ← dissolve → frame 0
-  visual change every 0.63 s on average · longest static 1.25 s at 10.75 s · longest re-hook gap 5.0 s · 8 hooks/re-hooks
+   16.00  32.00  MUSIC  dongu: e1.8 4/4 120 BPM A dorian 
+   16.00  32.00  TRANS  S6 loop     pendulum_grid  ← dissolve (2.5b)
+   17.00  34.00  LOGO   sonic logo (long note)
+   17.00  34.00  LOOP   seam ← dissolve → frame 0
+  visual change every 0.21 s on average · longest static 0.79 s at 14.50 s · longest re-hook gap 5.0 s · 8 hooks/re-hooks
 
-warn: duration 15.0 s outside the 20–45 s sweet spot
+warn: duration 17.0 s outside the 20–45 s sweet spot
 warn: S1: narration 1: on screen 0.5 s after full reveal < 2.0 s reading time (4 words) — lengthen 'until'/the segment, use a faster rate or shorten the text
 warn: S1: narration 2: on screen 0.5 s after full reveal < 1.3 s reading time (2 words) — lengthen 'until'/the segment, use a faster rate or shorten the text
 warn: S2: narration 1: on screen 0.7 s after full reveal < 2.0 s reading time (4 words) — lengthen 'until'/the segment, use a faster rate or shorten the text
 warn: S3: narration 1: on screen 0.7 s after full reveal < 2.0 s reading time (4 words) — lengthen 'until'/the segment, use a faster rate or shorten the text
 warn: S3: narration 2: on screen 0.0 s after full reveal < 2.0 s reading time (4 words) — lengthen 'until'/the segment, use a faster rate or shorten the text
 warn: S4: narration 1: on screen 1.0 s after full reveal < 2.0 s reading time (4 words) — lengthen 'until'/the segment, use a faster rate or shorten the text
-warn: S5: narration 2: on screen 1.3 s after full reveal < 1.6 s reading time (3 words) — lengthen 'until'/the segment, use a faster rate or shorten the text
-warn: S5: narration 3: on screen 0.3 s after full reveal < 1.6 s reading time (3 words) — lengthen 'until'/the segment, use a faster rate or shorten the text
+warn: S5: narration 3: on screen 1.3 s after full reveal < 1.6 s reading time (3 words) — lengthen 'until'/the segment, use a faster rate or shorten the text
+warn: visual change every 0.2 s on average — too busy for calm pacing (aim 1–3.5 s)
 OK
